@@ -1,0 +1,598 @@
+/*
+Theme Name: Proficient
+Theme URI: https://speciatheme.com/proficient-free-wordpress-theme/
+Author: Specia
+Author URI: https://speciatheme.com/
+Description: Proficient is the right theme for you if you are looking for a multipurpose theme that can handle everything you throw at it. It is perfect for marketing, corporate startup, agency, blog, business, company, creative, portfolio, professional business, food & restaurant, gym & fitness, spa salon, medical practitioner & hospitals, landing pages, product pages, corporate business, digital agency, product showcase, financial advisor, accountant, law firm, wealth advisor, photography, personal, and any eCommerce stores. The design is easy to change and adapt to the client needs. The theme has all the modern functionality such as: slider, services, blogs and much more. It is 100% Responsive WooCommerce Theme with a luxurious and elegant design. It has a fully responsive width that adjusts automatically to any screen size or resolution. It can be customized easily, and also has multiple features and functionalities. Let's start downloading this amazing and beautiful Free Multipurpose WordPress Theme right away. View the demo of Proficient Premium http://demo.speciatheme.com/pro/?theme=proficient
+Template: specia
+Version: 1.1.24
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: proficient
+Tags: one-column, two-columns, left-sidebar, right-sidebar, flexible-header, custom-background, custom-colors, custom-header, custom-menu,  custom-logo, featured-image-header, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce, education, entertainment, food-and-drink, photography, portfolio
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+*/
+
+/*---------------------------------------
+    Header Social Icons
+-----------------------------------------*/
+.header-top-info-1 .social li a i {
+    border-radius: 50%;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    color: #ffffff;
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+.header-top-info-1 .info li a {
+    font-size: 13px;
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+.header-center .custom-logo {
+    margin: 0 auto;
+    margin-top: -3%;
+    padding-bottom: 8px;
+}
+
+/* Menu*/
+.navbar {
+    padding: 4px 2px 5px;
+}
+.nav-center .navbar-nav li a {
+	color: #ffffff;
+}
+.nav-center .navbar-nav li a:hover {
+	color: #ffffff !important;
+}
+.nav-center .dropdown-menu > li > a { 
+	color: #747474;
+}
+.nav-center ul {
+	float: left !important;
+}
+.header-center {
+    text-align: center;
+}
+.header-center .navbar-brand {
+    margin: 0 auto;
+	float: none;
+}
+.header-center .navbar-brand p.site-description {
+	margin:0;
+}
+.header-center .custom-logo {
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  
+  .nav-center .navbar-nav {
+    width: 100%;
+    text-align: center;
+  }
+  .nav-center .navbar-nav > li {
+    float: none;
+    display: inline-block;
+  }
+  .nav-center .navbar-nav > li.navbar-right {
+    float: right !important;
+  }
+}
+
+/* .navbar-brand { display: block; } */
+.navbar-custom .navbar-toggle {text-align: center;}
+
+@media (min-width: 768px) {
+    .navbar-brand { display: block; }
+    .navbar-custom .navbar-toggle {text-align: left;}
+
+}
+
+@media only screen and (max-width: 767px) and (min-width: 240px) {
+.navbar-toggle {
+    float: left;
+    margin: 0 auto;
+    position: relative;
+    left: 44%;
+}
+}
+/*---------------------------------------
+    Proficient Slider
+-----------------------------------------*/
+.slider-version-one{
+    margin: 0;
+}
+.slider-version-one .caption{
+    margin: auto;
+	background: rgba(0,0,0,0.3);
+    width: 70%;
+    padding: 22px 20px;
+	border-radius: 3px;
+}
+.slider-version-one .specia-slider {
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+}
+.slider-version-one .inner-table {
+    display: table;
+    height: 100%;
+}
+.slider-version-one .inner-table-cell {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+    width: 100%;
+}
+.slider-version-one .caption h1{
+    font-size: 48px;
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.50);
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    font-weight: 600;
+    line-height: 56px;
+	margin:0;
+}
+.slider-version-one .caption p{
+	text-shadow: 0 3px 3px rgba(0, 0, 0, 0.50);
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    font-weight: normal;
+	margin: 0 0 25px;
+	font-size: 14px;
+}
+
+.verticle-center{
+    vertical-align: middle;
+    padding-bottom: 3vh;
+}
+
+.slider-version-one .owl-prev {
+    position: absolute;
+    top: 45%;
+    float: left;
+    left: 2%;
+    width: 40px;
+    opacity: 0;
+}
+.slider-version-one .owl-next {
+    position: absolute;
+    top: 45%;
+    float: right;
+    right: 2%;
+    width: 40px;
+    opacity: 0;
+}
+.slider-version-one .slider-version:hover .owl-prev {
+    position: absolute;
+    top: 45%;
+    float: left;
+    left: 3%;
+    width: 40px;
+    opacity: 0.9;
+    -webkit-transition: all 200ms ease-out;
+       -moz-transition: all 200ms ease-out;
+         -o-transition: all 200ms ease-out;
+            transition: all 200ms ease-out;
+}
+.slider-version-one .slider-version:hover .owl-next {
+    position: absolute;
+    top: 45%;
+    float: right;
+    right: 3%;
+    width: 40px;
+    opacity: 0.9;
+    -webkit-transition: all 200ms ease-out;
+       -moz-transition: all 200ms ease-out;
+         -o-transition: all 200ms ease-out;
+            transition: all 200ms ease-out;
+}
+.slider-version-one .owl-controls .owl-nav [class*=owl-] {
+    color: #fff;
+    font-size: 16px;
+    margin: 5px;
+    padding: 8px 17px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: all 200ms ease-out;
+       -moz-transition: all 200ms ease-out;
+         -o-transition: all 200ms ease-out;
+            transition: all 200ms ease-out;
+}
+
+.slider-version-one .owl-theme .owl-controls .owl-nav [class*=owl-]:hover {
+    color: #fff;
+    text-decoration: none
+    -webkit-transition: all 200ms ease-out;
+       -moz-transition: all 200ms ease-out;
+         -o-transition: all 200ms ease-out;
+            transition: all 200ms ease-out;
+}
+
+.slider-version-one .slider-version .owl-dots {
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    opacity: 0;
+    left: 40%;
+    right: 40%;
+    -webkit-transition: all 200ms ease-out;
+       -moz-transition: all 200ms ease-out;
+         -o-transition: all 200ms ease-out;
+            transition: all 200ms ease-out;
+}
+.slider-version-one .slider-version:hover .owl-dots {
+    position: absolute;
+    bottom: 35px;
+    text-align: center;
+    opacity: 0.9;
+    left: 40%;
+    right: 40%;
+    -webkit-transition: all 200ms ease-out;
+       -moz-transition: all 200ms ease-out;
+         -o-transition: all 200ms ease-out;
+            transition: all 200ms ease-out;
+}
+.slider-version-one .slider-version .owl-theme .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;
+    *display: inline
+}
+.slider-version-one .owl-dots .owl-dot span{
+    margin: 5px;
+    background: #ffffff;
+    padding: 3px 10px;
+	border-radius: 4px;
+    -webkit-backface-visibility: visible;
+   -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    -ms-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+    display: block;
+}
+.slider-version-one .owl-theme .owl-controls .owl-nav .disabled {
+    opacity: .5;
+    cursor: default
+}
+.slider-version-one .owl-theme .owl-dots .owl-dot span {
+   background: #d6d6d6;
+}
+.specia-btn-1{
+    background: transparent;
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    padding: 12px 24px;
+	border: solid 1px #ffffff;
+	border-radius: 4px;
+    -webkit-transition: all 200ms ease-out;
+       -moz-transition: all 200ms ease-out;
+         -o-transition: all 200ms ease-out;
+            transition: all 200ms ease-out;
+}
+.specia-btn-1:hover{
+    color: #ffffff;
+     -webkit-transition: all 200ms ease-out;
+       -moz-transition: all 200ms ease-out;
+         -o-transition: all 200ms ease-out;
+            transition: all 200ms ease-out;
+}
+
+/*---------------------------------------
+    Service Proficient  
+-----------------------------------------*/
+.service-version-one {
+}
+.icon-block {
+    margin-bottom: 20px
+}
+.icon-block.icon-block-1 .icon-block-item {
+    width: 15%;
+    display: table-cell;
+    vertical-align: top;
+    font-size: 45px;
+    text-align: center;
+    color: #242526;
+	-webkit-transition: all 200ms ease-out;
+       -moz-transition: all 200ms ease-out;
+         -o-transition: all 200ms ease-out;
+            transition: all 200ms ease-out;
+}
+.icon-block.icon-block-1:hover .icon-block-item i {
+	-webkit-transition: all 200ms ease-out;
+       -moz-transition: all 200ms ease-out;
+         -o-transition: all 200ms ease-out;
+            transition: all 200ms ease-out;
+}
+.icon-block.icon-block-1 .icon-block-body {
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 15px
+}
+.icon-block.icon-block-1 .icon-block-body .title {
+    margin-bottom: 5px;
+    color: #333
+}
+.icon-block.icon-block-1 .icon-block-body p {
+    margin: 0
+}
+.icon-block.icon-block-1 .icon-block-body h4 {
+    margin-bottom: 3px;
+	font-size: 18px;
+	color: #242526;
+}
+
+/*---------------------------------------
+    Portfolio Effects
+-----------------------------------------*/
+
+figure.effect-bubba {
+    background: #000000;
+}
+
+figure.effect-bubba img {
+    opacity: 0.7;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+
+figure.effect-bubba:hover img {
+    opacity: 0.4;
+}
+
+figure.effect-bubba figcaption::before,
+figure.effect-bubba figcaption::after {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-bubba figcaption::before {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: scale(0,1);
+    transform: scale(0,1);
+}
+
+figure.effect-bubba figcaption::after {
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    -webkit-transform: scale(1,0);
+    transform: scale(1,0);
+}
+
+figure.effect-bubba h2 {
+    padding-top: 12%;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0,-20px,0);
+    transform: translate3d(0,-20px,0);
+}
+
+figure.effect-bubba p {
+    padding: 0 30px;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,20px,0);
+    transform: translate3d(0,20px,0);
+    color: #ffffff;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+}
+figure.effect-bubba:hover figcaption::before,
+figure.effect-bubba:hover figcaption::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+figure.effect-bubba:hover h2,
+figure.effect-bubba:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+/*---------------------------------------
+    Blog
+-----------------------------------------*/
+.entry-content .more-link {
+    border-radius: 4px;
+}
+.post_date {
+    position: absolute;
+	background: rgba(0,0,0,0.5);
+    height: 70px;
+    z-index: 999;
+    color: #fff;
+    font-size: 35px;
+    padding: 15px;
+    font-weight: 700;
+	text-align: center;
+}
+.post_date .date{
+    display: block;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 0;
+}
+.post_date h6 {
+    font-size: 14px;
+    font-weight: lighter;
+    line-height: 20px;
+    margin: 0px;
+    text-align: center;
+	color: #fff;
+}
+/*---------------------------------------
+    Breadcrumb
+-----------------------------------------*/
+.breadcrumb h2 {
+    font-size: 18px;
+    color: #747474;
+    margin: 0;
+    padding: 15px 0;
+    font-weight: 600;
+    text-transform: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*---------------------------------------
+    Sidebars & Widgets
+-----------------------------------------*/
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    font-family: 'Open Sans', sans-serif;
+    padding: 12px 24px;
+    border-radius: 4px;
+    background: transparent;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+.sidebar .widget input[type="submit"]{
+    padding: 12px 24px;
+    border-radius: 4px;
+    background: transparent;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+.woo-sidebar .widget input[type="submit"] {
+    padding: 12px 24px;
+    margin-top: 10px;
+    border-radius: 4px;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+.sidebar .tagcloud a {
+    display: inline-block;
+    background: transparent;
+    padding: 12px;
+    position: relative;
+    border: 1px solid #505050;
+    color: #505050;
+    font-size: 14px !important;
+    line-height: 10px;
+    font-weight: lighter;
+    margin: 0 10px 14px 0;
+    text-decoration: none;
+    border-radius: 4px;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+.sidebar .widget:hover .title-border {
+    width: 100%;
+	-webkit-transition: all 300ms ease-out;
+       -moz-transition: all 300ms ease-out;
+         -o-transition: all 300ms ease-out;
+            transition: all 300ms ease-out;         
+}
+.footer-sidebar .tagcloud a {
+    display: inline-block;
+    background: transparent;
+    padding: 12px;
+    position: relative;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 14px !important;
+    line-height: 10px;
+    font-weight: lighter;
+    margin: 0 10px 14px 0;
+    text-decoration: none;
+    border-radius: 4px;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+.footer-sidebar .widget input[type="submit"] {
+    padding: 12px 24px;
+    border-radius: 4px;
+    background: transparent;
+    color: #ffffff;
+    border: solid 2px #ffffff;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+}
+.sidebar .widget .title-border { 
+    width: 30px;
+    margin-bottom: 15px;
+    margin-top: -12px;
+	-webkit-transition: all 300ms ease-out;
+       -moz-transition: all 300ms ease-out;
+         -o-transition: all 300ms ease-out;
+            transition: all 300ms ease-out;   
+}
+.widget:hover .title-border {
+    width: 100%;
+	-webkit-transition: all 300ms ease-out;
+       -moz-transition: all 300ms ease-out;
+         -o-transition: all 300ms ease-out;
+            transition: all 300ms ease-out;           
+}
+.footer-sidebar .widget .title-border { 
+    width: 30px;
+    margin-bottom: 15px;
+    margin-top: -32px;
+	-webkit-transition: all 300ms ease-out;
+       -moz-transition: all 300ms ease-out;
+         -o-transition: all 300ms ease-out;
+            transition: all 300ms ease-out;         
+}
+.footer-sidebar .widget:hover .title-border {
+    width: 100%;
+	-webkit-transition: all 300ms ease-out;
+       -moz-transition: all 300ms ease-out;
+         -o-transition: all 300ms ease-out;
+            transition: all 300ms ease-out;         
+}
+.top-scroll {
+	border-radius: 4px;
+}
+.paginations a, span.page-numbers.current {
+	border-radius: 4px; 
+}
+.paginations a:hover, .paginations a:focus, .paginations a.active, span.page-numbers.current {
+    color: #ffffff;
+    border-radius: 4px;
+}
+a.page-numbers {
+	color: #747474;
+}

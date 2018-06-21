@@ -1,0 +1,1104 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Specia\n"
+"POT-Creation-Date: 2017-10-20 10:30+0530\n"
+"PO-Revision-Date: 2017-10-20 10:30+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: C:\\xampp\\htdocs\\work\\free\\wp-content\\themes"
+"\\specia\n"
+"X-Poedit-SearchPath-0: C:\\xampp\\htdocs\\work\\free\\wp-content\\themes"
+"\\specia\n"
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/404.php:11
+msgid "404"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/footer.php:27
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:55
+msgid "Your Copyright Text"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/specia-nav-walker.php:124
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/breadcrumb/breadcrumb.php:6
+msgid "Home"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/template-tags.php:57
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/template-tags.php:178
+msgid "Welcome to Specia! Info about the theme can be found at your"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/template-tags.php:179
+msgid "theme info page"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/template-tags.php:189
+msgid "Premium Themes"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:27
+msgid "Specia Theme"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:28
+msgid "Proficient Theme"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:29
+msgid "Avira Theme"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:44
+msgid "Specia Premium WordPress Theme"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:45
+msgid ""
+"Specia is a Multipurpose WordPress theme with lots of powerful features, "
+"instantly giving a professional look to your online presence. Well suited "
+"for any type of websites - business, portfolio, food & restaurant, gym & "
+"fitness, spa salon, medical practitioner & hospitals, landing pages, product "
+"pages, corporate business, digital agency, product showcase, photography, "
+"personal, real estate and eCommerce stores."
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:48
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:291
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:534
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-premium.php:30
+msgid "Premium Demo"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:50
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:293
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:536
+msgid "Buy Premium"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:62
+msgid "Why Choose Specia Premium?"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:64
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:307
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:550
+msgid "Responsive Design"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:65
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:308
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:551
+msgid "Browser Compatibility"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:66
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:177
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:309
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:420
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:552
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:663
+msgid "Translation Ready"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:67
+msgid "WPML & Polylang Plugin Supports"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:68
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:311
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:554
+msgid "WooCommerce Ready"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:69
+msgid "Contact Form 7 Plugin Supports"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:70
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:313
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:556
+msgid "Ninja Form Support"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:71
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:314
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:557
+msgid "12 Page Templates"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:72
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:315
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:558
+msgid "Custom Widget"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:73
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:85
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:213
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:316
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:328
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:456
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:559
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:571
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:699
+msgid "Section Order Manager"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:74
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:317
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:560
+msgid "Style Configuration"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:75
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:318
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:561
+msgid "Wide & Boxed Layout"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:76
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:319
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:562
+msgid "Google Maps"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:77
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:320
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:563
+msgid "Editable Post Slug"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:78
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:321
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:564
+msgid "Prebuilt Theme Color"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:79
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:322
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:565
+msgid "Social Media Integration"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:80
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:323
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:566
+msgid "Unlimited Colors"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:81
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:324
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:567
+msgid "Background Patterns"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:82
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:195
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:325
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:438
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:568
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:681
+msgid "Filterable Portfolio"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:83
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:326
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:569
+msgid "Custom Sidebars"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:84
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:327
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:570
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:408
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:427
+msgid "Sticky Header"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:86
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:329
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:572
+msgid "Footer Copyright Editor"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:87
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:330
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:573
+msgid "Blog Paginations"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:88
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:331
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:574
+msgid "Breadcrumbs Ready"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:89
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:332
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:575
+msgid "Extensive Documentation"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:90
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:333
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:576
+msgid "Awesome Support"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:91
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:334
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:577
+msgid "4 Column Footer"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:109
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:352
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:595
+msgid "Free"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:113
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:356
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:599
+msgid "Premium"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:114
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:357
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:600
+msgid "Enhance your website with premium version"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:122
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:365
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:608
+msgid "Free Download"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:123
+msgid "Buy Specia Now"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:129
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:372
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:615
+msgid "Header Soical Icons & Contact Info"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:135
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:378
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:621
+msgid "Custom Logo & Favicon"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:141
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:384
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:627
+msgid "Touch & Swipe Slider"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:142
+msgid "<b>3</b> Slides"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:143
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:386
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:629
+msgid "<b>Unlimited Slides</b> with more features"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:147
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:390
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:633
+msgid "Call to Action"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:148
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:391
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:634
+msgid "<b>1 Animation</b> with background color"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:149
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:392
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:635
+msgid "<b>5 Animation</b> with Custom Buttons"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:153
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:396
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:639
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-service.php:12
+msgid "Service Section"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:154
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:397
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:640
+msgid "3 Services"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:155
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:398
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:641
+msgid "<b>Unlimited</b> Services (Icons & Image) with <b>Own Link</b>"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:159
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:402
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:645
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-features.php:12
+msgid "Features Section"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:160
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:403
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:646
+msgid "With background color"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:161
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:404
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:647
+msgid "With background color and background image"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:165
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:408
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:651
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-portfolio.php:12
+msgid "Portfolio Section"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:166
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:409
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:652
+msgid "3 Portfolio"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:167
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:410
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:653
+msgid "<b>Unlimited Portfolio</b>"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:171
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:414
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:657
+msgid "WooCommerce Compatibility"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:183
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:426
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:669
+msgid "Testimonial Section"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:189
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:432
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:675
+msgid "Client/Sponsor Section"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:201
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:444
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:687
+msgid "Attractive Blog Pages"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:207
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:450
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:693
+msgid "WPML & Polylang Support"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:219
+msgid "Custom About Page"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:224
+msgid "Custom Service Page"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:230
+msgid "Custom Pricing Page"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:236
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:479
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:722
+msgid "Preset Background & Colors"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:242
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:485
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:728
+msgid "Website Layouts"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:248
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:491
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:734
+msgid "Breadcrumbs</span>"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:249
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:492
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:735
+msgid "Fixed Background Color"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:250
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:493
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:736
+msgid "Background Color & Background Image"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:254
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:497
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:740
+msgid "Photo Gallery</span>"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:255
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:498
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:741
+msgid "Core Gallery Support"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:256
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:499
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:742
+msgid "<b>Jetpack</b> Gallery Support"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:260
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:503
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:746
+msgid "Custom Page Template"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:266
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:509
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:752
+msgid "Awesome Fast Support"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:267
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:510
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:753
+msgid ""
+"<b>Free</b> <a href='https://specia.ticksy.com/' target='_blank'>Help Desk</"
+"a>"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:268
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:511
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:754
+msgid ""
+"<b>Premium</b> <a href='https://specia.ticksy.com/' target='_blank'>Help "
+"Desk</a></i></a>"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:287
+msgid "Proficient Premium WordPress Theme"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:288
+msgid ""
+"Proficient is the right theme for you if you are looking for a multipurpose "
+"theme that can handle everything you throw at it. It is perfect for business "
+"themes, marketing, corporate startup, agency, blog, business, company, "
+"corporate, creative, portfolio, professional and more. The design is easy to "
+"change and adapt to the client needs. The theme has all the modern "
+"functionality such as: slider, services, blogs and much more."
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:305
+msgid "Why Choose Proficient Premium?"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:310
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:553
+msgid "WPML & Polylang Supports"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:312
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:555
+msgid "Contact Form 7 Supports"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:366
+msgid "Buy Proficient Now"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:385
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:628
+msgid "<b>3 Slides</b> Supports"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:462
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:705
+msgid "About Page"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:467
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:710
+msgid "Service Page"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:473
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:716
+msgid "Pricing Page"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:530
+msgid "Avira Premium WordPress Theme"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:531
+msgid ""
+"Avira is the right theme for you if you are looking for a multipurpose theme "
+"that can handle everything you throw at it. It is perfect for business "
+"themes, marketing, corporate startup, agency, blog, business, company, "
+"corporate, creative, portfolio, professional and more. The design is easy to "
+"change and adapt to the client needs. The theme has all the modern "
+"functionality such as: slider, services, blogs and much more."
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:548
+msgid "Why Choose Avira Premium?"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/theme-info.php:609
+msgid "Buy Avira Now"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/breadcrumb/breadcrumb.php:4
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/breadcrumb/breadcrumb.php:7
+msgid "1"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/breadcrumb/breadcrumb.php:26
+msgid "Archive by category"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/breadcrumb/breadcrumb.php:32
+msgid "Search results for "
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/breadcrumb/breadcrumb.php:131
+msgid "Posts tagged "
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/breadcrumb/breadcrumb.php:137
+msgid "Articles posted by "
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/breadcrumb/breadcrumb.php:141
+msgid "Error 404 "
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/breadcrumb/breadcrumb.php:146
+msgid "Page"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-blog.php:12
+msgid "Blog Section"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-blog.php:21
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-call-action.php:21
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-features.php:21
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-portfolio.php:21
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-service.php:21
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-slider-section.php:25
+msgid "Settings"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-blog.php:29
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-call-action.php:29
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-features.php:29
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:29
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:91
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:418
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-portfolio.php:29
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-service.php:29
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-slider-section.php:34
+msgid "on"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-blog.php:38
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-call-action.php:38
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-features.php:38
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-portfolio.php:38
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-service.php:38
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-slider-section.php:43
+msgid "Hide / Show Section"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-blog.php:44
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-call-action.php:44
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-features.php:44
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:45
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:107
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:49
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:352
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:434
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-portfolio.php:43
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-service.php:44
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-slider-section.php:49
+msgid "Show"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-blog.php:45
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-call-action.php:45
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-features.php:45
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:46
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:108
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:50
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:353
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:435
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-portfolio.php:44
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-service.php:45
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-slider-section.php:50
+msgid "Hide"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-blog.php:55
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-features.php:55
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-portfolio.php:54
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-service.php:55
+msgid "Header"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-blog.php:73
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-features.php:73
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-portfolio.php:72
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-service.php:73
+msgid "Section Title"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-blog.php:93
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-features.php:93
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-portfolio.php:92
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-service.php:93
+msgid "Section Description"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-blog.php:105
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-call-action.php:55
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-portfolio.php:104
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-service.php:105
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-slider-section.php:60
+msgid "Content"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-blog.php:114
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-blog.php:130
+msgid "3"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-blog.php:123
+msgid "Posts Display"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-blog.php:127
+msgid "No. of Post Display in a Single Row"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-blog.php:131
+msgid "6"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-blog.php:132
+msgid "9"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-call-action.php:12
+msgid "Call Action Section"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-call-action.php:75
+msgid "Select Page for Call Action:"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-call-action.php:94
+msgid "Button Text"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-call-action.php:114
+msgid "Button Link"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-call-action.php:134
+msgid "Open link in a new tab"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-features.php:105
+msgid "Background"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-features.php:124
+msgid "Background Color"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:10
+msgid "Footer Section"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:18
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:38
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:64
+msgid "Copyright Content"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:42
+msgid "Click to Hide / Show Copyright Content"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:68
+msgid "Enter your copyright text like website name"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:80
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:100
+msgid "Payment Icon"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:104
+msgid "Click to Hide / Show Payment Icon Section"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:126
+msgid "Paypal"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:130
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:152
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:173
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:194
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:215
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:72
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:93
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:114
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:134
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:154
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:174
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:194
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:214
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:294
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:314
+msgid "Enter Your Link Here"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:148
+msgid "Visa"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:169
+msgid "Master Card"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:190
+msgid "Amex"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-footer-section.php:211
+msgid "Stripe"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:12
+msgid "Header Section"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:24
+msgid "Social Media"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:33
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:336
+msgid "off"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:42
+msgid "Social Media Hide/Show"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:46
+msgid "Click to Hide / Show Social Media"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:69
+msgid "Facebook"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:90
+msgid "LinkedIn"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:111
+msgid "Twitter"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:131
+msgid "Google Plus"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:151
+msgid "Instagram"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:171
+msgid "Dribble"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:191
+msgid "Github"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:211
+msgid "Bitbucket"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:231
+msgid "Skype"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:234
+msgid "Enter Your Skype Username"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:251
+msgid "Skype Action"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:254
+msgid ""
+"Enter Your Skype Action For E.g: skype:echo123?call (call, chat, voicemail, "
+"sendfile, userinfo, add)"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:271
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:371
+msgid "Email"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:274
+msgid "Enter Your Email Here"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:291
+msgid "Vkontakte"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:311
+msgid "Pinterest"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:326
+msgid "Header Contact Info"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:345
+msgid "Header Contact Info Hide/Show"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:349
+msgid "Click to Hide / Show Contact Info"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:375
+msgid "Enter the Email"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:392
+msgid "Contact Number"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:396
+msgid "Enter the Contact Number"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-header-section.php:431
+msgid "Click to Hide / Show Sticky Header"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-portfolio.php:123
+msgid "Select Page for Portfolio One:"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-portfolio.php:143
+msgid "Select Page for Portfolio Two:"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-portfolio.php:163
+msgid "Select Page for Portfolio Three:"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-premium.php:14
+msgid "Upgrade to Premium"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-premium.php:32
+msgid "View Details"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-premium.php:34
+msgid "Buy Now"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-premium.php:36
+msgid "Support Center"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-service.php:124
+msgid "Select Page for Service One:"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-service.php:144
+msgid "Select Page for Service Two:"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-service.php:164
+msgid "Select Page for Service Three:"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-slider-section.php:12
+msgid "Slider Section"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-slider-section.php:79
+msgid "Select Page for Slide One:"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-slider-section.php:99
+msgid "Select Page for Slide Two:"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/customize/specia-slider-section.php:119
+msgid "Select Page for Slide Three:"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/sidebar/sidebar.php:4
+msgid "Sidebar Widget Area"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/sidebar/sidebar.php:6
+msgid "The Primary Widget Area"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/sidebar/sidebar.php:14
+msgid "Footer Widget Area"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/sidebar/sidebar.php:16
+msgid "The Footer Widget Area"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/sidebar/sidebar.php:24
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/widget/widget_feature.php:19
+msgid "Features Widget Area"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/sidebar/sidebar.php:26
+msgid "The Features Widget Area for Home Features"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/sidebar/sidebar.php:34
+msgid "WooCommerce Widget Area"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/sidebar/sidebar.php:36
+msgid "This Widget area for WooCommerce Widget"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/widget/widget_feature.php:16
+msgid "Features Widget"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/widget/widget_feature.php:74
+msgid "Features Title:"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/widget/widget_feature.php:79
+msgid "Features Icons:"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/inc/widget/widget_feature.php:84
+msgid "Features Description:"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/sections/specia-blog.php:76
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/sections/specia-slider.php:60
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/template-parts/content-page.php:65
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/template-parts/content-search.php:66
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/template-parts/content.php:65
+msgid "Read More"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/sections/specia-breadcrumb.php:10
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/sections/specia-breadcrumb.php:14
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/sections/specia-breadcrumb.php:18
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/sections/specia-breadcrumb.php:22
+#, php-format
+msgid "Category Archives: %s"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/sections/specia-breadcrumb.php:26
+#, php-format
+msgid "Tag Archives: %s"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/sections/specia-breadcrumb.php:30
+msgid "Error 404"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/sections/specia-breadcrumb.php:34
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/sections/specia-navigation.php:29
+msgid "Toggle navigation"
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/template-parts/content-none.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/template-parts/content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: C:\xampp\htdocs\work\free\wp-content\themes\specia/template-parts/content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
