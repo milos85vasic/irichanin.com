@@ -7,3 +7,6 @@
 [submodule "SQL"]
 	path = SQL
 	url = https://milos85vasic@bitbucket.org/milos85vasic/irichanin.com-sqls.git
+[submodule "Content/wp-content/uploads"]
+	path = Content/wp-content/uploads
+	url = https://milos85vasic@bitbucket.org/milos85vasic/irichanin.com-statics.git
