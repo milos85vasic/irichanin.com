@@ -4,3 +4,6 @@
 [submodule "Setup"]
 	path = Setup
 	url = https://github.com/milos85vasic/Apache-Factory-Website-Installer.git
+[submodule "SQL"]
+	path = SQL
+	url = https://milos85vasic@bitbucket.org/milos85vasic/irichanin.com-sqls.git
