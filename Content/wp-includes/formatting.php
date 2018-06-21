@@ -2560,7 +2560,7 @@ function _make_url_clickable_cb( $matches ) {
  * @param array $matches Single Regex Match.
  * @return string HTML A element with URL address.
  */
-function _make_web_ftp_clickable_cb( $matches ) {
+function _make_CONFIG_MATRIX_SQL_INIT_TABLE_PREFIX_ftp_clickable_cb( $matches ) {
 	$ret = '';
 	$dest = $matches[2];
 	$dest = 'http://' . $dest;
@@ -2651,7 +2651,7 @@ function make_clickable( $text ) {
 
 			$ret = preg_replace_callback( $url_clickable, '_make_url_clickable_cb', $ret );
 
-			$ret = preg_replace_callback( '#([\s>])((www|ftp)\.[\w\\x80-\\xff\#$%&~/.\-;:=,?@\[\]+]+)#is', '_make_web_ftp_clickable_cb', $ret );
+			$ret = preg_replace_callback( '#([\s>])((www|ftp)\.[\w\\x80-\\xff\#$%&~/.\-;:=,?@\[\]+]+)#is', '_make_CONFIG_MATRIX_SQL_INIT_TABLE_PREFIX_ftp_clickable_cb', $ret );
 			$ret = preg_replace_callback( '#([\s>])([.0-9a-z_+-]+)@(([0-9a-z-]+\.)+[0-9a-z]{2,})#i', '_make_email_clickable_cb', $ret );
 
 			$ret = substr( $ret, 1, -1 ); // Remove our whitespace padding.

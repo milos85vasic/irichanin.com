@@ -495,7 +495,7 @@ define('BLOG_ID_CURRENT_SITE', 1);
 		$iis_rewrite_base = ltrim( $base, '/' ) . $rewrite_base;
 		$iis_subdir_replacement = $subdomain_install ? '' : '{R:1}';
 
-		$web_config_file = '<?xml version="1.0" encoding="UTF-8"?>
+		$CONFIG_MATRIX_SQL_INIT_TABLE_PREFIX_config_file = '<?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <system.webServer>
         <rewrite>
@@ -505,13 +505,13 @@ define('BLOG_ID_CURRENT_SITE', 1);
                     <action type="None" />
                 </rule>';
 				if ( is_multisite() && get_site_option( 'ms_files_rewriting' ) ) {
-					$web_config_file .= '
+					$CONFIG_MATRIX_SQL_INIT_TABLE_PREFIX_config_file .= '
                 <rule name="WordPress Rule for Files" stopProcessing="true">
                     <match url="^' . $iis_subdir_match . 'files/(.+)" ignoreCase="false" />
                     <action type="Rewrite" url="' . $iis_rewrite_base . WPINC . '/ms-files.php?file={R:1}" appendQueryString="false" />
                 </rule>';
                 }
-                $web_config_file .= '
+                $CONFIG_MATRIX_SQL_INIT_TABLE_PREFIX_config_file .= '
                 <rule name="WordPress Rule 2" stopProcessing="true">
                     <match url="^' . $iis_subdir_match . 'wp-admin$" ignoreCase="false" />
                     <action type="Redirect" url="' . $iis_subdir_replacement . 'wp-admin/" redirectType="Permanent" />
@@ -553,7 +553,7 @@ define('BLOG_ID_CURRENT_SITE', 1);
 		if ( ! $subdomain_install && WP_CONTENT_DIR != ABSPATH . 'wp-content' )
 			echo '<p><strong>' . __( 'Warning:' ) . ' ' . __( 'Subdirectory networks may not be fully compatible with custom wp-content directories.' ) . '</strong></p>';
 		?>
-		<textarea class="code" readonly="readonly" cols="100" rows="20"><?php echo esc_textarea( $web_config_file ); ?>
+		<textarea class="code" readonly="readonly" cols="100" rows="20"><?php echo esc_textarea( $CONFIG_MATRIX_SQL_INIT_TABLE_PREFIX_config_file ); ?>
 		</textarea></li>
 		</ol>
 

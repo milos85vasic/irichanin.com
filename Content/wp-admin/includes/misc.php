@@ -235,15 +235,15 @@ function iis7_save_url_rewrite_rules(){
 	global $wp_rewrite;
 
 	$home_path = get_home_path();
-	$web_config_file = $home_path . 'web.config';
+	$CONFIG_MATRIX_SQL_INIT_TABLE_PREFIX_config_file = $home_path . 'web.config';
 
 	// Using win_is_writable() instead of is_writable() because of a bug in Windows PHP
-	if ( iis7_supports_permalinks() && ( ( ! file_exists($web_config_file) && win_is_writable($home_path) && $wp_rewrite->using_mod_rewrite_permalinks() ) || win_is_writable($web_config_file) ) ) {
+	if ( iis7_supports_permalinks() && ( ( ! file_exists($CONFIG_MATRIX_SQL_INIT_TABLE_PREFIX_config_file) && win_is_writable($home_path) && $wp_rewrite->using_mod_rewrite_permalinks() ) || win_is_writable($CONFIG_MATRIX_SQL_INIT_TABLE_PREFIX_config_file) ) ) {
 		$rule = $wp_rewrite->iis7_url_rewrite_rules(false, '', '');
 		if ( ! empty($rule) ) {
-			return iis7_add_rewrite_rule($web_config_file, $rule);
+			return iis7_add_rewrite_rule($CONFIG_MATRIX_SQL_INIT_TABLE_PREFIX_config_file, $rule);
 		} else {
-			return iis7_delete_rewrite_rule($web_config_file);
+			return iis7_delete_rewrite_rule($CONFIG_MATRIX_SQL_INIT_TABLE_PREFIX_config_file);
 		}
 	}
 	return false;
