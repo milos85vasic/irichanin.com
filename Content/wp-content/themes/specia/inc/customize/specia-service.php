@@ -26,7 +26,7 @@ function specia_service_setting( $wp_customize ) {
 	$wp_customize->add_setting( 
 		'hide_show_service' , 
 			array(
-			'default' => __( 'on', 'specia' ),
+			'default' => 'on',
 			'capability'     => 'edit_theme_options',
 			'sanitize_callback' => 'specia_sanitize_select',
 		) 
@@ -70,7 +70,7 @@ function specia_service_setting( $wp_customize ) {
 	$wp_customize->add_control( 
 		'service_title',
 		array(
-		    'label'   => __('Section Title','specia'),
+		    'label'   => __('Title','specia'),
 		    'section' => 'service_header',
 			'settings'   	 => 'service_title',
 			'type'           => 'text',
@@ -90,7 +90,7 @@ function specia_service_setting( $wp_customize ) {
 	$wp_customize->add_control( 
 		'service_description',
 		array(
-		    'label'   => __('Section Description','specia'),
+		    'label'   => __('Description','specia'),
 		    'section' => 'service_header',
 			'settings'   	 => 'service_description',
 			'type'           => 'textarea',
@@ -122,7 +122,7 @@ function specia_service_setting( $wp_customize ) {
 		array(
 			'type'	=> 'dropdown-pages',
 			'allow_addition' => true,
-			'label'	=> __('Select Page for Service One:','specia'),
+			'label'	=> __('Select Page','specia'),
 			'section'	=> 'service_content',
 			'settings'   	 => 'service-page1',
 		)
@@ -143,7 +143,7 @@ function specia_service_setting( $wp_customize ) {
 		array(
 			'type'	=> 'dropdown-pages',
 			'allow_addition' => true,
-			'label'	=> __('Select Page for Service Two:','specia'),
+			'label'	=> __('Select Page','specia'),
 			'section'	=> 'service_content',
 			'settings'   	 => 'service-page2',
 		)
@@ -164,7 +164,7 @@ function specia_service_setting( $wp_customize ) {
 		array(
 			'type'	=> 'dropdown-pages',
 			'allow_addition' => true,
-			'label'	=> __('Select Page for Service Three:','specia'),
+			'label'	=> __('Select Page','specia'),
 			'section'	=> 'service_content',
 			'settings'   	 => 'service-page3',
 		)

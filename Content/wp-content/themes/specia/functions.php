@@ -62,8 +62,6 @@ function specia_content_width() {
 }
 add_action( 'after_setup_theme', 'specia_content_width', 0 );
 
-
-
 /**
  * All Styles & Scripts.
  */
@@ -112,19 +110,9 @@ require_once get_template_directory() . '/inc/jetpack.php';
 require_once get_template_directory() . '/inc/sanitization.php';
 
 /**
- * Load Theme Info Page
- */
-require_once get_template_directory() . '/inc/theme-info.php';
-
-/**
  * Load Upsale Section in Customizer
  */
 require_once( trailingslashit( get_template_directory() ) . '/inc/upsale/class-customize.php' );
-
-/**
- * Load Preview Images on WordPress demo
- */
-require_once( get_template_directory() . '/inc/preview-demo/init-prevdem.php' );
 
 /**
  * Called all the Customize file.
@@ -139,3 +127,12 @@ require_once( get_template_directory() . '/inc/customize/specia-portfolio.php');
 require_once( get_template_directory() . '/inc/customize/specia-blog.php');
 require_once( get_template_directory() . '/inc/customize/specia-footer-section.php');
 require_once( get_template_directory() . '/inc/customize/specia-premium.php');
+
+
+add_filter( 'wp_get_attachment_image_attributes', function( $attr )
+{
+    if( isset( $attr['class'] )  && 'custom-logo' === $attr['class'] )
+        $attr['class'] = 'custom-logo navbar-brand';
+
+    return $attr;
+} );

@@ -1,78 +1,77 @@
-# Hueman v3.3.27
-![Hueman - Free Wordpress Theme](/screenshot.png)
+=== Hueman ===
+Contributors: nikeo, alxmedia, d4z_c0nf
+Tags: one-column, two-columns, three-columns, right-sidebar, left-sidebar, custom-colors, custom-menu, featured-images, flexible-header, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
+Requires at least: 4.6
+Tested up to: 5.0
+Stable tag: 3.4.11
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-> The Hueman theme helps you increase your traffic and engage your visitors. It loads fast and is 100% mobile-friendly according to Google. Best rated theme for blogs and magazines on WordPress.org. Powering 70K+ websites around the world.
+> Good looking, fast and mobile friendly theme. Perfect for blogs and magazines websites.
 
-View more themes from this author: https://presscustomizr.com
+== Description ==
+The Hueman theme helps you increase your traffic and engage your visitors. It loads fast and is 100% mobile-friendly according to Google. Best rated theme for blogs and magazines on WordPress.org. Powering 70K+ websites around the world.
 
-## Demo and Documentation
-* DEMO : https://demo-hueman.presscustomizr.com/
-* DOCUMENTATION : https://hueman.presscustomizr.com/
+== Upgrade Notice ==
+= 3.4.11 =
+Improved the new block editor style. Especially to enlarge the editor content width.
 
+== Changelog ==
+= 3.4.11 December 19th, 2018 =
+* improved : the new block editor style. Especially to enlarge the editor content width. fixes #732
 
-## Theme License
-The **Hueman WordPress theme** theme itself is nothing but 100% GPLv3. See headers of files for further details.[GNU GPL v3.0 or later](http://www.gnu.org/licenses/gpl-3.0.en.html)
+= 3.4.10 December 15th, 2018 =
+* fixed : admin style not compatible with WP5.0
+* fixed : WooCommerce related product position in some cases. fixes #729
+* improved : update FontAwesome to v5.5.0. fixes #727
+* improved : compatibility with Nimble Builder v1.4.0
+* improved : analytics params to external links
 
+= 3.4.9 November 23rd 2018 =
+* fixed : set only the featured posts thumbnail img width to 100%. fixes #703
+* fixed : hu_is_customize_left_panel() => the check on $pagenow does not work on multisite install
+* added : add sidebars background color option. fixes #718
+* improved : add wp 5.0 compatibility patch. fixes #719
+* improved : improve gutenberg alignment compatibility. fixes #702
+* improved : Nimble Builder compatibility. Don't load css and javascript front assets when using the full Nimble template
+* improved : replace select2 with our namespaced czrSelect2
 
-## Font Awesome License
-Font License - http://fontawesome.io
-License: SIL OFL 1.1
-License URI: http://scripts.sil.org/OFL
-Copyright: Dave Gandy, http://fontawesome.io
+= 3.4.7 October 24th 2018 =
+fixed : The "cover image" block of the new WP editor has been renamed "cover". See https://github.com/WordPress/gutenberg/pull/10659, but posts created with the former cover-image block will still use the wp-block-cover-image css class. related to #702
 
-Code License - http://fontawesome.io
-License: MIT License
-License URI: http://opensource.org/licenses/mit-license.html
-Copyright: Dave Gandy, http://fontawesome.io
+= 3.4.6 October 24th 2018 =
+* added : support for new WordPress editor, block cover image alignwide/alignfull
+* improved : readme.txt file, according to the latest TRT requirements https://make.wordpress.org/themes/2015/04/29/a-revised-readme/
 
-Brand Icons
-All brand icons are trademarks of their respective owners.
-The use of these trademarks does not indicate endorsement of the trademark holder by Font Awesome, nor vice versa.
+= 3.4.5 October 13th 2018 =
+* fixed : prefixed TGMPA class with HU_ to fix potential collision with other plugins using the same class. see issue https://github.com/presscustomizr/customizr/issues/1603
 
+= 3.4.4 October 12th 2018 =
+* improved : display only one admin notification ( if any ) at a time
+* improved : various minor plugin compatibility improvements
 
-## Titillium License
-Titillium Font - http://www.campivisivi.net/titillium/
-License: SIL OFL 1.1
-License URI: http://scripts.sil.org/OFL
-Copyright: Accademia di Belle Arti di Urbino, http://campivisivi.net
+= 3.4.3 October 8th 2018 =
+* added : a new option for collapsible submenus in mobiles
 
+= 3.4.2 October 7th 2018 =
+* Fix: Gutenberg reponsive video embed compatiblity issue. fixes #698
+* Imp : better Nimble section builder integration
 
-## Theme screenshot images
-CC0-licensed (GPL-compatible) images from http://pixabay.com/ and http://unsplash.com/
+= 3.4.1 August 1st 2018 =
+* imp : adapt the post format metaboxes to the Gutenberg editor plugin
+* fix: make the color of the external link icon the same as the user defined primary color. fixes #686
+* fixed : url validation broken in the social links module
+* added : new option to force the global column layout, even in contexts where it has been customized
+* added : new option to disable the icon + text before the archive titles
+* added : new option to use the original featured image size in grids.fixes #691
+* added : Strava social network in the list of icons. fixes #162
 
-Left sidebar, top to bottom:
+= 3.4.0 June 27th 2018 =
+* Improvements : Performance and UX enhancements made to the live customizer. Compatibility with the contextualizer feature introduced in Hueman Addons v2.1.0.
 
-1. unsplash - http://bit.ly/18NNxqe
-2. pixabay ID 210801
-3. pixabay ID 164985
-4. pixabay ID 181744
-5. pixabay ID 205220
-6. pixabay ID 74570
-7. pixabay ID 122694
-8. pixabay ID 97433
+= 3.3.28 June 22nd 2018 =
+* Improvements : various fixes and improvement to stay compliant with the WordPress.org themes requirements : removed previewer dummy content and image, removed welcome note, removed help icon link in the admin bar
 
-Content, top to bottom, left to right:
-
-1. pixabay ID 74570
-2. unsplash - http://bit.ly/18NNxqe
-3. pixabay ID 166705
-4. pixabay ID 68827
-5. pixabay ID 171732
-
-Right sidebar, top to bottom:
-
-1. pixabay ID 9950
-2. pixabay ID 181744
-3. pixabay ID 122705
-4. pixabay ID 195684
-5. pixabay ID 83810
-6. pixabay ID 18279
-
-
-## Other Licenses
-See headers of files for further details.
-
-# Changelog
 = 3.3.27 February 11th 2018 =
 * Fix : update notice not always dismissable in admin
 
@@ -778,3 +777,10 @@ See headers of files for further details.
 
 = October 31 2013 - 1.0.0 =
 * Theme released
+
+
+== Resources ==
+* Font Awesome Font : http://fontawesome.io, licensed SIL OFL 1.1, MIT License
+* Titillium Font : Licensed SIL OFL 1.1
+* Theme screenshot images : CC0-licensed (GPL-compatible) images from http://pixabay.com/ and http://unsplash.com/
+* Other resources licenses : see headers of assets files for further details.

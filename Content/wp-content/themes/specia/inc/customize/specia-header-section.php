@@ -30,7 +30,7 @@ function specia_header_setting( $wp_customize ) {
 	$wp_customize->add_setting( 
 		'hide_show_social' , 
 			array(
-			'default' => __( 'off', 'specia' ),
+			'default' => 'on',
 			'capability' => 'edit_theme_options',
 			'sanitize_callback' => 'specia_sanitize_select',
 		) 
@@ -39,11 +39,10 @@ function specia_header_setting( $wp_customize ) {
 	$wp_customize->add_control(
 	'hide_show_social' , 
 		array(
-			'label'          => __( 'Social Media Hide/Show', 'specia' ),
+			'label'          => __( 'Hide / Show Section', 'specia' ),
 			'section'        => 'header_setting',
 			'settings' 		 => 'hide_show_social',
 			'type'           => 'radio',
-			'description'    => __( 'Click to Hide / Show Social Media', 'specia' ),
 			'choices'        => 
 			array(
 				'on' => __( 'Show', 'specia' ),
@@ -69,7 +68,6 @@ function specia_header_setting( $wp_customize ) {
 		    'label'   		=> __('Facebook','specia'),
 		    'section' 		=> 'header_setting',
 			'settings' 		 => 'facebook_link',
-			'description'   => __( 'Enter Your Link Here', 'specia' ),
 		)  
 	);
 
@@ -90,7 +88,6 @@ function specia_header_setting( $wp_customize ) {
 		    'label'   		=> __('LinkedIn','specia'),
 		    'section' 		=> 'header_setting',
 			'settings' 		 => 'linkedin_link',
-			'description'   => __( 'Enter Your Link Here', 'specia' ),
 		)  
 	);
 
@@ -111,7 +108,6 @@ function specia_header_setting( $wp_customize ) {
 		    'label'   		=> __('Twitter','specia'),
 		    'section' 		=> 'header_setting',
 			'settings' 		 => 'twitter_link',
-			'description'   => __( 'Enter Your Link Here', 'specia' ),
 		)  
 	);
 
@@ -131,7 +127,6 @@ function specia_header_setting( $wp_customize ) {
 		    'label'   		=> __('Google Plus','specia'),
 		    'section' 		=> 'header_setting',
 			'settings' 		 => 'googleplus_link',
-			'description'   => __( 'Enter Your Link Here', 'specia' ),
 		)  
 	);
 
@@ -151,7 +146,6 @@ function specia_header_setting( $wp_customize ) {
 		    'label'   		=> __('Instagram','specia'),
 		    'section' 		=> 'header_setting',
 			'settings' 		 => 'instagram_link',
-			'description'   => __( 'Enter Your Link Here', 'specia' ),
 		)  
 	);
 
@@ -168,10 +162,9 @@ function specia_header_setting( $wp_customize ) {
 	$wp_customize->add_control( 
 		'dribble_link',
 		array(
-		    'label'   		=> __('Dribble','specia'),
+		    'label'   		=> __('Dribbble','specia'),
 		    'section' 		=> 'header_setting',
 			'settings' 		 => 'dribble_link',
-			'description'   => __( 'Enter Your Link Here', 'specia' ),
 		)  
 	);
 
@@ -188,10 +181,9 @@ function specia_header_setting( $wp_customize ) {
 	$wp_customize->add_control( 
 		'github_link',
 		array(
-		    'label'   		=> __('Github','specia'),
+		    'label'   		=> __('GitHub','specia'),
 		    'section' 		=> 'header_setting',
 			'settings' 		 => 'github_link',
-			'description'   => __( 'Enter Your Link Here', 'specia' ),
 		)  
 	);
 
@@ -211,7 +203,6 @@ function specia_header_setting( $wp_customize ) {
 		    'label'   		=> __('Bitbucket','specia'),
 		    'section' 		=> 'header_setting',
 			'settings' 		 => 'bitbucket_link',
-			'description'   => __( 'Enter Your Link Here', 'specia' ),
 		)  
 	);
 
@@ -231,7 +222,7 @@ function specia_header_setting( $wp_customize ) {
 		    'label'   		=> __('Skype','specia'),
 		    'section' 		=> 'header_setting',
 			'settings' 		 => 'skype_link',
-			'description'   => __( 'Enter Your Skype Username', 'specia' ),
+			'description'   => __( 'Username', 'specia' ),
 		)  
 	);
 
@@ -251,7 +242,7 @@ function specia_header_setting( $wp_customize ) {
 		    'label'   		=> __('Skype Action','specia'),
 		    'section' 		=> 'header_setting',
 			'settings' 		 => 'skype_action_link',
-			'description'   => __( 'Enter Your Skype Action For E.g: skype:echo123?call (call, chat, voicemail, sendfile, userinfo, add)', 'specia' ),
+			'description'   => __( 'Enter your Skype action, for e.g: skype:echo123?call (call, chat, voicemail, sendfile, userinfo, add)', 'specia' ),
 		)  
 	);
 
@@ -271,7 +262,6 @@ function specia_header_setting( $wp_customize ) {
 		    'label'   		=> __('Email','specia'),
 		    'section' 		=> 'header_setting',
 			'settings' 		 => 'email_link',
-			'description'   => __( 'Enter Your Email Here', 'specia' ),
 		)  
 	);
 	
@@ -288,10 +278,9 @@ function specia_header_setting( $wp_customize ) {
 	$wp_customize->add_control( 
 		'vk_link',
 		array(
-		    'label'   		=> __('Vkontakte','specia'),
+		    'label'   		=> __('VKontakte','specia'),
 		    'section' 		=> 'header_setting',
 			'settings' 		 => 'vk_link',
-			'description'   => __( 'Enter Your Link Here', 'specia' ),
 		)  
 	);
 	
@@ -311,7 +300,6 @@ function specia_header_setting( $wp_customize ) {
 		    'label'   		=> __('Pinterest','specia'),
 		    'section' 		=> 'header_setting',
 			'settings' 		 => 'pinterest_link',
-			'description'   => __( 'Enter Your Link Here', 'specia' ),
 		)  
 	);
 
@@ -333,7 +321,7 @@ function specia_header_setting( $wp_customize ) {
 	$wp_customize->add_setting( 
 		'hide_show_contact_infos' , 
 			array(
-			'default' => __( 'off', 'specia' ),
+			'default' => 'on',
 			'capability' => 'edit_theme_options',
 			'sanitize_callback' => 'specia_sanitize_select',
 		) 
@@ -342,11 +330,10 @@ function specia_header_setting( $wp_customize ) {
 	$wp_customize->add_control(
 	'hide_show_contact_infos' , 
 		array(
-			'label'          => __( 'Header Contact Info Hide/Show', 'specia' ),
+			'label'          => __( 'Hide / Show Section', 'specia' ),
 			'section'        => 'header_contact',
 			'settings' 		 => 'hide_show_contact_infos',
 			'type'           => 'radio',
-			'description'    => __( 'Click to Hide / Show Contact Info', 'specia' ),
 			'choices'        => 
 			array(
 				'on' => __( 'Show', 'specia' ),
@@ -371,8 +358,7 @@ function specia_header_setting( $wp_customize ) {
 		    'label'   => __('Email','specia'),
 		    'section' => 'header_contact',
 			'settings'=> 'header_email',
-			'type' => 'text',
-			'description'    => __( 'Enter the Email', 'specia' ),
+			'type' => 'text'
 		)  
 	);
 
@@ -392,8 +378,7 @@ function specia_header_setting( $wp_customize ) {
 		    'label'   => __('Contact Number','specia'),
 		    'section' => 'header_contact',
 			'settings'=> 'header_contact_num',
-			'type' => 'text',
-			'description'    => __( 'Enter the Contact Number', 'specia' ),
+			'type' => 'text'
 		)  
 	);
 
@@ -415,7 +400,7 @@ function specia_header_setting( $wp_customize ) {
 	$wp_customize->add_setting( 
 		'sticky_header_setting' , 
 			array(
-			'default' => __( 'on', 'specia' ),
+			'default' => 'on',
 			'capability' => 'edit_theme_options',
 			'sanitize_callback' => 'specia_sanitize_select',
 		) 
@@ -428,7 +413,6 @@ function specia_header_setting( $wp_customize ) {
 			'section'        => 'sticky_header',
 			'settings'		 => 'sticky_header_setting',
 			'type'           => 'radio',
-			'description'    => __( 'Click to Hide / Show Sticky Header', 'specia' ),
 			'choices'        => 
 			array(
 				'on' => __( 'Show', 'specia' ),

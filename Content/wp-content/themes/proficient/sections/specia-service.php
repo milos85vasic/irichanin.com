@@ -55,12 +55,20 @@
 				<div class="col-md-4 col-sm-6">
 					<div class="icon-block icon-block-1 wow fadeInUp">
 						<div class="icon-block-item">
+						
+						<?php $image = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
+						if( !empty($image) ) { ?>
+							<figure>
+									<img src="<?php echo esc_url( $image ); ?>" alt="<?php the_title_attribute();?>" >
+							</figure>
+						<?php } else { ?>
 							<?php if( get_post_meta(get_the_ID(),'icons', true ) ): ?>
 								<i class="fa <?php echo get_post_meta( get_the_ID(),'icons', true); ?>"></i>
-							<?php endif; ?>
+						<?php endif; }?>
 						</div>
+						
 						<div class="icon-block-body">
-							<h4><a href="<?php echo get_permalink(); ?>"> <?php echo $title; ?></a></h4>
+							<h4><a href="<?php echo get_permalink(); ?>"> <?php echo esc_html($title); ?></a></h4>
 							<?php echo $content; ?>
 						</div>
 					</div>
@@ -72,4 +80,4 @@
 		</div>
 	</section>
 <div class="clearfix"></div>
-<?php } endif; ?>
+<?php } wp_reset_postdata(); endif; ?>

@@ -1,0 +1,435 @@
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   Content/wp-config.php
+#	modified:   Content/wp-content/plugins/akismet/_inc/akismet.css
+#	modified:   Content/wp-content/plugins/akismet/_inc/akismet.js
+#	modified:   Content/wp-content/plugins/akismet/akismet.php
+#	modified:   Content/wp-content/plugins/akismet/class.akismet-admin.php
+#	modified:   Content/wp-content/plugins/akismet/class.akismet-cli.php
+#	modified:   Content/wp-content/plugins/akismet/class.akismet-rest-api.php
+#	modified:   Content/wp-content/plugins/akismet/class.akismet.php
+#	modified:   Content/wp-content/plugins/akismet/readme.txt
+#	modified:   Content/wp-content/plugins/akismet/views/config.php
+#	modified:   Content/wp-content/plugins/akismet/views/notice.php
+#	deleted:    Content/wp-content/plugins/akismet/views/strict.php
+#	new file:   Content/wp-content/plugins/ga-google-analytics/css/settings.css
+#	new file:   Content/wp-content/plugins/ga-google-analytics/ga-google-analytics.php
+#	new file:   Content/wp-content/plugins/ga-google-analytics/img/250x250-banhammer-pro.jpg
+#	new file:   Content/wp-content/plugins/ga-google-analytics/img/250x250-bbq-pro.jpg
+#	new file:   Content/wp-content/plugins/ga-google-analytics/img/250x250-blackhole-pro.jpg
+#	new file:   Content/wp-content/plugins/ga-google-analytics/img/250x250-digging-into-wordpress.jpg
+#	new file:   Content/wp-content/plugins/ga-google-analytics/img/250x250-htaccess-made-easy.jpg
+#	new file:   Content/wp-content/plugins/ga-google-analytics/img/250x250-ses-pro.jpg
+#	new file:   Content/wp-content/plugins/ga-google-analytics/img/250x250-tao-of-wordpress.jpg
+#	new file:   Content/wp-content/plugins/ga-google-analytics/img/250x250-usp-pro.jpg
+#	new file:   Content/wp-content/plugins/ga-google-analytics/img/250x250-wp-themes-in-depth.jpg
+#	new file:   Content/wp-content/plugins/ga-google-analytics/img/gap-logo.jpg
+#	new file:   Content/wp-content/plugins/ga-google-analytics/inc/plugin-core.php
+#	new file:   Content/wp-content/plugins/ga-google-analytics/inc/settings-display.php
+#	new file:   Content/wp-content/plugins/ga-google-analytics/inc/support-panel.php
+#	new file:   Content/wp-content/plugins/ga-google-analytics/js/settings.js
+#	new file:   Content/wp-content/plugins/ga-google-analytics/languages/ga-google-analytics.pot
+#	new file:   Content/wp-content/plugins/ga-google-analytics/license.txt
+#	new file:   Content/wp-content/plugins/ga-google-analytics/readme.txt
+#	new file:   Content/wp-content/plugins/ga-google-analytics/uninstall.php
+#	new file:   Content/wp-content/themes/hueman/assets/admin/css/block-editor-style-rtl.css
+#	new file:   Content/wp-content/themes/hueman/assets/admin/css/block-editor-style.css
+#	deleted:    Content/wp-content/themes/hueman/assets/admin/css/editor-style.min.css
+#	modified:   Content/wp-content/themes/hueman/assets/admin/css/hu_admin.css
+#	deleted:    Content/wp-content/themes/hueman/assets/admin/css/hu_admin.min.css
+#	new file:   Content/wp-content/themes/hueman/assets/admin/img/Nimble_interface-blanc-01.png
+#	new file:   Content/wp-content/themes/hueman/assets/admin/img/nimble_and_hueman_145.gif
+#	modified:   Content/wp-content/themes/hueman/assets/admin/js/post-formats.js
+#	modified:   Content/wp-content/themes/hueman/assets/admin/js/post-formats.min.js
+#	deleted:    Content/wp-content/themes/hueman/assets/czr/css/czr-control-base.min.css
+#	deleted:    Content/wp-content/themes/hueman/assets/czr/css/index.php
+#	deleted:    Content/wp-content/themes/hueman/assets/czr/css/lib/select2.css
+#	deleted:    Content/wp-content/themes/hueman/assets/czr/css/lib/select2.min.css
+#	new file:   Content/wp-content/themes/hueman/assets/czr/js/_customize_control_dependencies_and_dom_ready_actions.js
+#	new file:   Content/wp-content/themes/hueman/assets/czr/js/_customize_preview_reactions.js
+#	deleted:    Content/wp-content/themes/hueman/assets/czr/js/czr-control-base.js
+#	deleted:    Content/wp-content/themes/hueman/assets/czr/js/czr-control-base.min.js
+#	deleted:    Content/wp-content/themes/hueman/assets/czr/js/czr-preview-base.js
+#	deleted:    Content/wp-content/themes/hueman/assets/czr/js/czr-preview-base.min.js
+#	modified:   Content/wp-content/themes/hueman/assets/front/css/dev-font-awesome.css
+#	modified:   Content/wp-content/themes/hueman/assets/front/css/font-awesome.min.css
+#	modified:   Content/wp-content/themes/hueman/assets/front/css/main-not-responsive.css
+#	modified:   Content/wp-content/themes/hueman/assets/front/css/main-not-responsive.min.css
+#	modified:   Content/wp-content/themes/hueman/assets/front/css/main.css
+#	modified:   Content/wp-content/themes/hueman/assets/front/css/main.min.css
+#	modified:   Content/wp-content/themes/hueman/assets/front/fonts/titillium-light-webfont.svg
+#	modified:   Content/wp-content/themes/hueman/assets/front/fonts/titillium-lightitalic-webfont.svg
+#	modified:   Content/wp-content/themes/hueman/assets/front/fonts/titillium-regular-webfont.svg
+#	modified:   Content/wp-content/themes/hueman/assets/front/fonts/titillium-regularitalic-webfont.svg
+#	modified:   Content/wp-content/themes/hueman/assets/front/fonts/titillium-semibold-webfont.svg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/1-160x160.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/1-320x320.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/1-520x245.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/10-160x160.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/10-320x320.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/10-520x245.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/11-160x160.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/11-320x320.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/11-520x245.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/12-160x160.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/12-320x320.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/12-520x245.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/2-160x160.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/2-320x320.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/2-520x245.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/3-160x160.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/3-320x320.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/3-520x245.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/4-160x160.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/4-320x320.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/4-520x245.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/5-160x160.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/5-320x320.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/5-520x245.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/6-160x160.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/6-320x320.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/6-520x245.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/7-160x160.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/7-320x320.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/7-520x245.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/8-160x160.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/8-320x320.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/8-520x245.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/9-160x160.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/9-320x320.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/demo/9-520x245.jpg
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/sidebar/s-left-dual-full-collapse.png
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/sidebar/s-left-dual-full-expand.png
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/sidebar/s-left-dual-half-collapse.png
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/sidebar/s-left-dual-s2.png
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/sidebar/s-left.png
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/sidebar/s-right-collapse.png
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/sidebar/s-right-dual-full-collapse.png
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/sidebar/s-right-dual-full-expand.png
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/sidebar/s-right-dual-half-collapse.png
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/sidebar/s-right-dual-s2.png
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/sidebar/s-right-s1.png
+#	deleted:    Content/wp-content/themes/hueman/assets/front/img/sidebar/s-right-s2.png
+#	modified:   Content/wp-content/themes/hueman/assets/front/js/ie/html5shiv-printshiv.min.js
+#	modified:   Content/wp-content/themes/hueman/assets/front/js/ie/respond.js
+#	modified:   Content/wp-content/themes/hueman/assets/front/js/ie/selectivizr.js
+#	modified:   Content/wp-content/themes/hueman/assets/front/js/libs/jquery-plugins/jqueryAnimateSvg.js
+#	modified:   Content/wp-content/themes/hueman/assets/front/js/libs/jquery-plugins/jqueryCenterImages.js
+#	modified:   Content/wp-content/themes/hueman/assets/front/js/libs/jquery-plugins/jqueryFittext.js
+#	modified:   Content/wp-content/themes/hueman/assets/front/js/libs/jquery-plugins/jqueryParallax.js
+#	modified:   Content/wp-content/themes/hueman/assets/front/js/libs/jquery-plugins/jqueryaddDropCap.js
+#	modified:   Content/wp-content/themes/hueman/assets/front/js/libs/jquery-plugins/jqueryextLinks.js
+#	modified:   Content/wp-content/themes/hueman/assets/front/js/libs/jquery-plugins/jqueryimgOriginalSizes.js
+#	modified:   Content/wp-content/themes/hueman/assets/front/js/libs/jquery-plugins/jqueryimgSmartLoad.js
+#	modified:   Content/wp-content/themes/hueman/assets/front/js/libs/jquery.fittext.js
+#	modified:   Content/wp-content/themes/hueman/assets/front/js/libs/mobile-detect.min.js
+#	modified:   Content/wp-content/themes/hueman/assets/front/js/scripts.js
+#	modified:   Content/wp-content/themes/hueman/assets/front/js/scripts.min.js
+#	modified:   Content/wp-content/themes/hueman/assets/front/webfonts/fa-brands-400.eot
+#	modified:   Content/wp-content/themes/hueman/assets/front/webfonts/fa-brands-400.svg
+#	modified:   Content/wp-content/themes/hueman/assets/front/webfonts/fa-brands-400.ttf
+#	modified:   Content/wp-content/themes/hueman/assets/front/webfonts/fa-brands-400.woff
+#	modified:   Content/wp-content/themes/hueman/assets/front/webfonts/fa-brands-400.woff2
+#	modified:   Content/wp-content/themes/hueman/assets/front/webfonts/fa-regular-400.eot
+#	modified:   Content/wp-content/themes/hueman/assets/front/webfonts/fa-regular-400.svg
+#	modified:   Content/wp-content/themes/hueman/assets/front/webfonts/fa-regular-400.ttf
+#	modified:   Content/wp-content/themes/hueman/assets/front/webfonts/fa-regular-400.woff
+#	modified:   Content/wp-content/themes/hueman/assets/front/webfonts/fa-regular-400.woff2
+#	modified:   Content/wp-content/themes/hueman/assets/front/webfonts/fa-solid-900.eot
+#	modified:   Content/wp-content/themes/hueman/assets/front/webfonts/fa-solid-900.svg
+#	modified:   Content/wp-content/themes/hueman/assets/front/webfonts/fa-solid-900.ttf
+#	modified:   Content/wp-content/themes/hueman/assets/front/webfonts/fa-solid-900.woff
+#	modified:   Content/wp-content/themes/hueman/assets/front/webfonts/fa-solid-900.woff2
+#	modified:   Content/wp-content/themes/hueman/content-featured.php
+#	modified:   Content/wp-content/themes/hueman/content-standard.php
+#	modified:   Content/wp-content/themes/hueman/content.php
+#	modified:   Content/wp-content/themes/hueman/functions.php
+#	modified:   Content/wp-content/themes/hueman/functions/admin/class-admin-page.php
+#	modified:   Content/wp-content/themes/hueman/functions/admin/class-admin-update-notification.php
+#	modified:   Content/wp-content/themes/hueman/functions/admin/class-tgm-plugin-activation.php
+#	modified:   Content/wp-content/themes/hueman/functions/class-utils-settings-map.php
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/css/customizer-czr-content-picker.css
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/css/customizer-czr-content-picker.min.css
+#	renamed:    Content/wp-content/themes/hueman/assets/czr/css/czr-control-base.css -> Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/css/czr-ccat-control-base.css
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/css/czr-ccat-control-base.min.css
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/css/czr-control-footer.css
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/css/czr-control-footer.min.css
+#	renamed:    Content/wp-content/themes/hueman/assets/czr/css/img/czr-spinner.gif -> Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/css/img/czr-spinner.gif
+#	renamed:    Content/wp-content/themes/hueman/assets/czr/css/img/fs-sprite.png -> Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/css/img/fs-sprite.png
+#	renamed:    Content/wp-content/themes/hueman/assets/czr/css/img/green.png -> Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/css/img/green.png
+#	renamed:    Content/wp-content/themes/hueman/assets/czr/css/img/green@2x.png -> Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/css/img/green@2x.png
+#	renamed:    Content/wp-content/themes/hueman/assets/czr/css/img/grey.png -> Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/css/img/grey.png
+#	renamed:    Content/wp-content/themes/hueman/assets/czr/css/img/grey@2x.png -> Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/css/img/grey@2x.png
+#	renamed:    Content/wp-content/themes/hueman/assets/czr/css/img/jquery.fs.selecter-arrow.png -> Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/css/img/jquery.fs.selecter-arrow.png
+#	renamed:    Content/wp-content/themes/hueman/assets/czr/css/img/jquery.fs.stepper-arrows.png -> Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/css/img/jquery.fs.stepper-arrows.png
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/css/lib/czrSelect2.css
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/css/lib/czrSelect2.min.css
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/css/fa-brands.css
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/css/fa-brands.min.css
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/css/fa-regular.css
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/css/fa-regular.min.css
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/css/fa-solid.css
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/css/fa-solid.min.css
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/css/fontawesome-all.css
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/css/fontawesome-all.min.css
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/css/fontawesome.css
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/css/fontawesome.min.css
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/webfonts/fa-brands-400.eot
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/webfonts/fa-brands-400.svg
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/webfonts/fa-brands-400.ttf
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/webfonts/fa-brands-400.woff
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/webfonts/fa-brands-400.woff2
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/webfonts/fa-regular-400.eot
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/webfonts/fa-regular-400.svg
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/webfonts/fa-regular-400.ttf
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/webfonts/fa-regular-400.woff
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/webfonts/fa-regular-400.woff2
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/webfonts/fa-solid-900.eot
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/webfonts/fa-solid-900.svg
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/webfonts/fa-solid-900.ttf
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/webfonts/fa-solid-900.woff
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/fonts/webfonts/fa-solid-900.woff2
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/img/slide-placeholder.png
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/js/_0_ccat_czr-base-fmk.js
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/js/_0_ccat_czr-base-fmk.min.js
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/js/_1_ccat_czr-theme-fmk.js
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/js/_1_ccat_czr-theme-fmk.min.js
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/js/czr-preview-base.js
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/assets/js/czr-preview-base.min.js
+#	new file:   Content/wp-content/themes/hueman/functions/czr-base-fmk/czr-base-fmk.php
+#	new file:   Content/wp-content/themes/hueman/functions/czr-modules/body-background/assets/js/_3_2_body_background_module.js
+#	new file:   Content/wp-content/themes/hueman/functions/czr-modules/body-background/body_bg_module.php
+#	new file:   Content/wp-content/themes/hueman/functions/czr-modules/social-links/assets/js/_2_7_socials_module.js
+#	new file:   Content/wp-content/themes/hueman/functions/czr-modules/social-links/social_links_module.php
+#	new file:   Content/wp-content/themes/hueman/functions/czr-modules/widget-zones/assets/js/_2_6_widget_areas_module.js
+#	new file:   Content/wp-content/themes/hueman/functions/czr-modules/widget-zones/assets/js/_dev/_2_6_0_widg_initialize.js
+#	new file:   Content/wp-content/themes/hueman/functions/czr-modules/widget-zones/assets/js/_dev/_2_6_1_widg_input_constructor.js
+#	new file:   Content/wp-content/themes/hueman/functions/czr-modules/widget-zones/assets/js/_dev/_2_6_2_widg_item_constructor.js
+#	new file:   Content/wp-content/themes/hueman/functions/czr-modules/widget-zones/assets/js/_dev/_2_6_3_widg_add_remove_widget_zones.js
+#	new file:   Content/wp-content/themes/hueman/functions/czr-modules/widget-zones/assets/js/_dev/_2_6_4_widg_panel_section_react.js
+#	new file:   Content/wp-content/themes/hueman/functions/czr-modules/widget-zones/assets/js/_dev/_2_6_5_widg_callbacks_for_sidebar_insights_values.js
+#	new file:   Content/wp-content/themes/hueman/functions/czr-modules/widget-zones/assets/js/_dev/_2_6_6_widg_overriden_module_methods.js
+#	new file:   Content/wp-content/themes/hueman/functions/czr-modules/widget-zones/assets/js/_dev/_2_6_8_widg_react_to_preview_widget_settings.js
+#	new file:   Content/wp-content/themes/hueman/functions/czr-modules/widget-zones/assets/js/_dev/_2_6_9_widg_extend_module_map.js
+#	new file:   Content/wp-content/themes/hueman/functions/czr-modules/widget-zones/widget_zones_module.php
+#	modified:   Content/wp-content/themes/hueman/functions/czr/class-czr-init.php
+#	modified:   Content/wp-content/themes/hueman/functions/czr/controls/class-base-control.php
+#	modified:   Content/wp-content/themes/hueman/functions/czr/controls/class-code-editor-control.php
+#	modified:   Content/wp-content/themes/hueman/functions/czr/controls/class-cropped-image-control.php
+#	modified:   Content/wp-content/themes/hueman/functions/czr/controls/class-layout-control.php
+#	modified:   Content/wp-content/themes/hueman/functions/czr/controls/class-modules-control.php
+#	modified:   Content/wp-content/themes/hueman/functions/czr/controls/class-multipicker-control.php
+#	modified:   Content/wp-content/themes/hueman/functions/czr/controls/class-upload-control.php
+#	modified:   Content/wp-content/themes/hueman/functions/czr/czr-resources.php
+#	deleted:    Content/wp-content/themes/hueman/functions/czr/modules/modules-data.php
+#	modified:   Content/wp-content/themes/hueman/functions/czr/sections/class-pro-section.php
+#	modified:   Content/wp-content/themes/hueman/functions/czr/sections/class-sections.php
+#	modified:   Content/wp-content/themes/hueman/functions/czr/settings/class-settings.php
+#	deleted:    Content/wp-content/themes/hueman/functions/czr/tmpl/inputs/img-uploader-tmpl.php
+#	deleted:    Content/wp-content/themes/hueman/functions/czr/tmpl/modules/all-modules-tmpl.php
+#	deleted:    Content/wp-content/themes/hueman/functions/czr/tmpl/modules/body_bg-module-tmpl.php
+#	deleted:    Content/wp-content/themes/hueman/functions/czr/tmpl/modules/social-module-tmpl.php
+#	deleted:    Content/wp-content/themes/hueman/functions/czr/tmpl/modules/widgets-areas-module-tmpl.php
+#	modified:   Content/wp-content/themes/hueman/functions/dynamic-styles.php
+#	modified:   Content/wp-content/themes/hueman/functions/init-admin.php
+#	modified:   Content/wp-content/themes/hueman/functions/init-after-setup-theme.php
+#	modified:   Content/wp-content/themes/hueman/functions/init-core.php
+#	modified:   Content/wp-content/themes/hueman/functions/init-front.php
+#	modified:   Content/wp-content/themes/hueman/functions/init-functions.php
+#	deleted:    Content/wp-content/themes/hueman/functions/init-prevdem.php
+#	modified:   Content/wp-content/themes/hueman/functions/init-wp-core-filters.php
+#	modified:   Content/wp-content/themes/hueman/functions/widgets/alx-posts.php
+#	modified:   Content/wp-content/themes/hueman/functions/widgets/alx-tabs.php
+#	modified:   Content/wp-content/themes/hueman/functions/widgets/alx-video.php
+#	modified:   Content/wp-content/themes/hueman/header.php
+#	modified:   Content/wp-content/themes/hueman/languages/en_CA.mo
+#	modified:   Content/wp-content/themes/hueman/languages/en_CA.po
+#	modified:   Content/wp-content/themes/hueman/languages/es_VE.mo
+#	modified:   Content/wp-content/themes/hueman/languages/es_VE.po
+#	modified:   Content/wp-content/themes/hueman/languages/hr_HR.mo
+#	modified:   Content/wp-content/themes/hueman/languages/hr_HR.po
+#	modified:   Content/wp-content/themes/hueman/languages/hueman.pot
+#	modified:   Content/wp-content/themes/hueman/languages/id_ID.mo
+#	modified:   Content/wp-content/themes/hueman/languages/id_ID.po
+#	modified:   Content/wp-content/themes/hueman/languages/nl_NL.mo
+#	modified:   Content/wp-content/themes/hueman/languages/nl_NL.po
+#	modified:   Content/wp-content/themes/hueman/languages/pt_BR.mo
+#	modified:   Content/wp-content/themes/hueman/languages/pt_BR.po
+#	modified:   Content/wp-content/themes/hueman/license.txt
+#	modified:   Content/wp-content/themes/hueman/option-tree/assets/fonts/option-tree-font.svg
+#	modified:   Content/wp-content/themes/hueman/option-tree/assets/js/ot-postformats.js
+#	modified:   Content/wp-content/themes/hueman/option-tree/assets/js/vendor/jquery/jquery-ui-timepicker.js
+#	modified:   Content/wp-content/themes/hueman/option-tree/composer.json
+#	modified:   Content/wp-content/themes/hueman/option-tree/includes/ot-functions-compat.php
+#	modified:   Content/wp-content/themes/hueman/option-tree/includes/ot-functions-deprecated.php
+#	modified:   Content/wp-content/themes/hueman/option-tree/includes/ot-functions-option-types.php
+#	modified:   Content/wp-content/themes/hueman/option-tree/includes/ot-functions.php
+#	modified:   Content/wp-content/themes/hueman/option-tree/includes/ot-meta-box-api.php
+#	modified:   Content/wp-content/themes/hueman/option-tree/license.txt
+#	modified:   Content/wp-content/themes/hueman/option-tree/readme.txt
+#	modified:   Content/wp-content/themes/hueman/parts/pagination.php
+#	modified:   Content/wp-content/themes/hueman/parts/post-list-author-date.php
+#	modified:   Content/wp-content/themes/hueman/parts/related-posts.php
+#	modified:   Content/wp-content/themes/hueman/parts/single-author-date.php
+#	modified:   Content/wp-content/themes/hueman/readme.md
+#	modified:   Content/wp-content/themes/hueman/readme.txt
+#	modified:   Content/wp-content/themes/hueman/searchform.php
+#	modified:   Content/wp-content/themes/hueman/style.css
+#	new file:   Content/wp-content/themes/hueman/tmpl/nimble-tmpl.php
+#	modified:   Content/wp-content/themes/proficient/css/colors/default.css
+#	modified:   Content/wp-content/themes/proficient/css/editor-style.css
+#	modified:   Content/wp-content/themes/proficient/css/media-query.css
+#	modified:   Content/wp-content/themes/proficient/css/style-customizer.css
+#	modified:   Content/wp-content/themes/proficient/css/woo.css
+#	modified:   Content/wp-content/themes/proficient/footer.php
+#	modified:   Content/wp-content/themes/proficient/functions.php
+#	modified:   Content/wp-content/themes/proficient/header.php
+#	new file:   Content/wp-content/themes/proficient/images/documentation.png
+#	new file:   Content/wp-content/themes/proficient/images/rating.png
+#	new file:   Content/wp-content/themes/proficient/images/support.png
+#	modified:   Content/wp-content/themes/proficient/inc/customize/proficient-premium.php
+#	modified:   Content/wp-content/themes/proficient/inc/sanitization.php
+#	modified:   Content/wp-content/themes/proficient/languages/proficient.pot
+#	new file:   Content/wp-content/themes/proficient/licence.txt
+#	modified:   Content/wp-content/themes/proficient/readme.txt
+#	modified:   Content/wp-content/themes/proficient/screenshot.jpg
+#	modified:   Content/wp-content/themes/proficient/sections/specia-breadcrumb.php
+#	modified:   Content/wp-content/themes/proficient/sections/specia-header.php
+#	modified:   Content/wp-content/themes/proficient/sections/specia-navigation.php
+#	modified:   Content/wp-content/themes/proficient/sections/specia-portfolio.php
+#	modified:   Content/wp-content/themes/proficient/sections/specia-service.php
+#	modified:   Content/wp-content/themes/proficient/sections/specia-slider.php
+#	modified:   Content/wp-content/themes/proficient/style.css
+#	modified:   Content/wp-content/themes/proficient/templates/blog-sidebar-left.php
+#	modified:   Content/wp-content/themes/proficient/templates/page-full-width.php
+#	modified:   Content/wp-content/themes/proficient/templates/template-homepage-one.php
+#	modified:   Content/wp-content/themes/specia/404.php
+#	modified:   Content/wp-content/themes/specia/archive.php
+#	modified:   Content/wp-content/themes/specia/comments.php
+#	modified:   Content/wp-content/themes/specia/css/animate.min.css
+#	modified:   Content/wp-content/themes/specia/css/bootstrap.css
+#	modified:   Content/wp-content/themes/specia/css/bootstrap.min.css
+#	modified:   Content/wp-content/themes/specia/css/colors/default.css
+#	modified:   Content/wp-content/themes/specia/css/editor-style.css
+#	modified:   Content/wp-content/themes/specia/css/form.css
+#	modified:   Content/wp-content/themes/specia/css/media-query.css
+#	modified:   Content/wp-content/themes/specia/css/menus.css
+#	modified:   Content/wp-content/themes/specia/css/owl.carousel.css
+#	modified:   Content/wp-content/themes/specia/css/owl.theme.default.min.css
+#	modified:   Content/wp-content/themes/specia/css/specia-theme-admin.css
+#	modified:   Content/wp-content/themes/specia/css/style-customizer.css
+#	modified:   Content/wp-content/themes/specia/css/text-rotator.css
+#	modified:   Content/wp-content/themes/specia/css/typography.css
+#	modified:   Content/wp-content/themes/specia/css/widget.css
+#	modified:   Content/wp-content/themes/specia/css/woo.css
+#	modified:   Content/wp-content/themes/specia/footer.php
+#	modified:   Content/wp-content/themes/specia/functions.php
+#	modified:   Content/wp-content/themes/specia/header.php
+#	deleted:    Content/wp-content/themes/specia/images/avira.png
+#	new file:   Content/wp-content/themes/specia/images/documentation.png
+#	modified:   Content/wp-content/themes/specia/images/features.jpg
+#	deleted:    Content/wp-content/themes/specia/images/proficient.png
+#	new file:   Content/wp-content/themes/specia/images/rating.png
+#	deleted:    Content/wp-content/themes/specia/images/specia.png
+#	new file:   Content/wp-content/themes/specia/images/support.png
+#	modified:   Content/wp-content/themes/specia/inc/breadcrumb/breadcrumb.php
+#	modified:   Content/wp-content/themes/specia/inc/custom-header.php
+#	modified:   Content/wp-content/themes/specia/inc/customize/specia-blog.php
+#	modified:   Content/wp-content/themes/specia/inc/customize/specia-call-action.php
+#	modified:   Content/wp-content/themes/specia/inc/customize/specia-customizer.php
+#	modified:   Content/wp-content/themes/specia/inc/customize/specia-features.php
+#	modified:   Content/wp-content/themes/specia/inc/customize/specia-footer-section.php
+#	modified:   Content/wp-content/themes/specia/inc/customize/specia-header-section.php
+#	modified:   Content/wp-content/themes/specia/inc/customize/specia-portfolio.php
+#	modified:   Content/wp-content/themes/specia/inc/customize/specia-premium.php
+#	modified:   Content/wp-content/themes/specia/inc/customize/specia-service.php
+#	modified:   Content/wp-content/themes/specia/inc/customize/specia-slider-section.php
+#	modified:   Content/wp-content/themes/specia/inc/enqueue.php
+#	modified:   Content/wp-content/themes/specia/inc/fonts/font-awesome/css/font-awesome.css
+#	modified:   Content/wp-content/themes/specia/inc/fonts/font-awesome/css/font-awesome.min.css
+#	modified:   Content/wp-content/themes/specia/inc/fonts/font-awesome/fonts/fontawesome-webfont.svg
+#	modified:   Content/wp-content/themes/specia/inc/jetpack.php
+#	modified:   Content/wp-content/themes/specia/inc/preview-demo/init-prevdem.php
+#	modified:   Content/wp-content/themes/specia/inc/preview-demo/prevdem-functions.php
+#	modified:   Content/wp-content/themes/specia/inc/sanitization.php
+#	modified:   Content/wp-content/themes/specia/inc/sidebar/sidebar.php
+#	modified:   Content/wp-content/themes/specia/inc/specia-nav-walker.php
+#	modified:   Content/wp-content/themes/specia/inc/template-tags.php
+#	deleted:    Content/wp-content/themes/specia/inc/theme-info.php
+#	modified:   Content/wp-content/themes/specia/inc/upsale/class-customize.php
+#	modified:   Content/wp-content/themes/specia/inc/upsale/customize-controls.css
+#	modified:   Content/wp-content/themes/specia/inc/upsale/customize-controls.js
+#	modified:   Content/wp-content/themes/specia/inc/upsale/section-pro.php
+#	modified:   Content/wp-content/themes/specia/inc/widget/widget_feature.php
+#	modified:   Content/wp-content/themes/specia/index.php
+#	modified:   Content/wp-content/themes/specia/js/bootstrap.min.js
+#	modified:   Content/wp-content/themes/specia/js/component.js
+#	modified:   Content/wp-content/themes/specia/js/custom.js
+#	modified:   Content/wp-content/themes/specia/js/dropdown.js
+#	modified:   Content/wp-content/themes/specia/js/jquery.sticky.js
+#	modified:   Content/wp-content/themes/specia/js/modernizr.custom.js
+#	modified:   Content/wp-content/themes/specia/js/owl.carousel.min.js
+#	modified:   Content/wp-content/themes/specia/js/skip-link-focus-fix.js
+#	modified:   Content/wp-content/themes/specia/js/specia-theme-admin.js
+#	modified:   Content/wp-content/themes/specia/js/wow.js
+#	modified:   Content/wp-content/themes/specia/js/wow.min.js
+#	modified:   Content/wp-content/themes/specia/languages/specia.pot
+#	new file:   Content/wp-content/themes/specia/licence.txt
+#	modified:   Content/wp-content/themes/specia/page.php
+#	modified:   Content/wp-content/themes/specia/readme.txt
+#	modified:   Content/wp-content/themes/specia/screenshot.jpg
+#	modified:   Content/wp-content/themes/specia/search.php
+#	modified:   Content/wp-content/themes/specia/sections/specia-blog.php
+#	modified:   Content/wp-content/themes/specia/sections/specia-breadcrumb.php
+#	modified:   Content/wp-content/themes/specia/sections/specia-call-action.php
+#	modified:   Content/wp-content/themes/specia/sections/specia-features.php
+#	modified:   Content/wp-content/themes/specia/sections/specia-header.php
+#	modified:   Content/wp-content/themes/specia/sections/specia-navigation.php
+#	modified:   Content/wp-content/themes/specia/sections/specia-portfolio.php
+#	modified:   Content/wp-content/themes/specia/sections/specia-service.php
+#	modified:   Content/wp-content/themes/specia/sections/specia-slider.php
+#	modified:   Content/wp-content/themes/specia/sidebar-woocommerce.php
+#	modified:   Content/wp-content/themes/specia/sidebar.php
+#	modified:   Content/wp-content/themes/specia/single.php
+#	modified:   Content/wp-content/themes/specia/style.css
+#	modified:   Content/wp-content/themes/specia/template-parts/content-none.php
+#	modified:   Content/wp-content/themes/specia/template-parts/content-page.php
+#	modified:   Content/wp-content/themes/specia/template-parts/content-search.php
+#	modified:   Content/wp-content/themes/specia/template-parts/content.php
+#	modified:   Content/wp-content/themes/specia/templates/blog-column.php
+#	modified:   Content/wp-content/themes/specia/templates/blog-sidebar-left.php
+#	modified:   Content/wp-content/themes/specia/templates/page-full-width.php
+#	modified:   Content/wp-content/themes/specia/templates/template-homepage-one.php
+#	modified:   Content/wp-content/themes/specia/woocommerce.php
+#	new file:   Content/wp-content/themes/twentyfifteen/css/blocks.css
+#	new file:   Content/wp-content/themes/twentyfifteen/css/editor-blocks.css
+#	modified:   Content/wp-content/themes/twentyfifteen/functions.php
+#	modified:   Content/wp-content/themes/twentyfifteen/readme.txt
+#	modified:   Content/wp-content/themes/twentyfifteen/style.css
+#	modified:   Content/wp-content/themes/twentyseventeen/README.txt
+#	new file:   Content/wp-content/themes/twentyseventeen/assets/css/blocks.css
+#	new file:   Content/wp-content/themes/twentyseventeen/assets/css/editor-blocks.css
+#	modified:   Content/wp-content/themes/twentyseventeen/assets/css/editor-style.css
+#	modified:   Content/wp-content/themes/twentyseventeen/functions.php
+#	modified:   Content/wp-content/themes/twentyseventeen/style.css
+#	new file:   Content/wp-content/themes/twentysixteen/css/blocks.css
+#	new file:   Content/wp-content/themes/twentysixteen/css/editor-blocks.css
+#	modified:   Content/wp-content/themes/twentysixteen/css/editor-style.css
+#	modified:   Content/wp-content/themes/twentysixteen/functions.php
+#	modified:   Content/wp-content/themes/twentysixteen/js/functions.js
+#	modified:   Content/wp-content/themes/twentysixteen/readme.txt
+#	modified:   Content/wp-content/themes/twentysixteen/style.css
+#
+# Changes not staged for commit:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#   (commit or discard the untracked or modified content in submodules)
+#
+#	modified:   Setup (untracked content)
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	git_changes_001.txt

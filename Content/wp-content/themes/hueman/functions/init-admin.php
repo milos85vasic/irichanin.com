@@ -34,7 +34,6 @@ if ( is_admin() && ! hu_is_customizing() ) {
 }
 
 add_action( 'admin_init' , 'hu_admin_style' );
-add_action( 'wp_before_admin_bar_render', 'hu_add_help_button' );
 
 function hu_admin_style() {
   wp_enqueue_style(
@@ -46,29 +45,14 @@ function hu_admin_style() {
 }
 
 
-function hu_add_help_button() {
-   if ( ! current_user_can( 'edit_theme_options' ) || ! hu_is_checked('help-button') || ! hu_is_checked('about-page') )
-    return;
-  global $wp_admin_bar;
-  $wp_admin_bar->add_menu( array(
-     'parent' => 'top-secondary', // Off on the right side
-     'id' => 'tc-hueman-help' ,
-     'title' =>  __( '' , 'hueman' ),
-     'href' => admin_url( 'themes.php?page=welcome.php&help=true' ),
-     'meta'   => array(
-        'title'  => __( 'Need help with the Hueman theme ? Click here!', 'hueman' ),
-      ),
-   ));
-}
-
-
 /* ------------------------------------------------------------------------- *
  *  Loads Required Plugin Class and Setup
 /* ------------------------------------------------------------------------- */
-if ( ! HU_IS_PRO_ADDONS && ! HU_IS_PRO && is_admin() && ! hu_is_customizing() ) {
+if ( ( ! defined( 'HU_IS_PRO' ) || ! HU_IS_PRO ) && is_admin() && ! hu_is_customizing() && ! hu_is_plugin_active('nimble-builder/nimble-builder.php') ) {
     /**
-    * Include the TGM_Plugin_Activation class.
+    * Include the HU_Plugin_Activation class.
     */
+   //prefixed HU_Plugin_Activation because of the possible issue : https://github.com/presscustomizr/customizr/issues/1603
     load_template( get_template_directory() . '/functions/admin/class-tgm-plugin-activation.php' );
     add_action( 'tgmpa_register', 'hu_register_required_plugins' );
 }
@@ -84,7 +68,7 @@ if ( ! HU_IS_PRO_ADDONS && ! HU_IS_PRO && is_admin() && ! hu_is_customizing() ) 
  * arrays.
  *
  * This function is hooked into tgmpa_init, which is fired within the
- * TGM_Plugin_Activation class constructor.
+ * HU_Plugin_Activation class constructor.
  */
 function hu_register_required_plugins() {
 
@@ -108,8 +92,8 @@ function hu_register_required_plugins() {
 
     // This is an example of how to include a plugin from the WordPress Plugin Repository
     array(
-      'name'    => 'Hueman Addons',
-      'slug'    => 'hueman-addons',
+      'name'    => 'Nimble Builder',
+      'slug'    => 'nimble-builder',
       'required'  => false,
     ),
 
@@ -138,16 +122,16 @@ function hu_register_required_plugins() {
           'menu_title'                            => __( 'Install Plugins', 'hueman' ),
           'installing'                            => __( 'Installing Plugin: %s', 'hueman' ), // %1$s = plugin name
           'oops'                                  => __( 'Something went wrong with the plugin API.', 'hueman' ),
-          'notice_can_install_required'           => _n_noop( 'The Hueman theme requires the following plugin: %1$s.', 'This theme requires the following plugins: %1$s.', 'hueman' ), // %1$s = plugin name(s)
-          'notice_can_install_recommended'      => _n_noop( 'The Hueman theme recommends the Hueman Addons: %1$s.', 'This theme recommends the following plugins: %1$s.', 'hueman' ), // %1$s = plugin name(s)
+          'notice_can_install_required'           => _n_noop( 'The Hueman theme requires the following plugin: %1$s.', 'This theme requires the following plugins : %1$s.', 'hueman' ), // %1$s = plugin name(s)
+          'notice_can_install_recommended'      => _n_noop( 'The Hueman theme recommends the Nimble drag-and-drop section builder : %1$s.', 'This theme recommends the following plugins : %1$s.', 'hueman' ), // %1$s = plugin name(s)
           'notice_cannot_install'           => _n_noop( 'Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed.', 'Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed.', 'hueman' ), // %1$s = plugin name(s)
-          'notice_can_activate_required'          => _n_noop( 'The Hueman Addons required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.', 'hueman' ), // %1$s = plugin name(s)
-          'notice_can_activate_recommended'     => _n_noop( 'The Hueman Addons plugin is currently inactive: %1$s.', 'The following recommended plugins are currently inactive: %1$s.', 'hueman' ), // %1$s = plugin name(s)
+          'notice_can_activate_required'          => _n_noop( 'The Nimble Builder required plugin is currently inactive: %1$s.', 'The following required plugins are currently inactive: %1$s.', 'hueman' ), // %1$s = plugin name(s)
+          'notice_can_activate_recommended'     => _n_noop( 'The Nimble Builder plugin, recommended for the Hueman theme, is installed but currently inactive : %1$s.', 'The following recommended plugins are currently inactive: %1$s.', 'hueman' ), // %1$s = plugin name(s)
           'notice_cannot_activate'          => _n_noop( 'Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated.', 'Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated.', 'hueman' ), // %1$s = plugin name(s)
-          'notice_ask_to_update'            => _n_noop( 'The Hueman Addons plugin needs to be updated to its latest version to ensure maximum compatibility with the Hueman theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.', 'hueman' ), // %1$s = plugin name(s)
+          'notice_ask_to_update'            => _n_noop( 'The Nimble Builder plugin needs to be updated to its latest version to ensure maximum compatibility with the Hueman theme: %1$s.', 'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.', 'hueman' ), // %1$s = plugin name(s)
           'notice_cannot_update'            => _n_noop( 'Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated.', 'Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated.', 'hueman' ), // %1$s = plugin name(s)
           'install_link'                  => _n_noop( 'Begin installing plugin', 'Begin installing plugins', 'hueman' ),
-          'activate_link'                 => _n_noop( 'Activate Hueman Addons', 'Activate installed plugins', 'hueman' ),
+          'activate_link'                 => _n_noop( 'Activate Nimble Builder', 'Activate installed plugins', 'hueman' ),
           'return'                                => __( 'Return to Required Plugins Installer', 'hueman' ),
           'plugin_activated'                      => __( 'Plugin activated successfully.', 'hueman' ),
           'complete'                  => __( 'All plugins installed and activated successfully. %s', 'hueman' ), // %1$s = dashboard link
@@ -450,24 +434,41 @@ function hu_custom_meta_boxes() {
 
 
 if ( is_admin() && ! hu_is_customizing() ) {
-    add_action( 'after_setup_theme' , 'hu_add_editor_style' );
+    add_action( 'init' , 'hu_add_editor_style' );
     //@return void()
-    //hook : after_setup_theme
+    //hook : init
+    // It used to be after_setup_theme, but, don't know from whic WP version, is_rtl() always returns false at that stage.
     function hu_add_editor_style() {
         //we need only the relative path, otherwise get_editor_stylesheets() will treat this as external CSS
         //which means:
         //a) child-themes cannot override it
         //b) no check on the file existence will be made (producing the rtl error, for instance : https://github.com/presscustomizr/customizr/issues/926)
         $_stylesheets = array(
+            'assets/admin/css/block-editor-style.css', //block editor style
             'assets/admin/css/editor-style.css',
             //hu_get_front_style_url(),
             //get_stylesheet_uri()
         );
+
+        // Workaround to avoid loading the classic edito style in the block editor
+        // this filter is documented in wp-admin/edit-form-blocks.php
+        // basically there's no real action hook we can use to modify the global editor_styles array
+        // before gutenberg will use if. Also there seems to be no way to determine which editor we're about to use at this stage (after_setup_theme).
+        // All this could be avoided if Gutenberg would use the filterable get_editor_stylesheets() instead of using
+        add_filter( 'block_editor_preload_paths', 'hu_remove_classic_editor_style', -100 );
+
         $gfont_src = hu_maybe_add_gfonts_to_editor();
         if ( apply_filters( 'hu_add_user_fonts_to_editor' , false != $gfont_src ) )
           $_stylesheets = array_merge( $_stylesheets , $gfont_src );
 
         add_editor_style( $_stylesheets );
+    }
+
+
+    function hu_remove_classic_editor_style( $paths ) {
+        global $editor_styles;
+        $editor_styles = array_diff( $editor_styles, array( 'assets/admin/css/editor-style.css' ) );
+        return $paths;
     }
 
 

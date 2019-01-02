@@ -26,7 +26,7 @@ function specia_portfolio_setting( $wp_customize ) {
 	$wp_customize->add_setting( 
 		'hide_show_portfolio' , 
 			array(
-			'default' => __( 'on', 'specia' ),
+			'default' => 'on',
 			'capability'     => 'edit_theme_options',
 			'sanitize_callback' => 'specia_sanitize_select',
 		) 
@@ -69,7 +69,7 @@ function specia_portfolio_setting( $wp_customize ) {
 	$wp_customize->add_control( 
 		'portfolio_title',
 		array(
-		    'label'   => __('Section Title','specia'),
+		    'label'   => __('Title','specia'),
 		    'section' => 'portfolio_header',
 			'settings' => 'portfolio_title',
 			'type'           => 'text',
@@ -89,7 +89,7 @@ function specia_portfolio_setting( $wp_customize ) {
 	$wp_customize->add_control( 
 		'portfolio_description',
 		array(
-		    'label'   => __('Section Description','specia'),
+		    'label'   => __('Description','specia'),
 		    'section' => 'portfolio_header',
 			'settings' => 'portfolio_description',
 			'type'           => 'textarea',
@@ -121,7 +121,7 @@ function specia_portfolio_setting( $wp_customize ) {
 		array(
 			'type'	=> 'dropdown-pages',
 			'allow_addition' => true,
-			'label'	=> __('Select Page for Portfolio One:','specia'),
+			'label'	=> __('Select Page','specia'),
 			'section'	=> 'portfolio_content',
 			'settings'   	 => 'portfolio-page1',
 		)
@@ -142,7 +142,7 @@ function specia_portfolio_setting( $wp_customize ) {
 		array(
 			'type'	=> 'dropdown-pages',
 			'allow_addition' => true,
-			'label'	=> __('Select Page for Portfolio Two:','specia'),
+			'label'	=> __('Select Page','specia'),
 			'section'	=> 'portfolio_content',
 			'settings'   	 => 'portfolio-page2',
 		)
@@ -163,7 +163,7 @@ function specia_portfolio_setting( $wp_customize ) {
 		array(
 			'type'	=> 'dropdown-pages',
 			'allow_addition' => true,
-			'label'	=> __('Select Page for Portfolio Three:','specia'),
+			'label'	=> __('Select Page','specia'),
 			'section'	=> 'portfolio_content',
 			'settings'  => 'portfolio-page3',
 		)

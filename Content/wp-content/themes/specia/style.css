@@ -1,14 +1,14 @@
 /*
 Theme Name: Specia
-Theme URI: https://speciatheme.com/specia-free-wordpress-theme/
+Theme URI: https://speciatheme.com/specia-free/
 Author: Specia
 Author URI: https://speciatheme.com/
-Description: Specia is a Multipurpose WordPress theme with lots of powerful features, instantly giving a professional look to your online presence. Well suited for any type of websites - business, portfolio, food & restaurant, gym & fitness, spa salon, medical practitioner & hospitals, landing pages, product pages, corporate business, digital agency, product showcase, financial advisor, accountant, law firm, wealth advisor, photography, personal, and any eCommerce stores. Specia is made on its cross-browser compatibility. It consists of: Slider, Call to Action, Service, Features, Latest Posts, Sticky Header, Social Icons, Payment Icons and Four Column blocks in Footer. This theme has several customization options that are available WordPress Theme Customizer. Specia is WPML, Polylang compatible and it´s translation ready. Specia works fine with WordPress popular plugins like WooCommerce, Contact Form 7, Ninja Form, Jetpack, WP-featherlight, Give - WordPress Donation Plugin, Open Table Widget, Page Links To, Gravity Forms, Yoast SEO, and many others. Get more features in the premium version. It has multiple useful sections on the homepage - Slider, Call to Action, Services, Features, Filterable Portfolio, Plans & Pricing, Testimonials, Teams, and Clients. Following page templates ready for publishing like: about, service, portfolio, portfolio filter, pricing, blog full width, blog left sidebar, blog right sidebar, blog masonry, and contact. What are you waiting for? Let's start downloading this amazing and beautiful Free Multipurpose WordPress Theme right away. View the demo of Specia Premium http://demo.speciatheme.com/pro/?theme=specia
-Version: 2.2.25
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Description: Specia is a trending WordPress theme with lots of powerful features, instantly giving a professional look to your online presence. It fits for business, portfolio, food & restaurant, gym & fitness, spa salon, medical practitioner & hospitals, landing pages, product pages, corporate business, digital agency, product showcase, financial advisor, accountant, law firm, wealth advisor, photography, personal, and any eCommerce stores. Specia premium version provides you more than 10 different designs and supports popular plugins WPML, Polylang, WooCommerce, Contact Form 7, Revolution Slider, Elementor, Visual Composer, WP-Forms, Ninja Forms, Jetpack, WP-Featherlight, Give (WordPress Donation Plugin), Gravity Forms, Yoast SEO and many more. View the demo of Specia Premium https://demo.speciatheme.com/pro/?theme=specia
+Version: 2.2.75
+License: GPLv3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: specia
-Tags: one-column, two-columns, left-sidebar, right-sidebar, flexible-header, custom-background, custom-colors, custom-header, custom-menu,  custom-logo, featured-image-header, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce, education, entertainment, food-and-drink, photography, portfolio, editor-style
+Tags: one-column, two-columns, left-sidebar, right-sidebar, flexible-header, custom-background, custom-colors, custom-header, custom-menu,  custom-logo, featured-image-header, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce, portfolio, editor-style, grid-layout
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -359,12 +359,11 @@ body img {
 /*---------------------------------------
     Social Icons    
 -----------------------------------------*/
-
 .header-top-info-1 .social {
     padding: 0px 0;
     margin: 0;
     line-height: 20px;
-    padding-top: 4px;
+    padding: 5px 0 4px;
 }
 .header-top-info-1 .social li {
     font-family: 'Awesomefont';
@@ -380,6 +379,9 @@ body img {
 .social li a {
     display: table;
     position: relative;
+    -webkit-transition: .3s all;
+    transition: .3s all;
+	 overflow: hidden;
 }
 .header-top-info-1 .social li a i {
     background: #747474;
@@ -397,12 +399,43 @@ body img {
             transition: all 200ms ease-out;
 }
 .header-top-info-1 .social li a i:hover {
-    -webkit-transition: all 200ms ease-out;
-       -moz-transition: all 200ms ease-out;
-         -o-transition: all 200ms ease-out;
-            transition: all 200ms ease-out;
+	color: #ffffff;
+    -webkit-animation: socialFxD .3s forwards;
+            animation: socialFxD .3s forwards
+}
+@-webkit-keyframes socialFxD {
+    49% {
+        -webkit-transform: translateX(100%);
+                transform: translateX(100%)
+    }
+    50% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%)
+    }
+    51% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+    }
 }
 
+@keyframes socialFxD {
+    49% {
+        -webkit-transform: translateX(100%);
+                transform: translateX(100%)
+    }
+    50% {
+        opacity: 0;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%)
+    }
+    51% {
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+    }
+}
 
 /*---------------------------------------
    Header Contact Details 
@@ -541,7 +574,7 @@ body img {
     cursor: pointer;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
-    border-radius: 3px
+    border-radius: 3px;
     -webkit-transition: all 200ms ease-out;
        -moz-transition: all 200ms ease-out;
          -o-transition: all 200ms ease-out;
@@ -550,7 +583,7 @@ body img {
 
 .owl-theme .owl-controls .owl-nav [class*=owl-]:hover {
     color: #fff;
-    text-decoration: none
+    text-decoration: none;
     -webkit-transition: all 200ms ease-out;
        -moz-transition: all 200ms ease-out;
          -o-transition: all 200ms ease-out;
@@ -697,7 +730,7 @@ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 	position: relative;
 	z-index: 1;
 	color: #fff;
-	background: #e84c3d;
+	/* background: #e84c3d; */
 }
 
 .specia-icon:after {

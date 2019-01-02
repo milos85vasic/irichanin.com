@@ -9,7 +9,7 @@ function specia_call_action_setting( $wp_customize ) {
 		array(
 			'priority'      => 128,
 			'capability'    => 'edit_theme_options',
-			'title'			=> __('Call Action Section', 'specia'),
+			'title'			=> __('Call To Action Section', 'specia'),
 		) 
 	);
 	
@@ -26,7 +26,7 @@ function specia_call_action_setting( $wp_customize ) {
 	$wp_customize->add_setting( 
 		'hide_show_call_actions' , 
 			array(
-			'default' => __( 'on', 'specia' ),
+			'default' => 'on',
 			'capability'     => 'edit_theme_options',
 			'sanitize_callback' => 'specia_sanitize_select',
 		) 
@@ -73,7 +73,7 @@ function specia_call_action_setting( $wp_customize ) {
 		array(
 			'type'	=> 'dropdown-pages',
 			'allow_addition' => true,
-			'label'	=> __('Select Page for Call Action:','specia'),
+			'label'	=> __('Select Page','specia'),
 			'section'	=> 'call_action_content',
 			'settings'  => 'call_action_page',
 		)

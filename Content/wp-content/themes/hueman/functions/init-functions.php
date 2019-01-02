@@ -121,7 +121,22 @@ function hu_doing_customizer_ajax() {
 */
 function hu_is_customizing() {
     //checks if is customizing : two contexts, admin and front (preview frame)
-    return hu_is_customize_left_panel() || hu_is_customize_preview_frame() || hu_doing_customizer_ajax();
+    global $pagenow;
+    // the check on $pagenow does NOT work on multisite install @see https://github.com/presscustomizr/nimble-builder/issues/240
+    // That's why we also check with other global vars
+    // @see wp-includes/theme.php, _wp_customize_include()
+    $is_customize_php_page = ( is_admin() && 'customize.php' == basename( $_SERVER['PHP_SELF'] ) );
+    $is_customize_admin_page_one = (
+      $is_customize_php_page
+      ||
+      ( isset( $_REQUEST['wp_customize'] ) && 'on' == $_REQUEST['wp_customize'] )
+      ||
+      ( ! empty( $_GET['customize_changeset_uuid'] ) || ! empty( $_POST['customize_changeset_uuid'] ) )
+    );
+    $is_customize_admin_page_two = is_admin() && isset( $pagenow ) && 'customize.php' == $pagenow;
+
+    //checks if is customizing : two contexts, admin and front (preview frame)
+    return $is_customize_admin_page_one || $is_customize_admin_page_two || hu_is_customize_preview_frame() || hu_doing_customizer_ajax();
 }
 
 //@return boolean
@@ -488,9 +503,11 @@ function hu_get_img_src_from_option( $option_name ) {
 *
 * @echo html
 */
-function hu_the_post_thumbnail( $size = 'post-thumbnail', $attr = '', $placeholder = true ) {
+function hu_the_post_thumbnail( $size = 'post-thumbnail', $attr = '', $placeholder = true, $placeholder_size = null ) {
     $html = '';
     $post = get_post();
+    $placeholder_size = is_null( $placeholder_size ) ? $size : $placeholder_size;
+
     $is_attachment = is_object( $post ) && isset( $post -> post_type ) && 'attachment' == $post -> post_type;
     if ( ! $post || ( ! $is_attachment && ! has_post_thumbnail() ) ) {
         if ( hu_is_checked('placeholder') && (bool)$placeholder ) {
@@ -539,4 +556,22 @@ function hu_is_comment_icon_displayed_on_grid_item_thumbnails() {
       $are_comments_contextually_enabled = true;
     }
     return comments_open() && hu_is_checked( 'comment-count') && $are_comments_contextually_enabled;
+}
+
+// @return string
+function hu_is_full_nimble_tmpl() {
+  $bool = false;
+  if ( function_exists('Nimble\sek_get_locale_template') ) {
+    $tmpl_name = \Nimble\sek_get_locale_template();
+    $tmpl_name = ( !empty( $tmpl_name ) && is_string( $tmpl_name ) ) ? basename( $tmpl_name ) : '';
+    // kept for retro-compat.
+    // since Nimble Builder v1.4.0, the 'nimble_full_tmpl_ghf.php' has been deprecated
+    $bool = 'nimble_full_tmpl_ghf.php' === $tmpl_name;
+
+    // "is full Nimble template" when header, footer and content use Nimble templates.
+    if ( function_exists('Nimble\sek_page_uses_nimble_header_footer') ) {
+        $bool = ( 'nimble_template.php' === $tmpl_name || 'nimble-tmpl.php' === $tmpl_name ) && Nimble\sek_page_uses_nimble_header_footer();
+    }
+  }
+  return $bool;
 }

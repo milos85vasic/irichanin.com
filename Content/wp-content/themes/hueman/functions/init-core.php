@@ -43,6 +43,8 @@ if( ! defined( 'HU_THEME_TEXT_DOM' ) )       define( 'HU_THEME_TEXT_DOM' , HU_IS
 //HU_WEBSITE is the home website of Hueman
 if( ! defined( 'HU_WEBSITE' ) )         define( 'HU_WEBSITE' , $hu_base_data['authoruri'] );
 
+//define useful constants
+if( ! defined( 'HU_DYN_WIDGETS_SECTION' ) )      define( 'HU_DYN_WIDGETS_SECTION' , 'dyn_widgets_section' );
 
 
 /* ------------------------------------------------------------------------- *
@@ -50,13 +52,6 @@ if( ! defined( 'HU_WEBSITE' ) )         define( 'HU_WEBSITE' , $hu_base_data['au
 /* ------------------------------------------------------------------------- */
 load_template( HU_BASE . 'functions/init-functions.php' );
 
-
-/* ------------------------------------------------------------------------- *
- *  PrevDem
-/* ------------------------------------------------------------------------- */
-if ( hu_isprevdem() ) {
-  load_template( get_template_directory() . '/functions/init-prevdem.php' );
-}
 
 /* ------------------------------------------------------------------------- *
  *  OptionTree framework integration: Use in theme mode
@@ -170,6 +165,66 @@ if ( hu_is_customizing() ) {
   new HU_customize();
 }
 
+
+/* ------------------------------------------------------------------------- *
+ *  Nimble Integration
+/* ------------------------------------------------------------------------- */
+// Replaces the default Nimble theme template by a custom one for Hueman
+add_filter( 'nimble_get_locale_template_path', 'hu_set_specific_nimble_template', 10, 2 );
+function hu_set_specific_nimble_template( $path, $file_name ) {
+    if ( 'nimble_template' === $file_name ) {
+        $path = HU_BASE .'tmpl/nimble-tmpl.php';
+    }
+    return $path;
+}
+
+add_action( '__after_header', 'hu_render_nimble_sections_after_header', PHP_INT_MAX );
+function hu_render_nimble_sections_after_header() {
+    if ( function_exists( 'Nimble\sek_page_uses_nimble_header_footer' ) && \Nimble\sek_page_uses_nimble_header_footer() )
+      return;
+
+    hu_do_render_nimble_sections();
+    // this occurs only when user pick the nimble template for a given context
+    // 'nimble-tmpl.php' is the Hueman theme template overriding the Nimble one. Located in HU_BASE .'tmpl/nimble-tmpl.php'
+}
+
+function hu_do_render_nimble_sections() {
+    if ( function_exists( 'Nimble\sek_get_locale_template' ) && 'nimble-tmpl.php' === basename( \Nimble\sek_get_locale_template() ) ) {
+        if ( function_exists('Nimble\Nimble_Manager') && function_exists('Nimble\sek_get_local_content_locations') ) {
+            if ( method_exists( \Nimble\Nimble_Manager(), 'render_nimble_locations') ) {
+                \Nimble\Nimble_Manager()->render_nimble_locations(
+                    array_keys( \Nimble\sek_get_local_content_locations() ),//array( 'loop_start', 'before_content', 'after_content', 'loop_end'),
+                    array(
+                        // the location rendered even if empty.
+                        // This way, the user starts customizing with only one location for the content instead of four
+                        // But if the other locations were already customized, they will be printed.
+                        'fallback_location' => 'loop_start'
+                    )
+                );
+            }
+        }
+    }
+}
+
+add_filter( 'body_class', 'hu_body_class_for_nimble_template' );
+function hu_body_class_for_nimble_template( $classes ) {
+    if ( function_exists( '\Nimble\sek_get_locale_template' ) && 'nimble-tmpl.php' === basename( \Nimble\sek_get_locale_template() ) ) {
+        $classes[] = 'nimble-template-enabled';
+    }
+    return $classes;
+}
+
+/* ------------------------------------------------------------------------- *
+ *  Register locations for Nimble Builder when posts are featured on top of the blog
+ *  @see if ( hu_is_checked('featured-posts-enabled') ) { get_template_part('parts/featured'); }
+/* ------------------------------------------------------------------------- */
+add_action( 'init', 'czr_fn_maybe_register_nimble_location');
+function czr_fn_maybe_register_nimble_location() {
+    if ( function_exists('nimble_register_location') ) {
+        nimble_register_location('__before_featured');
+        nimble_register_location('__after_featured');
+    }
+}
 
 
 /* ------------------------------------------------------------------------- *

@@ -5,7 +5,7 @@
 
 			<!-- Mobile Display -->
 			<div class="navbar-header">
-				<a class="navbar-brand" href="<?php echo home_url( '/' ); ?>" class="brand">
+				<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" class="brand">
 					<?php
 						if(has_custom_logo())
 						{	
@@ -26,7 +26,7 @@
 				
 				
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only"><?php _e('Toggle navigation','specia');?></span>
+					<span class="sr-only"><?php echo 'Toggle navigation'; ?></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>

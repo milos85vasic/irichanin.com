@@ -66,34 +66,33 @@ jQuery(document).ready(function() {
 /*
 Top Scroller Function
 */
-  jQuery(".top-scroll").hide(); 
-  jQuery(function () {
-    jQuery(window).scroll(function () {
-      if (jQuery(this).scrollTop() > 500) {
-        jQuery('.top-scroll').fadeIn();
-      } else {
-        jQuery('.top-scroll').fadeOut();
-      }
-    });   
-    jQuery('a.top-scroll').click(function () {
-      jQuery('body,html').animate({
-        scrollTop: 0
-      }, 800);
-      return false;
-    });
-  });
+jQuery(".top-scroll").hide(); 
+jQuery(function () {
+jQuery(window).scroll(function () {
+  if (jQuery(this).scrollTop() > 500) {
+	jQuery('.top-scroll').fadeIn();
+  } else {
+	jQuery('.top-scroll').fadeOut();
+  }
+});   
+jQuery('a.top-scroll').click(function () {
+  jQuery('body,html').animate({
+	scrollTop: 0
+  }, 800);
+  return false;
+});
+});
   
 /*
 //wow-animated
 */
-  jQuery(document).ready(function() {
-    wow = new WOW({
-      boxClass:     'wow',      // animated element css class (default is wow)
-      animateClass: 'animated', // animation css class (default is animated)
-      offset:       100,        // distance to the element when triggering the animation (default is 0)
-      mobile: true,             // trigger animations on mobile devices (true is default)
-      live: true                // consatantly check for new WOW elements on the page (true is default)
-    })
-    wow.init();
-  });
-
+jQuery(document).ready(function() {
+wow = new WOW({
+  boxClass:     'wow',      // animated element css class (default is wow)
+  animateClass: 'animated', // animation css class (default is animated)
+  offset:       100,        // distance to the element when triggering the animation (default is 0)
+  mobile: true,             // trigger animations on mobile devices (true is default)
+  live: true                // consatantly check for new WOW elements on the page (true is default)
+})
+wow.init();
+});

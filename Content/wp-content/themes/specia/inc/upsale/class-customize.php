@@ -75,7 +75,7 @@ final class specia_Customize {
 				array(
 					'title'    => esc_html__( 'Premium Themes', 'specia' ),
 					'pro_text' => esc_html__( 'Buy Now', 'specia' ),
-					'pro_url'  => 'themes.php?page=specia-theme-info'
+					'pro_url'  => 'themes.php?page=specia-store'
 				)
 			)
 		);

@@ -3,7 +3,7 @@ function specia_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Sidebar Widget Area', 'specia' ),
 		'id' => 'sidebar-primary',
-		'description' => __( 'The Primary Widget Area', 'specia' ),
+		'description' => __( 'Sidebar Widget Area', 'specia' ),
 		'before_widget' => '<aside id="%1$s" class="widget">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
@@ -13,7 +13,7 @@ function specia_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Footer Widget Area', 'specia' ),
 		'id' => 'footer-widget-area',
-		'description' => __( 'The Footer Widget Area', 'specia' ),
+		'description' => __( 'Footer Widget Area', 'specia' ),
 		'before_widget' => '<div class="col-md-3 col-sm-6"><aside id="%1$s" class="widget">',
 		'after_widget' => '</aside></div>',
 		'before_title' => '<h3 class="widget-title">',
@@ -23,7 +23,7 @@ function specia_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'Features Widget Area', 'specia' ),
 		'id' => 'specia_feature_widget',
-		'description' => __( 'The Features Widget Area for Home Features', 'specia' ),
+		'description' => __( 'Features Widget Area', 'specia' ),
 		'before_widget' => '',
 		'after_widget' => '',
 		'before_title' => '',
@@ -33,7 +33,7 @@ function specia_widgets_init() {
 	register_sidebar( array(
 		'name' => __( 'WooCommerce Widget Area', 'specia' ),
 		'id' => 'woocommerce-1',
-		'description' => __( 'This Widget area for WooCommerce Widget', 'specia' ),
+		'description' => __( 'WooCommerce Widget Area', 'specia' ),
 		'before_widget' => '<aside id="%1$s" class="widget">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',

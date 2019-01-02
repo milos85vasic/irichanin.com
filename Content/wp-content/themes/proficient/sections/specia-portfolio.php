@@ -35,7 +35,7 @@
 						<?php endif; ?>
 						
 						<?php if ($portfolio_description) : ?>
-							<p><?php echo esc_attr($portfolio_description); ?></p>
+							<p><?php echo esc_html($portfolio_description); ?></p>
 						<?php endif; ?>
 					</div>
 				</div>
@@ -66,7 +66,7 @@
 										<h2><?php echo $title; ?></h2>
 										<p><?php echo $content; ?></p>
 									</div>
-									<a href="<?php echo get_permalink(); ?>"></a>
+									<a href="<?php echo esc_url( get_permalink() ); ?>"></a>
 								</figcaption>           
 							</figure>
 						</div>

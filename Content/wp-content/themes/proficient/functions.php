@@ -46,7 +46,6 @@ function proficient_google_font() {
         $get_fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
 
     return esc_url($get_fonts_url);
-	
 }
 
 function proficient_scripts_styles() {
@@ -54,6 +53,9 @@ function proficient_scripts_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'proficient_scripts_styles' );
 
+/**
+ * Remove Customize Panel from parent theme
+ */
 function proficient_remove_parent_setting( $wp_customize ) {
 	$wp_customize->remove_panel('features_panel');
 	$wp_customize->remove_control('slider-page3');
@@ -62,7 +64,9 @@ function proficient_remove_parent_setting( $wp_customize ) {
 }
 add_action( 'customize_register', 'proficient_remove_parent_setting',99 );
 
-
+/**
+ * Remove Parent theme widgets
+ */
 function proficient_remove_widgets(){
 
 	unregister_sidebar( 'specia_feature_widget' );

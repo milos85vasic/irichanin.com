@@ -13,7 +13,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'proficient' ); ?></a>
+<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'proficient' ); ?></a>
 
 <?php if ( get_header_image() ) : ?>
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="custom-header" rel="home">
@@ -21,8 +21,9 @@
 	</a>
 <?php endif;  ?>	
 
-<?php get_template_part('sections/specia','header'); ?>
+<?php 
+	get_template_part('sections/specia','header');
+	get_template_part('sections/specia','navigation'); 
+?>
 
-<?php get_template_part('sections/specia','navigation'); ?>
-
-	<div id="content" class="site-content" role="main">
+<div id="content" class="site-content" role="main">

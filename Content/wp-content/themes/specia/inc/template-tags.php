@@ -173,26 +173,15 @@ add_action( 'wp_enqueue_scripts', 'specia_scripts_styles' );
 // Admin notice first time activating
 function specia_welcome_message () {
     if ( ! get_theme_mod( 'been_welcomed' ) ) { ?>
-        <div class="notice notice-success is-dismissible">
-            <p>
-                <?php _e( 'Welcome to Specia! Info about the theme can be found at your', 'specia' ); ?>
-                <a href="<?php echo esc_url( admin_url( 'themes.php?page=' . 'specia-theme-info' ) ); ?>"><?php _e( 'theme info page', 'specia' ); ?></a>.
-            </p>
-        </div>
+	   <div class="updated notice is-dismissible specia-notice">
+			<h1><?php
+			$theme_info = wp_get_theme();
+			printf( esc_html__('Welcome to %1$s - Version %2$s', 'specia'), esc_html( $theme_info->Name ), esc_html( $theme_info->Version ) ); ?>
+			</h1>
+			<p><?php echo sprintf( esc_html__("Welcome! Thank you for choosing Specia WordPress theme. To take full advantage of the features this theme has to offer visit our %1\$s welcome page %2\$s.", "specia"), '<a href="' . esc_url( admin_url( 'themes.php?page=specia-store' ) ) . '">', '</a>' ); ?></p>
+			<p><a href="<?php echo esc_url( admin_url( 'themes.php?page=specia-store' ) ); ?>" class="button button-blue-secondary button_erzen" style="text-decoration: none;"><?php echo esc_html__('Get started with Specia','specia'); ?></a></p>
+		</div>
         <?php set_theme_mod( 'been_welcomed', true );
     }
 }
-
-
-// Admin page
-function specia_admin_init () {
-    $title = __( 'Premium Themes', 'specia' );
-
-    require_once get_template_directory() . '/inc/theme-info.php';
-
-    add_theme_page( $title, $title, 'edit_theme_options', 'specia-theme-info', array( 'Specia_admin', 'settings_page' ) );
-    add_action( 'admin_enqueue_scripts', array( 'Specia_admin', 'scripts_and_styles' ) );
-	add_action( 'admin_notices', 'specia_welcome_message' );
-}
-add_action( 'admin_menu', 'specia_admin_init' );
 ?>

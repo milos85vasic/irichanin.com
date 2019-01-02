@@ -76,8 +76,7 @@ if($hide_show_breadcrumb == 'on') :
 						?>
 					</h2>
                 </div>
-
-                
+		
             </div>
         </div>
     </div>

@@ -26,7 +26,7 @@ function specia_features_setting( $wp_customize ) {
 	$wp_customize->add_setting( 
 		'hide_show_features' , 
 			array(
-			'default' 		=> __( 'on', 'specia' ),
+			'default' => 'on',
 			'capability' 	=> 'edit_theme_options',
 			'sanitize_callback' => 'specia_sanitize_select',
 		) 
@@ -70,7 +70,7 @@ function specia_features_setting( $wp_customize ) {
 	$wp_customize->add_control( 
 		'features_title',
 		array(
-		    'label'   => __('Section Title','specia'),
+		    'label'   => __('Title','specia'),
 		    'section' => 'features_header',
 			'settings'   	 => 'features_title',
 			'type'           => 'text',
@@ -90,7 +90,7 @@ function specia_features_setting( $wp_customize ) {
 	$wp_customize->add_control( 
 		'features_description',
 		array(
-		    'label'   => __('Section Description','specia'),
+		    'label'   => __('Description','specia'),
 		    'section' => 'features_header',
 			'settings'   	 => 'features_description',
 			'type'           => 'textarea',

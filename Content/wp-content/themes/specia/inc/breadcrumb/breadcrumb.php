@@ -1,10 +1,10 @@
 <?php
 function specia_breadcrumbs() {
  
-	$showOnHome	= __('1','specia'); 	// 1 - Show breadcrumbs on the homepage, 0 - don't show
+	$showOnHome	= "1"; 	// 1 - Show breadcrumbs on the homepage, 0 - don't show
 	$delimiter 	= '';   // Delimiter between breadcrumb
 	$home 		= __('Home','specia'); 	// Text for the 'Home' link
-	$showCurrent= __('1','specia'); // Current post/page title in breadcrumb in use 1, Use 0 for don't show
+	$showCurrent= "1"; // Current post/page title in breadcrumb in use 1, Use 0 for don't show
 	$before		= '<li class="active">'; // Tag before the current Breadcrumb
 	$after 		= '</li>'; // Tag after the current Breadcrumb
  
@@ -29,7 +29,7 @@ function specia_breadcrumbs() {
 	
 	elseif ( is_search() ) 
 	{
-		echo $before . __('Search results for ','specia').' "' . get_search_query() . '"' . $after;
+		echo $before . __('Search results for','specia').' "' . get_search_query() . '"' . $after;
 	} 
 	
 	elseif ( is_day() ) 
@@ -128,17 +128,17 @@ function specia_breadcrumbs() {
     } 
 	elseif ( is_tag() ) 
 	{
-		echo $before . __('Posts tagged ','specia').' "' . single_tag_title('', false) . '"' . $after;
+		echo $before . __('Posts tagged','specia').' "' . single_tag_title('', false) . '"' . $after;
 	} 
 	
 	elseif ( is_author() ) {
 		global $author;
 		$userdata = get_userdata($author);
-		echo $before . __('Articles posted by ','specia').'' . $userdata->display_name . $after;
+		echo $before . __('Articles posted by','specia').'' . $userdata->display_name . $after;
 	} 
 	
 	elseif ( is_404() ) {
-		echo $before . __('Error 404 ','specia'). $after;
+		echo $before . __('Error 404','specia'). $after;
     }
 	
     if ( get_query_var('paged') ) {

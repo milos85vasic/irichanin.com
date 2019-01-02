@@ -26,7 +26,7 @@ function specia_footer( $wp_customize ) {
 	$wp_customize->add_setting( 
 		'hide_show_copyright' , 
 			array(
-			'default' => __( 'on', 'specia' ),
+			'default' => 'on',
 			'capability'     => 'edit_theme_options',
 			'sanitize_callback' => 'specia_sanitize_select',
 		) 
@@ -39,7 +39,6 @@ function specia_footer( $wp_customize ) {
 			'section'        => 'footer_copyright',
 			'settings'   	 => 'hide_show_copyright',
 			'type'           => 'radio',
-			'description'    => __( 'Click to Hide / Show Copyright Content', 'specia' ),
 			'choices'        => 
 			array(
 				'on' => __( 'Show', 'specia' ),
@@ -65,7 +64,6 @@ function specia_footer( $wp_customize ) {
 		    'section'		=> 'footer_copyright',
 			'settings'   	 => 'copyright_content',
 			'type' 			=> 'textarea',
-			'description'   => __( 'Enter your copyright text like website name', 'specia' ),
 		)  
 	);
 
@@ -88,7 +86,7 @@ function specia_footer( $wp_customize ) {
 	$wp_customize->add_setting( 
 		'hide_show_payment' , 
 			array(
-				'default' => __( 'on', 'specia' ),
+				'default' => 'on',
 				'capability'     => 'edit_theme_options',
 				'sanitize_callback' => 'specia_sanitize_select',
 		) 
@@ -101,7 +99,6 @@ function specia_footer( $wp_customize ) {
 			'section'        => 'footer_icon',
 			'settings'   	 => 'hide_show_payment',
 			'type'           => 'radio',
-			'description'    => __( 'Click to Hide / Show Payment Icon Section', 'specia' ),
 			'choices'        => 
 			array(
 				'on' => __( 'Show', 'specia' ),
@@ -123,11 +120,10 @@ function specia_footer( $wp_customize ) {
 	$wp_customize->add_control( 
 		'icon_one',
 		array(
-		    'label'   		=> __('Paypal','specia'),
+		    'label'   		=> __('PayPal','specia'),
 		    'section'		=> 'footer_icon',
 			'settings'   	 => 'icon_one',
 			'type' 			=> 'text',
-			'description'   => __( 'Enter Your Link Here', 'specia' ),
 		)  
 	);
 
@@ -149,7 +145,6 @@ function specia_footer( $wp_customize ) {
 		    'section'		=> 'footer_icon',
 			'settings'   	 => 'icon_two',
 			'type' 			=> 'text',
-			'description'   => __( 'Enter Your Link Here', 'specia' ),
 		)  
 	);
 
@@ -166,11 +161,10 @@ function specia_footer( $wp_customize ) {
 	$wp_customize->add_control( 
 		'icon_three',
 		array(
-		    'label'   		=> __('Master Card','specia'),
+		    'label'   		=> __('MasterCard','specia'),
 		    'section'		=> 'footer_icon',
 			'settings'   	 => 'icon_three',
 			'type' 			=> 'text',
-			'description'   => __( 'Enter Your Link Here', 'specia' ),
 		)  
 	);
 
@@ -187,11 +181,10 @@ function specia_footer( $wp_customize ) {
 	$wp_customize->add_control( 
 		'icon_four',
 		array(
-		    'label'   		=> __('Amex','specia'),
+		    'label'   		=> __('AmEx','specia'),
 		    'section'		=> 'footer_icon',
 			'settings'   	 => 'icon_four',
 			'type' 			=> 'text',
-			'description'   => __( 'Enter Your Link Here', 'specia' ),
 		)  
 	);
 
@@ -212,7 +205,6 @@ function specia_footer( $wp_customize ) {
 		    'section'		=> 'footer_icon',
 			'settings'   	 => 'icon_five',
 			'type' 			=> 'text',
-			'description'   => __( 'Enter Your Link Here', 'specia' ),
 		)  
 	);
 		

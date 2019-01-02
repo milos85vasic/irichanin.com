@@ -5,7 +5,7 @@
 	if($hide_show_features == 'on') {
 ?>
 
-<section class="features-version-one" style="background: url('<?php echo get_template_directory_uri(); ?>/images/features.jpg') no-repeat fixed 0 0 / cover rgba(0, 0, 0, 0);">
+<section class="features-version-one" style="background: url('<?php echo esc_url( get_template_directory_uri() ); ?>/images/features.jpg') no-repeat fixed 0 0 / cover rgba(0, 0, 0, 0);">
 
     <div class="features-overlay">
         <div class="container">

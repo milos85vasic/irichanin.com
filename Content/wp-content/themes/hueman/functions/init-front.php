@@ -105,7 +105,10 @@ if ( ! function_exists( 'hu_get_layout_class' ) ) {
       array_walk_recursive(hu_is_real_home(), function(&$v) { $v = htmlspecialchars($v); }); */
 
     // Check for page/post specific layout
-    if ( ! hu_is_real_home() && ( is_page() || is_single() ) ) {
+    if ( hu_is_checked( 'force-layout-global' ) ) {
+        $layout = hu_get_option( 'layout-global' );
+    }
+    elseif ( ! hu_is_real_home() && ( is_page() || is_single() ) ) {
         // Reset post data
         wp_reset_postdata();
         global $post;
@@ -225,12 +228,14 @@ function hu_print_dynamic_sidebars( $_id, $location ) {
         __('You can change or disable this setting by editing the options of the current post / page.', 'hueman')
       );
     }
-
-    if ( empty( $sidebars_widgets[ $_id ] ) || ! is_array( $sidebars_widgets[ $_id ] ) ) {
-      printf('<div class="widget"><div class="hu-placeholder-widget"><h3>%1$s<br/><span class="zone-name">"%2$s"</span></h3></div></div>',
-        __('Add widgets to the zone :', 'hueman'),
-        $wp_registered_sidebars[$_id]['name']
-      );
+    if ( 'header-ads' !== $_id ) {// we don't want to print a placeholder for the header ads widget zone.
+        if ( empty( $sidebars_widgets[ $_id ] ) || ! is_array( $sidebars_widgets[ $_id ] ) ) {
+          printf('<div class="widget" id="hu-widget-zone-when-customizing-%3$s"><div class="hu-placeholder-widget"><h3>%1$s<br/><span class="zone-name">"%2$s"</span></h3></div></div>',
+            __('Add widgets to the zone :', 'hueman'),
+            $wp_registered_sidebars[$_id]['name'],
+            $_id
+          );
+        }
     }
   }//end if customizing
 
@@ -250,6 +255,9 @@ if ( ! function_exists( 'hu_print_social_links' ) ) {
     $_default_size    = '14'; //px
     $_social_opts     = array( 'social-size' => $_default_size );
     $_social_items    = array();
+
+    if ( ! is_array( $_raw_socials ) )
+      return;
 
     //get the social mod opts and the items
     foreach( $_raw_socials as $key => $item ) {
@@ -511,10 +519,14 @@ if ( ! function_exists( 'hu_get_404_title' ) ) {
 if ( ! function_exists( 'hu_get_author_title' ) ) {
   function hu_get_author_title() {
     $author = get_userdata( get_query_var('author') );
-    return sprintf('<i class="fas fa-user"></i>%1$s <span>%2$s </span>',
-        __('Author:','hueman'),
-        $author->display_name
-    );
+    if ( ! hu_is_checked( 'archive-title-with-icon' ) ) {
+        return $author->display_name;
+    } else {
+        return sprintf('<i class="fas fa-user"></i>%1$s <span>%2$s </span>',
+            __('Author:','hueman'),
+            $author->display_name
+        );
+    }
   }
 }
 
@@ -525,15 +537,23 @@ if ( ! function_exists( 'hu_get_author_title' ) ) {
 if ( ! function_exists( 'hu_get_term_page_title' ) ) {
   function hu_get_term_page_title() {
     if ( is_category() ) {
-      $title = sprintf('<i class="fas fa-folder-open"></i>%1$s <span>%2$s </span>',
-          __('Category:','hueman'),
-          single_cat_title('', false)
-      );
+      if ( ! hu_is_checked( 'archive-title-with-icon' ) ) {
+          $title = single_cat_title('', false);
+      } else {
+          $title = sprintf('<i class="fas fa-folder-open"></i>%1$s <span>%2$s </span>',
+              __('Category:','hueman'),
+              single_cat_title('', false)
+          );
+      }
     } else if ( is_tag() ) {
-      $title = sprintf('<i class="fas fa-tags"></i>%1$s <span>%2$s </span>',
-          __('Tagged:','hueman'),
-          single_tag_title('', false)
-      );
+      if ( ! hu_is_checked( 'archive-title-with-icon' ) ) {
+          $title = single_tag_title('', false);
+      } else {
+          $title = sprintf('<i class="fas fa-tags"></i>%1$s <span>%2$s </span>',
+              __('Tagged:','hueman'),
+              single_tag_title('', false)
+          );
+      }
     }
     return $title;
   }
@@ -545,20 +565,34 @@ if ( ! function_exists( 'hu_get_term_page_title' ) ) {
 if ( ! function_exists( 'hu_get_date_archive_title' ) ) {
   function hu_get_date_archive_title() {
     if ( is_day() ) {
-      $title = sprintf('<i class="fas fa-calendar"></i>%1$s <span>%2$s </span>',
-          __('Daily Archive:','hueman'),
-          get_the_time('F j, Y')
-      );
+      if ( ! hu_is_checked( 'archive-title-with-icon' ) ) {
+          $title = get_the_time('F j, Y');
+      } else {
+          $title = sprintf('<i class="fas fa-calendar"></i>%1$s <span>%2$s </span>',
+              __('Daily Archive:','hueman'),
+              get_the_time('F j, Y')
+          );
+      }
+
     } else if ( is_month() ) {
-      $title = sprintf('<i class="fas fa-calendar"></i>%1$s <span>%2$s </span>',
-          __('Monthly Archive:','hueman'),
-          get_the_time('F Y')
-      );
+      if ( ! hu_is_checked( 'archive-title-with-icon' ) ) {
+          $title = get_the_time('F Y');
+      } else {
+          $title = sprintf('<i class="fas fa-calendar"></i>%1$s <span>%2$s </span>',
+              __('Monthly Archive:','hueman'),
+              get_the_time('F Y')
+          );
+      }
+
     } else if ( is_year() ) {
-      $title = sprintf('<i class="fas fa-calendar"></i>%1$s <span>%2$s </span>',
-          __('Yearly Archive:','hueman'),
-          get_the_time('Y')
-      );
+      if ( ! hu_is_checked( 'archive-title-with-icon' ) ) {
+          $title = get_the_time('Y');
+      } else {
+          $title = sprintf('<i class="fas fa-calendar"></i>%1$s <span>%2$s </span>',
+              __('Yearly Archive:','hueman'),
+              get_the_time('Y')
+          );
+      }
     }
     return $title;
   }
@@ -725,7 +759,7 @@ if ( ! function_exists( 'hu_print_placeholder_thumb' ) ) {
     printf( ' %1$s<img class="hu-img-placeholder" src="%2$s" alt="%3$s" data-hu-post-id="%4$s" />',
       false !== $filter ? $filter : '',
       $_img_src,
-      get_the_title(),
+      the_title_attribute( 'echo=0' ),
       $_unique_id
     );
   }
@@ -991,6 +1025,8 @@ add_filter( 'hu_front_js_localized_params', 'hu_add_fittext_js_front_params' );
 //hook : wp_enqueue_scripts
 if ( ! function_exists( 'hu_scripts' ) ) {
   function hu_scripts() {
+    if ( hu_is_full_nimble_tmpl() )
+      return;
     if ( hu_is_checked( 'js-mobile-detect') ) {
       wp_enqueue_script(
         'mobile-detect',
@@ -1043,9 +1079,12 @@ if ( ! function_exists( 'hu_scripts' ) ) {
     $is_welcome_note_on = false;
     $welcome_note_content = '';
     if ( ! HU_IS_PRO && hu_user_started_with_current_version() ) {
+        // Welcome note deactivated since TRT request on slack
+        // implemented in release following since https://github.com/presscustomizr/hueman/issues/683
         $is_welcome_note_on = apply_filters(
             'hu_is_welcome_front_notification_on',
-            hu_user_can_see_customize_notices_on_front() && ! hu_is_customizing() && ! hu_isprevdem() && 'dismissed' != get_transient( 'hu_welcome_note_status' )
+            false
+            //hu_user_can_see_customize_notices_on_front() && ! hu_is_customizing() && ! hu_isprevdem() && 'dismissed' != get_transient( 'hu_welcome_note_status' )
         );
         if ( $is_welcome_note_on ) {
             $welcome_note_content = hu_get_welcome_note_content();
@@ -1099,6 +1138,8 @@ if ( ! function_exists( 'hu_scripts' ) ) {
                     'desktop' => hu_normalize_stick_menu_opt( hu_get_option( 'header-desktop-sticky' ) ),
                     'mobile'  => hu_normalize_stick_menu_opt( hu_get_option( 'header-mobile-sticky' ) )
                 ),
+                'mobileSubmenuExpandOnClick' => esc_attr( hu_get_option( 'mobile-submenu-click' ) ),
+                'submenuTogglerIcon'   => '<i class="fas fa-angle-down"></i>',
                 'isDevMode' => ( defined('WP_DEBUG') && true === WP_DEBUG ) || ( defined('CZR_DEV') && true === CZR_DEV ),
                 //AJAX
                 'ajaxUrl'        => add_query_arg(
@@ -1113,7 +1154,11 @@ if ( ! function_exists( 'hu_scripts' ) ) {
                       'on' => is_object( $started_on ) ? (array)$started_on : $started_on
                 ),
                 'isWelcomeNoteOn' => $is_welcome_note_on,
-                'welcomeContent'  => $welcome_note_content
+                'welcomeContent'  => $welcome_note_content,
+                'i18n' => array(
+                  'collapsibleExpand'   => __( 'Expand', 'hueman' ),
+                  'collapsibleCollapse' => __( 'Collapse', 'hueman' )
+                ),
             )
         )//end of filter
        );//wp_localize_script()
@@ -1158,6 +1203,10 @@ function hu_normalize_stick_menu_opt( $opt_val = 'stick_up' ) {
 /* ------------------------------------ */
 if ( ! function_exists( 'hu_styles' ) ) {
   function hu_styles() {
+    // Dec 2018 : When using the full nimble template, header + content + footer, we still need to load the Hueman stylesheet to have the Hueman widgets style
+    // if ( hu_is_full_nimble_tmpl() )
+    //   return;
+
     //Registered only if child theme => will be loaded as a dependency when enqueuing wp child style.css
     if ( is_child_theme() ) {
         wp_register_style(
@@ -1487,8 +1536,18 @@ function hu_get_template_part( $path ) {
 
 
 
+add_filter( 'hu_masonry_grid_thumb_size',  'hu_maybe_replace_blog_thumb_size_with_full' );
+add_filter( 'hu_grid_featured_thumb_size', 'hu_maybe_replace_blog_thumb_size_with_full' );
+add_filter( 'hu_grid_standard_thumb_size', 'hu_maybe_replace_blog_thumb_size_with_full' );
+add_filter( 'hu_grid_thumb_size',          'hu_maybe_replace_blog_thumb_size_with_full' );
 
-
+//@return string thumb-size
+//Filter to override the default grid thumb sizes
+//hook: 'hu_masonry_grid_thumb_size'
+//hook: 'hu_grid_thumb_size'
+function hu_maybe_replace_blog_thumb_size_with_full( $thumb_size ) {
+  return hu_is_checked( 'blog-use-original-image-size' ) ? 'full' : $thumb_size;
+}
 
 /* ------------------------------------------------------------------------- *
  *  Page Menu

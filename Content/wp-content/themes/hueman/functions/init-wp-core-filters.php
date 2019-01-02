@@ -73,29 +73,18 @@ if ( ! function_exists( 'hu_embed_html_jp' ) ) {
 add_filter( 'video_embed_html', 'hu_embed_html_jp' );
 
 
-/*  Upscale cropped thumbnails
-/* ------------------------------------ */
-if ( ! function_exists( 'hu_thumbnail_upscale' ) ) {
-
-  function hu_thumbnail_upscale( $default, $orig_w, $orig_h, $new_w, $new_h, $crop ){
-    if ( !$crop ) return null; // let the wordpress default function handle this
-
-    $aspect_ratio = $orig_w / $orig_h;
-    $size_ratio = max($new_w / $orig_w, $new_h / $orig_h);
-
-    $crop_w = round($new_w / $size_ratio);
-    $crop_h = round($new_h / $size_ratio);
-
-    $s_x = floor( ($orig_w - $crop_w) / 2 );
-    $s_y = floor( ($orig_h - $crop_h) / 2 );
-
-    return array( 0, 0, (int) $s_x, (int) $s_y, (int) $new_w, (int) $new_h, (int) $crop_w, (int) $crop_h );
-  }
-
-}
-add_filter( 'image_resize_dimensions', 'hu_thumbnail_upscale', 10, 6 );
-
-
 /*  Add shortcode support to text widget
 /* ------------------------------------ */
 add_filter( 'widget_text', 'do_shortcode' );
+
+
+// WP 5.0.0 compat. until the bug is fixed
+// this hook fires before the customize changeset is inserter / updated in database
+// Removing the wp_targeted_link_rel callback from the 'content_save_pre' filter prevents corrupting the changeset JSON
+// more details in this ticket : https://core.trac.wordpress.org/ticket/45292
+add_action( 'customize_save_validation_before'       , 'hu_remove_callback_wp_targeted_link_rel' );
+function hu_remove_callback_wp_targeted_link_rel() {
+    if ( false !== has_filter( 'content_save_pre', 'wp_targeted_link_rel' ) ) {
+        remove_filter( 'content_save_pre', 'wp_targeted_link_rel' );
+    }
+}

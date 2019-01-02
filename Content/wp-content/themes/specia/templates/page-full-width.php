@@ -21,6 +21,6 @@ get_template_part('sections/specia','breadcrumb'); ?>
 		
 	</div><!-- /.container -->
 </section>
-
+<?php wp_reset_postdata(); ?>
 <?php get_footer(); ?>
 

@@ -36,7 +36,7 @@
 				<?php endif; ?>
 				
 				<?php if ($service_description) : ?>
-					<p><?php echo esc_attr($service_description); ?></p>
+					<p><?php echo esc_html($service_description); ?></p>
 				<?php endif; ?>
 				</div>
 			</div>
@@ -74,7 +74,7 @@
 							?>
 							
 						</div>
-						<div class="service-title"><a href="<?php echo get_permalink(); ?>"> <?php echo $title; ?> </a></div>
+						<div class="service-title"><a href="<?php echo esc_url( get_permalink() ); ?>"> <?php echo esc_html($title); ?> </a></div>
 						<div class="service-description"><p> <?php echo $content; ?> </p></div>
 					</div>
 				</div>
@@ -85,5 +85,5 @@
 		</div>
 	</section>
 <div class="clearfix"></div>
-<?php } endif; ?>
+<?php } wp_reset_postdata(); endif; ?>
 

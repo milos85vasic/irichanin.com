@@ -1,3 +1,45 @@
+@media only screen and (min-width: 200px) and (max-width: 768px) and (orientation : portrait) {
+	.header-top-info-1 .social, .header-top-info-1 .info {
+        float: none !important;
+        text-align: center;
+    }
+	.navbar-nav .open .dropdown-menu > li > a:hover,
+	.navbar-nav .open .dropdown-menu > li > a:focus {
+		color: #fff;
+	}
+	.call-to-action h2 {
+		font-size: 20px;
+		line-height: 24px;
+		font-weight: 800;
+		margin: 0 0 13px;
+	}
+	.call-to-action .call-btn-1 {
+		float: left;
+	}
+}
+
+
+@media only screen and (min-width: 200px) and (max-width: 768px) and (orientation : landscape) {
+	.header-top-info-1 .social, .header-top-info-1 .info {
+        float: none !important;
+        text-align: center;
+    }
+	.nav-specia .navbar-nav .open .dropdown-menu > li > a:hover,
+    .nav-specia .navbar-nav .open .dropdown-menu > li > a:focus {
+		color: #fff;
+	}
+	.call-to-action h2 {
+		font-size: 20px;
+		line-height: 24px;
+		font-weight: 800;
+		margin: 0 0 13px;
+	}
+	.call-to-action .call-btn-1 {
+		float: left;
+	}
+}
+
+
 @media only screen and (min-width: 200px) and (max-width: 480px) {
     .header-top-info-1 .social, .header-top-info-1 .info {
         float: none !important;
@@ -41,7 +83,7 @@
     }
     .slider-version-one .item img{
         min-height: 250px;
-        background-size: 
+         background-size: cover;
     }
     .slider-version .owl-controls .owl-dots .owl-dot{
         display: none;

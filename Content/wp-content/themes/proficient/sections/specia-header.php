@@ -92,11 +92,11 @@
 					<!-- Start Contact Info -->
 					<ul class="info pull-right">
 						<?php if($header_email) { ?> 
-							<li><a href="mailto:<?php echo esc_attr($header_email); ?>"><i class="fa fa-envelope"></i> <?php echo $header_email; ?> </a></li>
+							<li><a href="mailto:<?php echo esc_html($header_email); ?>"><i class="fa fa-envelope"></i> <?php echo esc_html($header_email); ?> </a></li>
 						<?php } ?>
 						
 						<?php if($header_contact) { ?> 
-							<li><a href="tel:<?php echo esc_attr($header_contact); ?>"><i class="fa fa-phone-square"></i> <?php echo $header_contact; ?></a></li>
+							<li><a href="tel:<?php echo esc_html($header_contact); ?>"><i class="fa fa-phone-square"></i> <?php echo esc_html($header_contact); ?></a></li>
 						<?php } ?>
 					</ul>
 					<!-- /End Contact Info -->

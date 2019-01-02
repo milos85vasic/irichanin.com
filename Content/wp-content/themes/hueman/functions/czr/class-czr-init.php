@@ -21,8 +21,6 @@ if ( ! class_exists( 'HU_customize' ) ) :
 
             //v3.1.2 option update : registered sidebar names have changed
             $this -> hu_update_widget_database_option();
-            //define useful constants
-            if( ! defined( 'CZR_DYN_WIDGETS_SECTION' ) )      define( 'CZR_DYN_WIDGETS_SECTION' , 'dyn_widgets_section' );
 
             //load custom customizer classes
             //=> will be instantiated on "customize_register"
@@ -53,11 +51,10 @@ if ( ! class_exists( 'HU_customize' ) ) :
 
             //Print modules and inputs templates
             $this -> hu_load_tmpl();
-            //Add the module data server side generated + additional resources (like the WP text editor)
-            $this -> hu_load_module_data_resources();
 
-            //populate the css_attr property, used both server side and on the customize panel (passed via serverControlParams )
-            $this -> css_attr = $this -> hu_get_controls_css_attr();
+            //Add the module data server side generated + additional resources (like the WP text editor)
+            // DEPRECATED SINCE JUNE 2018
+            //$this -> hu_load_module_data_resources();
 
             locate_template( 'functions/czr/czr-resources.php', true, true );
         }
@@ -226,26 +223,24 @@ if ( ! class_exists( 'HU_customize' ) ) :
         /* ------------------------------------------------------------------------- */
         function hu_load_tmpl() {
             $_tmpl = array(
-                'tmpl/modules/all-modules-tmpl.php',
-                'tmpl/modules/body_bg-module-tmpl.php',
-                'tmpl/modules/social-module-tmpl.php',
-                'tmpl/modules/widgets-areas-module-tmpl.php',
-                'tmpl/modules/text_editor-module-tmpl.php',
+                //'tmpl/modules/all-modules-tmpl.php',
                 'tmpl/modules/slide-module-tmpl.php',
 
-                'tmpl/inputs/img-uploader-tmpl.php',
-                'tmpl/inputs/text_editor-input-tmpl.php'
+                //'tmpl/inputs/img-uploader-tmpl.php',
+
+                'tmpl/modules/text_editor-module-tmpl.php',
+                //'tmpl/inputs/text_editor-input-tmpl.php'
             );
             foreach ($_tmpl as $_path) {
                 locate_template( 'functions/czr/' . $_path , $load = true, $require_once = true );
             }
         }
 
-
-        function hu_load_module_data_resources() {
-            locate_template( 'functions/czr/modules/modules-data.php' , $load = true, $require_once = true );
-            locate_template( 'functions/czr/modules/modules-resources.php' , $load = true, $require_once = true );
-        }
+        // DEPRECATED SINCE JUNE 2018
+        // function hu_load_module_data_resources() {
+        //     locate_template( 'functions/czr/modules/modules-data.php' , $load = true, $require_once = true );
+        //     //locate_template( 'functions/czr/modules/modules-resources.php' , $load = true, $require_once = true );
+        // }
 
 
 
@@ -460,15 +455,17 @@ if ( ! class_exists( 'HU_customize' ) ) :
                 array(
                     'add_setting' => array(
                         'sidebar-areas' => array(
+                              'registered_dynamically' => true,
                               'default'   => array(),//empty array by default
                               'control'   => 'HU_Customize_Modules',
                               'label'     => __('Create And Order Widget Areas', 'hueman'),
-                              'section'   => CZR_DYN_WIDGETS_SECTION,
+                              'section'   => HU_DYN_WIDGETS_SECTION,
                               'type'      => 'czr_module',
                               'module_type' => 'czr_widget_areas_module',
                               'notice'    => __('You must save changes for the new areas to appear below. <br /><i>Warning: Make sure each area has a unique ID.</i>' , 'hueman'),
                               'transport' => 'postMessage',
-                              'skoped' => false
+                              'skoped' => false,
+
                         )
 
                     )
@@ -485,10 +482,11 @@ if ( ! class_exists( 'HU_customize' ) ) :
 
 
         function hu_register_sidebar_section( $wp_customize ) {
-            $_widget_section_name = CZR_DYN_WIDGETS_SECTION;
+            $_widget_section_name = HU_DYN_WIDGETS_SECTION;
             $_map = array(
               'add_control' => array(
                   'sidebar-areas' => array(
+                        'registered_dynamically' => true,
                         'default'   => array(),//empty array by default
                         'control'   => 'HU_Customize_Modules',
                         'label'     => __('Create And Manage Widget Areas', 'hueman'),
@@ -763,6 +761,12 @@ if ( ! class_exists( 'HU_customize' ) ) :
 
                   //declares settings array
                   $option_settings = array();
+
+                  // bail here if the setting is registered dynamically
+                  // since June 2018
+                  if ( array_key_exists( 'registered_dynamically', $options ) && true === $options[ 'registered_dynamically' ] )
+                    continue;
+
                   foreach( $args['settings'] as $set => $set_value) {
                       if ( $set == 'setting_type' ) {
                           $option_settings['type'] = isset( $options['setting_type']) ?  $options['setting_type'] : $args['settings'][$set];
@@ -808,45 +812,7 @@ if ( ! class_exists( 'HU_customize' ) ) :
         /* ------------------------------------------------------------------------- *
          *  HELPERS
         /* ------------------------------------------------------------------------- */
-        function hu_get_controls_css_attr() {
-            return apply_filters('controls_css_attr',
-                array(
-                  'multi_input_wrapper' => 'czr-multi-input-wrapper',
-                  'sub_set_wrapper'     => 'czr-sub-set',
-                  'sub_set_input'       => 'czr-input',
-                  'img_upload_container' => 'czr-imgup-container',
 
-                  'edit_modopt_icon'    => 'czr-toggle-modopt',
-                  'close_modopt_icon'   => 'czr-close-modopt',
-                  'mod_opt_wrapper'     => 'czr-mod-opt-wrapper',
-
-
-                  'items_wrapper'     => 'czr-items-wrapper',
-                  'single_item'        => 'czr-single-item',
-                  'item_content'      => 'czr-item-content',
-                  'item_header'       => 'czr-item-header',
-                  'item_title'        => 'czr-item-title',
-                  'item_btns'         => 'czr-item-btns',
-                  'item_sort_handle'   => 'czr-item-sort-handle',
-
-                  //remove dialog
-                  'display_alert_btn' => 'czr-display-alert',
-                  'remove_alert_wrapper'   => 'czr-remove-alert-wrapper',
-                  'cancel_alert_btn'  => 'czr-cancel-button',
-                  'remove_view_btn'        => 'czr-remove-button',
-
-                  'edit_view_btn'     => 'czr-edit-view',
-                  //pre add dialog
-                  'open_pre_add_btn'      => 'czr-open-pre-add-new',
-                  'adding_new'        => 'czr-adding-new',
-                  'pre_add_wrapper'   => 'czr-pre-add-wrapper',
-                  'pre_add_item_content'   => 'czr-pre-add-view-content',
-                  'cancel_pre_add_btn'  => 'czr-cancel-add-new',
-                  'add_new_btn'       => 'czr-add-new',
-                  'pre_add_success'   => 'czr-add-success'
-              )
-            );
-        }
 
 
 

@@ -6,7 +6,6 @@
  *
  * @package specia
  */
-
 ?>
 <?php
 	$hide_show_blog_meta = get_theme_mod('hide_show_blog_meta','on'); 

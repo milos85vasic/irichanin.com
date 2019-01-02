@@ -66,7 +66,7 @@
 										<h2><?php echo $title; ?></h2>
 										<p><?php echo $content; ?></p>
 									</div>
-									<a href="<?php echo get_permalink(); ?>"></a>
+									<a href="<?php echo esc_url( get_permalink() ); ?>"></a>
 								</figcaption>           
 							</figure>
 						</div>
@@ -79,4 +79,4 @@
 		</div>
 	</section>
 	<div class="clearfix"></div>
-<?php } endif; ?>
+<?php } wp_reset_postdata(); endif; ?>

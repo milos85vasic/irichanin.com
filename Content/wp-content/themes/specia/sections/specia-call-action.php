@@ -1,7 +1,5 @@
 <?php 
 	$hide_show_call_actions= get_theme_mod('hide_show_call_actions','on'); 
-	$call_action_background_setting= get_theme_mod('call_action_background_setting');
-	$call_actions_background_position= get_theme_mod('call_actions_background_position','fixed');
 	$call_action_button_label= get_theme_mod('call_action_button_label');
 	$call_action_button_link= get_theme_mod('call_action_button_link');
 	$call_action_button_target= get_theme_mod('call_action_button_target');
@@ -25,7 +23,7 @@
 				
 				<?php if($call_action_button_label) :?>
                 <div class="col-md-3">
-                    <a href="<?php echo esc_url($call_action_button_link); ?>" <?php if(($call_action_button_target)== 1){ echo "target='_blank'"; } ?> class="call-btn-1"><?php echo esc_attr($call_action_button_label); ?></a>
+                    <a href="<?php echo esc_url($call_action_button_link); ?>" <?php if(($call_action_button_target)== 1){ echo "target='_blank'"; } ?> class="call-btn-1"><?php echo esc_html($call_action_button_label); ?></a>
                 </div>
 				<?php endif; ?>
             </div>

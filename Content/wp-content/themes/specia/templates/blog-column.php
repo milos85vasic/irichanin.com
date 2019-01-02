@@ -30,7 +30,10 @@ get_template_part('sections/specia','breadcrumb'); ?>
 					
 					<?php endwhile; ?>
 					
-				<?php endif; ?>
+				<?php 
+					wp_reset_postdata(); 
+					endif; 
+				?>
 				
 			</div>
 			<!--/End of Blog Detail-->

@@ -31,7 +31,7 @@ function specia_slider_setting( $wp_customize ) {
 	$wp_customize->add_setting( 
 		'hide_show_slider' , 
 			array(
-			'default' => __( 'on', 'specia' ),
+			'default' => 'on',
 			'capability' => 'edit_theme_options',
 			'sanitize_callback' => 'specia_sanitize_select',
 		) 
@@ -77,7 +77,7 @@ function specia_slider_setting( $wp_customize ) {
 		array(
 			'type'	=> 'dropdown-pages',
 			'allow_addition' => true,
-			'label'	=> __('Select Page for Slide One:','specia'),
+			'label'	=> __('Select Page','specia'),
 			'section'	=> 'slider_content',
 			'settings'   	 => 'slider-page1',
 		)
@@ -98,7 +98,7 @@ function specia_slider_setting( $wp_customize ) {
 		array(
 			'type'	=> 'dropdown-pages',
 			'allow_addition' => true,
-			'label'	=> __('Select Page for Slide Two:','specia'),
+			'label'	=> __('Select Page','specia'),
 			'section'	=> 'slider_content',
 			'settings'   	 => 'slider-page2',
 		)
@@ -119,7 +119,7 @@ function specia_slider_setting( $wp_customize ) {
 		array(
 			'type'	=> 'dropdown-pages',
 			'allow_addition' => true,
-			'label'	=> __('Select Page for Slide Three:','specia'),
+			'label'	=> __('Select Page','specia'),
 			'section'	=> 'slider_content',
 			'settings'   	 => 'slider-page3',
 		)

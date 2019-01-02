@@ -38,7 +38,10 @@ get_template_part('sections/specia','breadcrumb'); ?>
 							'next_text'          => '<i class="fa fa-angle-double-right"></i>',
 							) ); ?>
 							</div>
-					<?php endif; ?>
+					<?php 
+						wp_reset_postdata(); 
+						endif; 
+					?>
 					
 			
 			</div>

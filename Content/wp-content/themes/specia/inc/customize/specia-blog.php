@@ -26,7 +26,7 @@ function specia_blog_setting( $wp_customize ) {
 	$wp_customize->add_setting( 
 		'hide_show_blog' , 
 			array(
-			'default' => __( 'on', 'specia' ),
+			'default' => 'on',
 			'capability'     => 'edit_theme_options',
 			'sanitize_callback' => 'specia_sanitize_select',
 		) 
@@ -70,7 +70,7 @@ function specia_blog_setting( $wp_customize ) {
 	$wp_customize->add_control( 
 		'blog_title',
 		array(
-		    'label'   => __('Section Title','specia'),
+		    'label'   => __('Title','specia'),
 		    'section' => 'blog_header',
 			'settings'   	 => 'blog_title',
 			'type'           => 'text',
@@ -90,7 +90,7 @@ function specia_blog_setting( $wp_customize ) {
 	$wp_customize->add_control( 
 		'blog_description',
 		array(
-		    'label'   => __('Section Description','specia'),
+		    'label'   => __('Description','specia'),
 		    'section' => 'blog_header',
 			'settings'   	 => 'blog_description',
 			'type'           => 'textarea',
@@ -111,7 +111,7 @@ function specia_blog_setting( $wp_customize ) {
 	$wp_customize->add_setting(
     	'blog_display_num',
     	array(
-	        'default'			=> __('3','specia'),
+	        'default'			=> 3,
 			'capability'     	=> 'edit_theme_options',
 			'sanitize_callback'	=> 'specia_sanitize_integer',
 		)
@@ -120,16 +120,15 @@ function specia_blog_setting( $wp_customize ) {
 	$wp_customize->add_control( 
 		'blog_display_num',
 		array(
-		    'label'   		=> __('Posts Display','specia'),
+		    'label'   		=> __('Select number of Posts','specia'),
 		    'section' 		=> 'blog_content',
 			'settings'   	 => 'blog_display_num',
 			'type' 			=> 'select',
-			'description'   => __( 'No. of Post Display in a Single Row', 'specia' ),
 			'choices'        => 
 			array(
-				'3' => __( '3', 'specia' ),
-				'6' => __( '6', 'specia' ),
-				'9' => __( '9', 'specia' )
+				'3' => '3',
+				'6' => '6',
+				'9' => '9'
 				
 			) 
 		)  

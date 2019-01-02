@@ -2,19 +2,19 @@
 
 Contributors: specia
 Requires at least: WordPress 4.4
-Tested up to: WordPress 4.9.4
-Stable tag: 2.2.25
-Version: 2.2.25
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: one-column, two-columns, left-sidebar, right-sidebar, flexible-header, custom-background, custom-colors, custom-header, custom-menu,  custom-logo, featured-image-header, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce, education, entertainment, food-and-drink, photography, portfolio, editor-style
+Tested up to: WordPress 5.0.2
+Stable tag: 2.2.75
+Version: 2.2.75
+License: GPLv3 or later
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Tags: one-column, two-columns, left-sidebar, right-sidebar, flexible-header, custom-background, custom-colors, custom-header, custom-menu,  custom-logo, featured-image-header, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce, portfolio, editor-style, grid-layout
 
-Specia WordPress Theme, Copyright 2017 Specia Theme
+Specia WordPress Theme, Copyright 2018 Specia Theme
 Specia is distributed under the terms of the GNU GPL
 
 === Description ===
 
-Specia is a Multipurpose WordPress theme with lots of powerful features, instantly giving a professional look to your online presence. Well suited for any type of websites - business, portfolio, food & restaurant, gym & fitness, spa salon, medical practitioner & hospitals, landing pages, product pages, corporate business, digital agency, product showcase, financial advisor, accountant, law firm, wealth advisor, photography, personal, and any eCommerce stores. Specia is made on its cross-browser compatibility. It consists of: Slider, Call to Action, Service, Features, Latest Posts, Sticky Header, Social Icons, Payment Icons and Four Column blocks in Footer. This theme has several customization options that are available WordPress Theme Customizer. Specia is WPML, Polylang compatible and it´s translation ready. Specia works fine with WordPress popular plugins like WooCommerce, Contact Form 7, Ninja Form, Jetpack, WP-featherlight, Give - WordPress Donation Plugin, Open Table Widget, Page Links To, Gravity Forms, Yoast SEO, and many others. Get more features in the premium version. It has multiple useful sections on the homepage - Slider, Call to Action, Services, Features, Filterable Portfolio, Plans & Pricing, Testimonials, Teams, and Clients. Following page templates ready for publishing like: about, service, portfolio, portfolio filter, pricing, blog full width, blog left sidebar, blog right sidebar, blog masonry, and contact. What are you waiting for? Let's start downloading this amazing and beautiful Free Multipurpose WordPress Theme right away. View the demo of Specia Premium http://demo.speciatheme.com/pro/?theme=specia
+Specia is a trending WordPress theme with lots of powerful features, instantly giving a professional look to your online presence. It fits for business, portfolio, food & restaurant, gym & fitness, spa salon, medical practitioner & hospitals, landing pages, product pages, corporate business, digital agency, product showcase, financial advisor, accountant, law firm, wealth advisor, photography, personal, and any eCommerce stores. Specia premium version provides you more than 10 different designs and supports popular plugins WPML, Polylang, WooCommerce, Contact Form 7, Revolution Slider, Elementor, Visual Composer, WP-Forms, Ninja Forms, Jetpack, WP-Featherlight, Give (WordPress Donation Plugin), Gravity Forms, Yoast SEO and many more. View the demo of Specia Premium https://demo.speciatheme.com/pro/?theme=specia
 
 
 == Installation ==
@@ -26,7 +26,7 @@ Specia is a Multipurpose WordPress theme with lots of powerful features, instant
 
 === Frequently Asked Questions ===
 
-1. Get Support - https://specia.ticksy.com/submit/#100006114
+1. Get Support - https://specia.ticksy.com/
 
 
 === Copyright ===
@@ -74,22 +74,170 @@ Source: https://github.com/matthieua/WOW
 
 x) Screenshot Image
 Screenshot Image
-URL: https://stocksnap.io/photo/XGXORJWZIX
-Source: https://stocksnap.io
-License: CC0 License (https://stocksnap.io/license)
+URL: https://pixabay.com/en/workplace-team-business-meeting-1245776/
+License: CC0 Public Domain
 
 xi) Image Folder Images
 All other Images have been used in images folder, Created by Specia Theme. Also they are GPL Licensed and free to use and free to redistribute further.
 
 x) Admin Detail Image
 Admin Detail Image
-URL: https://pixabay.com/en/traffic-city-street-urban-city-1149857/
+URL: https://pixabay.com/en/london-cityscape-england-1081820/
 Source: http://pixabay.com
 License: CC0 Public Domain
 
 
-
 == Changelog ==
+@version 2.2.75
+* Tested With WordPress 5.0.2
+
+@version 2.2.74
+* Tested With WordPress 5.0.1
+
+@version 2.2.73
+* Tested With WP5
+
+@version 2.2.72
+* Menu Toggle Style Improvement
+
+@version 2.2.71
+* License Info Changed.
+
+@version 2.2.70
+* Theme Tags Changed.
+
+@version 2.2.69
+* Feature Image Changed.
+
+@version 2.2.68
+* Added Theme Tag (grid-layout)
+
+@version 2.2.67
+* Updated readme file description.
+
+@version 2.2.66
+* Updated Premium Themes Link
+
+@version 2.2.65
+* Screenshot Updated
+
+@version 2.2.64
+* Removed Upsale admin page
+
+@version 2.2.63
+* Added Documentation, Support & Review Buttons
+
+@version 2.2.62
+* Added Nifty Theme Details
+
+@version 2.2.61
+* Updated Screenshot
+
+@version 2.2.60
+* Added Premium Themes Link
+
+@version 2.2.59
+* Fixed Strings Issue (WP-Translation)
+
+@version 2.2.58
+* Fixed Strings Issue (WP-Translation)
+
+@version 2.2.57
+* Fixed Strings Issue (WP-Translation)
+
+@version 2.2.56
+* Remove Unused Code and Added Theme's Details.
+
+@version 2.2.55
+* Support URL updated
+
+@version 2.2.54
+* WordPress 4.9.8 Compatibility Tested.
+
+@version 2.2.53
+* Social Media Icons Improvement
+
+@version 2.2.52
+* WordPress 4.9.7 Compatibility Tested.
+
+@version 2.2.51
+* Code Improvement
+
+@version 2.2.50
+* Update code for security purpose
+
+@version 2.2.49
+* Removed white space from script file.
+
+@version 2.2.48
+* Code beautify
+
+@version 2.2.47
+* Changed Screenshot
+
+@version 2.2.46
+* Added [wp_reset_postdata();]
+
+@version 2.2.45
+* Added "navbar-brand" class to custom logo
+
+@version 2.2.44
+* Added [wp_reset_postdata();] for service.
+
+@version 2.2.43
+* Added [wp_reset_postdata();] for slider.
+
+@version 2.2.42
+* Bug resolved.
+
+@version 2.2.41
+* WordPress 4.9.6 Compatibility Tested.
+
+@version 2.2.40
+* Changed Screenshot
+
+@version 2.2.39
+* Change Copyright Information
+
+@version 2.2.38
+* Added [wp_reset_postdata();] for templates.
+
+@version 2.2.37
+* Output escaping issue resolved.
+
+@version 2.2.36
+* Output escaping issue resolved.
+
+@version 2.2.35
+* Output escaping issue resolved.
+
+@version 2.2.34
+* Output escaping issue resolved.
+
+@version 2.2.33
+* Menu Border Removed from Small Device.
+
+@version 2.2.32
+* WordPress 4.9.5 Compatibility Tested.
+
+@version 2.2.31
+* Theme Images Changed.
+
+@version 2.2.30
+* Theme Images Changed.
+
+@version 2.2.29
+* Removed Unused Code.
+
+@version 2.2.28
+* Mockup Images Changed.
+
+@version 2.2.27
+* Mockup Images Changed.
+
+@version 2.2.26
+* Code Beautify and Change buttons color.
+
 @version 2.2.25
 * WordPress 4.9.4 Compatibility Tested.
 

@@ -71,17 +71,17 @@
 	?>
 	
 		<p>
-			<label for="<?php echo $this->get_field_id( 'features_widget_title' ); ?>"><?php _e( 'Features Title:','specia' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'features_widget_title' ); ?>"><?php _e( 'Title','specia' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'features_widget_title' ); ?>" name="<?php echo $this->get_field_name( 'features_widget_title' ); ?>" type="text" value="<?php if($features_widget_title) echo esc_html( $features_widget_title ); ?>" />
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'features_widget_icon' ); ?>"><?php _e( 'Features Icons:','specia' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'features_widget_icon' ); ?>"><?php _e( 'Icons','specia' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'features_widget_icon' ); ?>" name="<?php echo $this->get_field_name( 'features_widget_icon' ); ?>" type="text" value="<?php if($features_widget_icon) echo esc_html( $features_widget_icon ); ?>" />
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id( 'features_widget_description' ); ?>"><?php _e( 'Features Description:','specia' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'features_widget_description' ); ?>"><?php _e( 'Description','specia' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'features_widget_description' ); ?>" name="<?php echo $this->get_field_name( 'features_widget_description' ); ?>" type="text" value="<?php if($features_widget_description) echo esc_html( $features_widget_description ); ?>" />
 		</p>
 	

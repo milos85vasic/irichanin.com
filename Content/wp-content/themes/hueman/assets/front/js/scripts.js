@@ -141,7 +141,7 @@ if (!Array.from) {
     };
   }());
 }
-;(function ( $, window, document, undefined ) {
+(function ( $ ) {
 
   var pluginPrefix = 'original',
       _props       = ['Width', 'Height'];
@@ -175,8 +175,8 @@ if (!Array.from) {
     return ( typeof _img_size === undefined ) ? false : _img_size;
   }
 
-})( jQuery, window, document );
-;(function ( $, window, document, undefined ) {
+})( jQuery );
+(function ( $, window ) {
       var pluginName = 'imgSmartLoad',
           defaults = {
                 load_all_images_on_first_scroll : false,
@@ -231,7 +231,7 @@ if (!Array.from) {
             }
       };
       Plugin.prototype._maybe_trigger_load = function( $_imgs , _evt ) {
-            var self = this;
+            var self = this,
                 _visible_list = $_imgs.filter( function( ind, _img ) { return self._is_visible( _img ,  _evt ); } );
             _visible_list.map( function( ind, _img ) {
                   $(_img).trigger( 'load_img' );
@@ -269,7 +269,7 @@ if (!Array.from) {
                               $_img.fadeIn(self.options.fadeIn_options).addClass('tc-smart-loaded');
                         }
                         if ( ( 'undefined' !== typeof $_img.attr('data-tcjp-recalc-dims')  ) && ( false !== $_img.attr('data-tcjp-recalc-dims') ) ) {
-                              var _width  = $_img.originalWidth();
+                              var _width  = $_img.originalWidth(),
                                   _height = $_img.originalHeight();
 
                               if ( 2 != _.size( _.filter( [ _width, _height ], function(num){ return _.isNumber( parseInt(num, 10) ) && num > 1; } ) ) )
@@ -296,8 +296,8 @@ if (!Array.from) {
                   }
             });
       };
-})( jQuery, window, document );
-;(function ( $, window, document, undefined ) {
+})( jQuery, window );
+(function ( $ ) {
     var pluginName = 'extLinks',
         defaults = {
           addIcon : true,
@@ -403,8 +403,8 @@ if (!Array.from) {
       });
     };
 
-})( jQuery, window, document );
-;(function ( $, window, document, undefined ) {
+})( jQuery );
+(function ( $, window ) {
       var pluginName = 'centerImages',
           defaults = {
                 enableCentering : true,
@@ -467,7 +467,7 @@ if (!Array.from) {
                   } );
             }
       };
-      Plugin.prototype._maybe_apply_golden_r = function( evt ) {
+      Plugin.prototype._maybe_apply_golden_r = function() {
             if ( ! this.options.enableGoldenRatio || ! this.options.goldenRatioVal || 0 === this.options.goldenRatioVal )
               return;
             if ( ! this._is_selector_allowed() )
@@ -509,7 +509,7 @@ if (!Array.from) {
                   $(self.container).attr('data-img-centered-in-container', 1 );
             }
       };
-      Plugin.prototype._pre_img_cent = function( $_img, _event_ ) {
+      Plugin.prototype._pre_img_cent = function( $_img ) {
 
             var _state = this._get_current_state( $_img ),
                 self = this,
@@ -611,18 +611,8 @@ if (!Array.from) {
             });
       };
 
-})( jQuery, window, document );/* ===================================================
- * jqueryParallax.js v1.0.0
- * ===================================================
- * (c) 2016 Nicolas Guillaume - Rocco Aliberti, Nice, France
- * CenterImages plugin may be freely distributed under the terms of the GNU GPL v2.0 or later license.
- *
- * License URI: http://www.gnu.org/licenses/gpl-2.0.html
- *
- *
- *
- * =================================================== */
-;(function ( $, window, document, undefined ) {
+})( jQuery, window );
+(function ( $, window, _ ) {
         var pluginName = 'czrParallax',
             defaults = {
                   parallaxRatio : 0.5,
@@ -655,10 +645,8 @@ if (!Array.from) {
               this._bind_evt();
         };
         Plugin.prototype._bind_evt = function() {
-              var self = this,
-                  _customEvt = $.isArray(this.options.oncustom) ? this.options.oncustom : this.options.oncustom.split(' ');
 
-              _.bindAll( this, 'maybeParallaxMe', 'parallaxMe' );
+            _.bindAll( this, 'maybeParallaxMe', 'parallaxMe' );
         };
 
         Plugin.prototype.stageParallaxElements = function() {
@@ -748,14 +736,8 @@ if (!Array.from) {
                 }
             });
         };
-})( jQuery, window, document );/* ===================================================
- * jqueryAnimateSvg.js v1.0.0
- * @dependency : Vivus.js (MIT licensed)
- * ===================================================
- * (c) 2016 Nicolas Guillaume, Nice, France
- * Animates an svg icon with Vivus given its #id
- * =================================================== */
-;(function ( $, window, document, _ ) {
+})( jQuery, window, _ );
+(function ( $, window, document, _ ) {
   var pluginName = 'animateSvg',
       defaults = {
         filter_opacity : 0.8,
@@ -2032,44 +2014,65 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
               return '';
             return string.length > length ? string.substr( 0, length - 1 ) : string;
       };
-      czrapp._prettyfy = function( args ) {
+      var _prettyPrintLog = function( args ) {
             var _defaults = {
                   bgCol : '#5ed1f5',
                   textCol : '#000',
-                  consoleArguments : [],
-                  prettyfy : true
+                  consoleArguments : []
             };
             args = _.extend( _defaults, args );
 
-            var _toArr = Array.from( args.consoleArguments );
+            var _toArr = Array.from( args.consoleArguments ),
+                _truncate = function( string ){
+                      if ( ! _.isString( string ) )
+                        return '';
+                      return string.length > 300 ? string.substr( 0, 299 ) + '...' : string;
+                };
             if ( ! _.isEmpty( _.filter( _toArr, function( it ) { return ! _.isString( it ); } ) ) ) {
-                  _toArr =  JSON.stringify( _toArr );
+                  _toArr =  JSON.stringify( _toArr.join(' ') );
             } else {
                   _toArr = _toArr.join(' ');
             }
-            if ( args.prettyfy )
-              return [
-                    '%c ' + czrapp._truncate( _toArr ),
-                    [ 'background:' + args.bgCol, 'color:' + args.textCol, 'display: block;' ].join(';')
-              ];
-            else
-              return czrapp._truncate( _toArr );
+            return [
+                  '%c ' + _truncate( _toArr ),
+                  [ 'background:' + args.bgCol, 'color:' + args.textCol, 'display: block;' ].join(';')
+            ];
+      };
+
+      var _wrapLogInsideTags = function( title, msg, bgColor ) {
+            if ( ( _.isUndefined( console ) && typeof window.console.log != 'function' ) )
+              return;
+            if ( czrapp.localized.isDevMode ) {
+                  if ( _.isUndefined( msg ) ) {
+                        console.log.apply( console, _prettyPrintLog( { bgCol : bgColor, textCol : '#000', consoleArguments : [ '<' + title + '>' ] } ) );
+                  } else {
+                        console.log.apply( console, _prettyPrintLog( { bgCol : bgColor, textCol : '#000', consoleArguments : [ '<' + title + '>' ] } ) );
+                        console.log( msg );
+                        console.log.apply( console, _prettyPrintLog( { bgCol : bgColor, textCol : '#000', consoleArguments : [ '</' + title + '>' ] } ) );
+                  }
+            } else {
+                  console.log.apply( console, _prettyPrintLog( { bgCol : bgColor, textCol : '#000', consoleArguments : [ title ] } ) );
+            }
       };
       czrapp.consoleLog = function() {
             if ( ! czrapp.localized.isDevMode )
               return;
             if ( ( _.isUndefined( console ) && typeof window.console.log != 'function' ) )
               return;
-
-            console.log.apply( console, czrapp._prettyfy( { consoleArguments : arguments } ) );
+            console.log.apply( console, _prettyPrintLog( { consoleArguments : arguments } ) );
+            console.log( 'Unstyled console message : ', arguments );
       };
 
       czrapp.errorLog = function() {
             if ( ( _.isUndefined( console ) && typeof window.console.log != 'function' ) )
               return;
 
-            console.log.apply( console, czrapp._prettyfy( { bgCol : '#ffd5a0', textCol : '#000', consoleArguments : arguments } ) );
+            console.log.apply( console, _prettyPrintLog( { bgCol : '#ffd5a0', textCol : '#000', consoleArguments : arguments } ) );
       };
+
+
+      czrapp.errare = function( title, msg ) { _wrapLogInsideTags( title, msg, '#ffd5a0' ); };
+      czrapp.infoLog = function( title, msg ) { _wrapLogInsideTags( title, msg, '#5ed1f5' ); };
       czrapp.doAjax = function( queryParams ) {
             queryParams = queryParams || ( _.isObject( queryParams ) ? queryParams : {} );
 
@@ -2097,12 +2100,16 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
             $.post( ajaxUrl, _query_ )
                   .done( function( _r ) {
-                        if ( '0' === _r ||  '-1' === _r ) {
-                              czrapp.errorLog( 'czrapp.doAjax : done ajax error for : ', _query_.action, _r );
+                        if ( '0' === _r ||  '-1' === _r || false === _r.success ) {
+                              czrapp.errare( 'czrapp.doAjax : done ajax error for action : ' + _query_.action , _r );
+                              dfd.reject( _r );
                         }
+                        dfd.resolve( _r );
                   })
-                  .fail( function( _r ) { czrapp.errorLog( 'czrapp.doAjax : failed ajax error for : ', _query_.action, _r ); })
-                  .always( function( _r ) { dfd.resolve( _r ); });
+                  .fail( function( _r ) {
+                        czrapp.errare( 'czrapp.doAjax : failed ajax error for : ' + _query_.action, _r );
+                        dfd.reject( _r );
+                  });
             return dfd.promise();
       };
 })(jQuery, czrapp);
@@ -2143,7 +2150,8 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
                           czrapp.errorLog( 'setupDOMListeners : selector must be a string not empty. Aborting setup of action(s) : ' + _event.actions.join(',') );
                           return;
                     }
-                    args.dom_el.on( _event.trigger , _event.selector, function( e, event_params ) {
+                    var once = _event.once ? _event.once : false;
+                    args.dom_el[ once ? 'one' : 'on' ]( _event.trigger , _event.selector, function( e, event_params ) {
                           e.stopPropagation();
                           if ( czrapp.isKeydownButNotEnterEvent( e ) ) {
                             return;
@@ -2727,7 +2735,18 @@ var czrapp = czrapp || {};
                   }, 100 ) );
             }, 10 ) );
 
-      }
+      },
+      onSlidingCompleteResetCSS : function( $_el ) {
+            $_el   = $_el ? $_el : $(this);
+            $_el.css({
+                  'display'    : '',
+                  'paddingTop' : '',
+                  'marginTop' : '',
+                  'paddingBottom' : '',
+                  'marginBottom' : '',
+                  'height' : ''
+            });
+      },
   };//_methods{}
 
   czrapp.methods.UserXP = czrapp.methods.UserXP || {};
@@ -2772,7 +2791,10 @@ var czrapp = czrapp || {};
                     var mobMenu = this;
                     czrapp.Value.prototype.initialize.call( mobMenu, null, constructor_options );
                     $.extend( mobMenu, constructor_options || {} );
-                    mobMenu( 'collapsed' );
+                    mobMenu( 'collapsed' ).button
+                        .toggleClass( 'collapsed', true )
+                        .toggleClass( 'active', false )
+                        .attr('aria-expanded', false );
                     mobMenu.bind( function( state ) {
                           return $.Deferred( function() {
                                 var dfd = this;
@@ -2815,6 +2837,24 @@ var czrapp = czrapp || {};
                           { dom_el: mobMenu.container },//dom scope
                           mobMenu //instance where to look for the cb methods
                     );
+                    if ( czrapp.localized.mobileSubmenuExpandOnClick ) {
+                          mobMenu.menu_wrapper.addClass( 'submenu-click-expand' );
+                          czrapp.setupDOMListeners(
+                                [
+                                      {
+                                            trigger   : 'click keydown',
+                                            selector  : mobMenu.button_selectors,
+                                            actions   : function() {
+                                                  var mobMenu = this;
+                                                  mobMenu._collapsibleSubmenu();
+                                            },
+                                            once      : true
+                                      }
+                                ],//actions to execute
+                                { dom_el: mobMenu.container },//dom scope
+                                mobMenu //instance where to look for the cb methods
+                          );
+                    }
                     czrapp.userXP.isResizing.bind( function( is_resizing ) {
                           if ( ! is_resizing )
                             return;
@@ -2843,11 +2883,102 @@ var czrapp = czrapp || {};
                                                   'overflow' : 'auto'
                                             });
                                       }
+                                      czrapp.userXP.onSlidingCompleteResetCSS($(this).toggleClass( 'expanded', expand ));
+
                                       dfd.resolve( expand );
                                 }
                           } );
                     });
                     return dfd.promise();
+              },
+              _collapsibleSubmenu : function() {
+                    var mobMenu     = this;
+
+                    var EVENT_KEY   = '.hu.submenu',
+                        Event       = {
+                          SHOW     : 'show' + EVENT_KEY,
+                          HIDE     : 'hide' + EVENT_KEY,
+                          CLICK    : 'click' + EVENT_KEY,
+                        },
+                        Classname   = {
+                          DD_TOGGLE_ON_CLICK    : 'submenu-click-expand',
+                          SHOWN                 : 'expanded',
+                          DD_TOGGLE             : 'hu-dropdown-toggle',
+                          DD_TOGGLE_WRAPPER     : 'hu-dropdown-toggle-wrapper',
+                          SCREEN_READER         : 'screen-reader-text',
+
+                        },
+                        Selector    = {
+                          DD_TOGGLE_PARENT      : '.menu-item-has-children, .page_item_has_children',
+                          CURRENT_ITEM_ANCESTOR : '.current-menu-ancestor',
+                          SUBMENU               : '.sub-menu'
+                        },
+                        dropdownToggle        = $( '<button />', { 'class': Classname.DD_TOGGLE, 'aria-expanded': false })
+                                                .append( czrapp.localized.submenuTogglerIcon )
+                                                .append( $( '<span />', { 'class': Classname.SCREEN_READER, text: czrapp.localized.i18n.collapsibleExpand } ) ),
+                        dropdownToggleWrapper = $( '<span />', { 'class': Classname.DD_TOGGLE_WRAPPER })
+                                                .append( dropdownToggle );
+                    mobMenu.menu_wrapper.find( Selector.DD_TOGGLE_PARENT ).children('a').after( dropdownToggleWrapper );
+                    mobMenu.menu_wrapper.find( Selector.CURRENT_ITEM_ANCESTOR +'>.'+ Classname.DD_TOGGLE_WRAPPER +' .'+ Classname.DD_TOGGLE )
+                      .addClass( Classname.SHOWN )
+                      .attr( 'aria-expanded', 'true' )
+                      .find( '.'+Classname.SCREEN_READER )
+                        .text( czrapp.localized.i18n.collapsibleCollapse );
+                    mobMenu.menu_wrapper.find( Selector.CURRENT_ITEM_ANCESTOR +'>'+ Selector.SUBMENU ).addClass( Classname.SHOWN );
+                    mobMenu.menu_wrapper.find( Selector.CURRENT_ITEM_ANCESTOR ).addClass( Classname.SHOWN );
+
+                    $(  mobMenu.menu_wrapper )
+                        .on( Event.CLICK, 'a[href="#"]', function(evt) {
+                              if ( ! czrapp.userXP._isMobileScreenSize() )
+                                    return;
+
+                              evt.preventDefault();
+                              evt.stopPropagation();
+                              $(this).next('.'+Classname.DD_TOGGLE_WRAPPER).find('.'+Classname.DD_TOGGLE).trigger( Event.CLICK );
+                        })
+                        .on( Event.CLICK, '.'+Classname.DD_TOGGLE, function( e ) {
+                              e.preventDefault();
+
+                              var $_this             = $( this );
+                              $_this.trigger( $_this.closest( Selector.DD_TOGGLE_PARENT ).hasClass( Classname.SHOWN ) ? Event.HIDE: Event.SHOW  );
+                              _clearMenus( mobMenu, $_this );
+                        })
+                        .on( Event.SHOW+' '+Event.HIDE, '.'+Classname.DD_TOGGLE, function( e ) {
+                              var $_this             = $( this );
+
+                              $_this.closest( Selector.DD_TOGGLE_PARENT ).toggleClass( Classname.SHOWN );
+
+                              $_this.closest('.'+Classname.DD_TOGGLE_WRAPPER).next( Selector.SUBMENU )
+                                .stop()[Event.SHOW == e.type + '.' + e.namespace  ? 'slideDown' : 'slideUp']( {
+                                    duration: 300,
+                                    complete: function() {
+                                      var _to_expand =  'false' === $_this.attr( 'aria-expanded' );
+                                          $submenu   = $(this);
+
+                                      $_this.attr( 'aria-expanded', _to_expand )
+                                            .find( '.'+Classname.SCREEN_READER )
+                                                .text( _to_expand ? czrapp.localized.i18n.collapsibleCollapse : czrapp.localized.i18n.collapsibleExpand );
+
+                                      $submenu.toggleClass( Classname.SHOWN );
+                                      czrapp.userXP.onSlidingCompleteResetCSS($submenu);
+                                    }
+                                });
+                        });
+                    var _clearMenus = function( mobMenu, $_toggle ) {
+                      var _parentsToNotClear = $.makeArray( $_toggle.parents( Selector.DD_TOGGLE_PARENT ) ),
+                          _toggles           = $.makeArray( $( '.'+Classname.DD_TOGGLE, mobMenu.menu_wrapper ) );
+
+                      for (var i = 0; i < _toggles.length; i++) {
+                           var _parent = $(_toggles[i]).closest( Selector.DD_TOGGLE_PARENT )[0];
+
+                           if (!$(_parent).hasClass( Classname.SHOWN ) || $.inArray(_parent, _parentsToNotClear ) > -1 ){
+                              continue;
+                           }
+
+                          $(_toggles[i]).trigger( Event.HIDE );
+                      }
+                    };
+
               }
         }//MobileCTOR
 
@@ -3894,24 +4025,91 @@ var czrapp = czrapp || {};
                           }, 1000 );
                     }
               );
-              $('.nav ul.sub-menu').hide();
               $('.nav li').hover(
                     function() {
                           if ( czrapp.userXP._isMobileScreenSize() )
                             return;
-                          $(this).children('ul.sub-menu').stop().slideDown('fast').css( 'opacity', 1 );
+                          $(this).children('ul.sub-menu').hide().stop().slideDown({
+                                  duration : 'fast',
+                                  complete : czrapp.userXP.onSlidingCompleteResetCSS
+                          })
+                          .css( 'opacity', 1 );
                     },
                     function() {
                           if ( czrapp.userXP._isMobileScreenSize() )
                             return;
                           $(this).children('ul.sub-menu').stop().css( 'opacity', '' ).slideUp( {
-                                duration : 'fast',
-                                complete : function() {
-                                      $(this).hide();
-                                }
+                                  duration : 'fast',
+                                  complete : czrapp.userXP.onSlidingCompleteResetCSS
                           });
                     }
               );
+        },
+        gutenbergAlignfull : function() {
+              var _isPage                        = czrapp.$_body.hasClass( 'page' ),
+                  _isSingle                      = czrapp.$_body.hasClass( 'single' ),
+                  _coverImageSelector            = '.full-width.col-1c .alignfull[class*=wp-block-cover]',
+                  _alignFullSelector             = '.full-width.col-1c .alignfull[class*=wp-block-]',
+                  _alignTableSelector            = [
+                                        '.boxed .themeform .wp-block-table.alignfull',
+                                        '.boxed .themeform .wp-block-table.alignwide',
+                                        '.full-width.col-1c .themeform .wp-block-table.alignwide'
+                                      ],
+                  _coverWParallaxImageSelector   = _coverImageSelector + '.has-parallax',
+                  _classParallaxTreatmentApplied = 'hu-alignfull-p',
+                  _styleId                       = 'hu-gutenberg-alignfull',
+                  $_refWidthElement              = czrapp.$_body,
+                  $_refContainedWidthElement     = $( 'section.content', $_refWidthElement );
+              if ( ! ( _isPage || _isSingle ) ) {
+                    return;
+              }
+
+              if ( _isSingle ) {
+                    _coverImageSelector = '.single' + _coverImageSelector;
+                    _alignFullSelector  = '.single' + _alignFullSelector;
+                    _alignTableSelector = '.single' + _alignTableSelector.join(',.single');
+              } else {
+                    _coverImageSelector = '.page' + _coverImageSelector;
+                    _alignFullSelector  = '.page' + _alignFullSelector;
+                    _alignTableSelector = '.page' + _alignTableSelector.join(',.page');
+              }
+
+              if ( $( _alignFullSelector ).length > 0 ) {
+                    _add_alignelement_style( $_refWidthElement, _alignFullSelector, 'hu-gb-alignfull' );
+                    console.log($(_coverWParallaxImageSelector));
+                    if ( $(_coverWParallaxImageSelector).length > 0 ) {
+                          _add_parallax_treatment_style();
+                    }
+                    czrapp.userXP.windowWidth.bind( function() {
+                          _add_alignelement_style( $_refWidthElement, _alignFullSelector, 'hu-gb-alignfull' );
+                          _add_parallax_treatment_style();
+                    });
+              }
+              if ( $( _alignTableSelector ).length > 0 ) {
+                    _add_alignelement_style( $_refContainedWidthElement, _alignTableSelector, 'hu-gb-aligntable' );
+                    czrapp.userXP.windowWidth.bind( function() {
+                          _add_alignelement_style( $_refContainedWidthElement, _alignTableSelector, 'hu-gb-aligntable' );
+                    });
+              }
+              function _add_parallax_treatment_style() {
+                    $( _coverWParallaxImageSelector ).each(function() {
+                          $(this)
+                                .css( 'left', '' )
+                                .css( 'left', -1 * $(this).offset().left )
+                                .addClass(_classParallaxTreatmentApplied);
+                    });
+              }
+              function _add_alignelement_style( $_refElement, _selector, _styleId ) {
+                    var newElementWidth = $_refElement[0].getBoundingClientRect().width,
+                        $_style         = $( 'head #' + _styleId );
+
+                    if ( 1 > $_style.length ) {
+                          $_style = $('<style />', { 'id' : _styleId });
+                          $( 'head' ).append( $_style );
+                          $_style = $( 'head #' + _styleId );
+                    }
+                    $_style.html( _selector + '{width:'+ newElementWidth +'px}' );
+              }
         }
 
   };//_methods{}
@@ -4138,6 +4336,7 @@ var czrapp = czrapp || {};
                             'dropdownMenu',
                             'mobileMenu',
                             'topNavToLife',
+                            'gutenbergAlignfull',
                             'mayBePrintWelcomeNote'
                       ]
                 }
