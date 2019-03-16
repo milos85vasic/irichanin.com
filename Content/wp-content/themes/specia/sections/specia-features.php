@@ -17,7 +17,7 @@
 					<?php endif; ?>
 					
 					<?php if ($features_description)  : ?>
-						<p><?php echo esc_attr($features_description); ?></p>
+						<p><?php echo esc_html($features_description); ?></p>
 					<?php endif; ?>
                 </div>
             </div>

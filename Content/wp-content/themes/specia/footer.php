@@ -29,7 +29,7 @@
 
 				?>
 				<?php if($hide_show_copyright == 'on') : ?>
-					<p><?php echo $copyright_content; ?>
+					<p><?php echo wp_kses_post($copyright_content); ?>
 				<?php endif; ?>
                 </p>
             </div>

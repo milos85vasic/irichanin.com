@@ -13,8 +13,6 @@ function specia_scripts() {
 	
 	wp_enqueue_style('bootstrap',get_template_directory_uri().'/css/bootstrap.css');
 	
-	wp_enqueue_style('owl-carousel-theme',get_template_directory_uri().'/css/owl.theme.default.min.css');
-	
 	wp_enqueue_style('woo',get_template_directory_uri().'/css/woo.css');
 	
 	wp_enqueue_style('specia-form',get_template_directory_uri().'/css/form.css');
@@ -48,9 +46,9 @@ function specia_scripts() {
 	
 	wp_enqueue_script('wow-min', get_template_directory_uri() . '/js/wow.min.js');
 	
-	wp_enqueue_script('specia-service-component', get_template_directory_uri() . '/js/component.js');
+	wp_enqueue_script('specia-service-component', get_template_directory_uri() . '/js/component.min.js');
 	
-	wp_enqueue_script('specia-service-modernizr-custom', get_template_directory_uri() . '/js/modernizr.custom.js');
+	wp_enqueue_script('specia-service-modernizr-custom', get_template_directory_uri() . '/js/modernizr.custom.min.js');
 	
 	wp_enqueue_script('specia-custom-js', get_template_directory_uri() . '/js/custom.js');
 

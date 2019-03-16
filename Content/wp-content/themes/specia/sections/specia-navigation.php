@@ -19,14 +19,14 @@
 					<?php
 						$description = get_bloginfo( 'description');
 						if ($description) : ?>
-							<p class="site-description"><?php echo $description; ?></p>
+							<p class="site-description"><?php echo esc_html($description); ?></p>
 					<?php endif; ?>
 				</a>
 				
 				
 				
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only"><?php echo 'Toggle navigation'; ?></span>
+					<span class="sr-only"><?php echo __('Toggle navigation','specia'); ?></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>

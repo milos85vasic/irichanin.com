@@ -41,12 +41,12 @@
 			<div class="item">
 			
 				<figure>
-					<?php $image = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
-					if( !empty($image) ) { ?>
-							<img src="<?php echo esc_url($image); ?>" alt="<?php the_title_attribute();?>" >
-						<?php } else { ?>
-							<img src="<?php echo esc_url( get_template_directory_uri() ) ; ?>/images/slider/default.jpg" title="<?php the_title_attribute(); ?>" />
-					<?php } ?>
+					<?php
+						$image = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
+						$thumbnail_id = get_post_thumbnail_id( $post->ID );
+						$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
+					?>
+					<img src="<?php echo esc_url($image);?>" alt="<?php echo esc_attr($alt); ?>">
 				</figure>
 
 				<div class="specia-slider">

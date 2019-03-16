@@ -2,14 +2,15 @@
 
 Contributors: specia
 Requires at least: WordPress 4.4
-Tested up to: WordPress 5.0.2
-Stable tag: 2.2.75
-Version: 2.2.75
+Tested up to: WordPress 5.0.3
+Requires PHP: 5.6
+Stable tag: 2.2.84
+Version: 2.2.84
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: one-column, two-columns, left-sidebar, right-sidebar, flexible-header, custom-background, custom-colors, custom-header, custom-menu,  custom-logo, featured-image-header, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce, portfolio, editor-style, grid-layout
 
-Specia WordPress Theme, Copyright 2018 Specia Theme
+Specia WordPress Theme, Copyright 2019 Specia Theme
 Specia is distributed under the terms of the GNU GPL
 
 === Description ===
@@ -42,29 +43,29 @@ Source: http://fontawesome.io
 iii) Bootstrap Framework
 Bootstrap (http://getbootstrap.com/)
 Copyright (c) 2011-2014 Twitter, Inc
-Licensed - https://github.com/twbs/bootstrap/blob/master/LICENSE
+Licensed -  MIT License(https://github.com/twbs/bootstrap/blob/master/LICENSE)
 
 iv) Owl Carousel 2
 Owl Carousel 2 - by @David Deutsch - https://github.com/OwlCarousel2
-Licensed - https://github.com/OwlCarousel2/OwlCarousel2/blob/develop/LICENSE
+Licensed - MIT License(https://github.com/OwlCarousel2/OwlCarousel2/blob/develop/LICENSE)
 
 v) Simple Text Rotator
 Simple Text Rotator - https://github.com/peachananr/simple-text-rotator
-Licensed - https://github.com/peachananr/simple-text-rotator/blob/master/LICENSE
+Licensed - GNU GENERAL PUBLIC LICENSE(https://github.com/peachananr/simple-text-rotator/blob/master/LICENSE)
 
 vi) Animate Css
 Animate Css by @Daniel Eden - https://daneden.me/
-License - https://github.com/daneden/animate.css/blob/master/LICENSE (MIT License)
+License - MIT License(https://github.com/daneden/animate.css/blob/master/LICENSE) 
 Source: https://github.com/daneden/animate.css
 
 vii) Sticky Js
 Sticky Js by @Anthony Garand - http://stickyjs.com/
-License - https://github.com/garand/sticky/blob/master/LICENSE.md
+License - MIT License (https://github.com/garand/sticky/blob/master/LICENSE.md)
 Source: http://stickyjs.com/
 
 viii) Modernizr Custom
 Modernizr Custom 
-License - MIT & BSD
+License - MIT License (https://github.com/Modernizr/Modernizr/blob/master/LICENSE)
 Source: http://modernizr.com/download/#-touch-shiv-cssclasses-teststyles-prefixes-load
 
 ix) WOW Js
@@ -73,21 +74,55 @@ License - GNU GPL license v3
 Source: https://github.com/matthieua/WOW
 
 x) Screenshot Image
-Screenshot Image
-URL: https://pixabay.com/en/workplace-team-business-meeting-1245776/
+URL: https://stocksnap.io/photo/3IVBNKC2JH
+Source: https://stocksnap.io
 License: CC0 Public Domain
 
 xi) Image Folder Images
 All other Images have been used in images folder, Created by Specia Theme. Also they are GPL Licensed and free to use and free to redistribute further.
 
-x) Admin Detail Image
-Admin Detail Image
-URL: https://pixabay.com/en/london-cityscape-england-1081820/
-Source: http://pixabay.com
+x) Feature Section Image
+URL: https://stocksnap.io/photo/5UQ2YS94N1
+Source: https://stocksnap.io
 License: CC0 Public Domain
 
 
 == Changelog ==
+@version 2.2.84
+* Add Image Alt Feature
+* Screenshot Changed
+
+@version 2.2.83
+* Screenshot Changed
+* Feature Image Changed
+* Underscore Licence Changed
+
+@version 2.2.82
+* Minimum required php version added
+
+@version 2.2.81
+* Resolve Escaping Issue 
+* Add Orignal Files of Css
+
+@version 2.2.80
+* Resolve Escaping Issue 
+* Update POT File
+
+@version 2.2.79
+* Screenshot Image Changed
+
+@version 2.2.78
+* Resolve Escaping Issue
+* Add Orignal Files of Js
+* Screenshot Image Changed
+* Feature Image Change
+
+@version 2.2.77
+* Tested With WordPress 5.0.3
+
+@version 2.2.76
+* Copyright Changed
+
 @version 2.2.75
 * Tested With WordPress 5.0.2
 

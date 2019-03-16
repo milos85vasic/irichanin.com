@@ -58,10 +58,13 @@
 					<div class="service-box wow fadeInUp">
 						<div class="service-icon-box">
 							
-							<?php $image = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
+							<?php 
+								$image = wp_get_attachment_url( get_post_thumbnail_id($post->ID));
+								$thumbnail_id = get_post_thumbnail_id( $post->ID );
+								$alt = get_post_meta($thumbnail_id, '_wp_attachment_image_alt', true);
 								if( !empty($image) ) { ?>
 									<figure>
-											<img src="<?php echo esc_url( $image ); ?>" alt="<?php the_title_attribute();?>" >
+											<img src="<?php echo esc_url( $image ); ?>" alt="<?php echo esc_attr($alt); ?>" >
 									</figure>
 								<?php } else { ?>
 								<?php if( get_post_meta(get_the_ID(),'icons', true ) ): ?>

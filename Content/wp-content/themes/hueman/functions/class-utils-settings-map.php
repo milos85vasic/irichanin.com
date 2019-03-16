@@ -295,20 +295,20 @@ if ( ! class_exists( 'HU_utils_settings_map' ) ) :
           ),
           'color-1' => array(
                 'default'     => hu_user_started_before_version( '3.3.8' ) ? '#3b8dbd' : '#16cfc1',
-                'control'     => 'WP_Customize_Color_Control',
+                'control'     => 'HU_Customize_Color_Alpha_Control',
                 'label'       => __( 'Primary Color' , 'hueman' ),
                 'section'     => 'general_design_sec',
-                'type'        =>  'color' ,
+                'type'        =>  'wp_color_alpha' ,
                 'sanitize_callback'    => 'maybe_hash_hex_color',
                 'sanitize_js_callback' => 'maybe_hash_hex_color'
                 //'transport'   => 'postMessage'
           ),
           'color-2' => array(
                 'default'     =>  hu_user_started_before_version( '3.3.8' ) ? '#82b965' : '#efb93f',
-                'control'     => 'WP_Customize_Color_Control',
+                'control'     => 'HU_Customize_Color_Alpha_Control',
                 'label'       => __( 'Secondary Color' , 'hueman' ),
                 'section'     => 'general_design_sec',
-                'type'        =>  'color' ,
+                'type'        =>  'wp_color_alpha' ,
                 'sanitize_callback'    => 'maybe_hash_hex_color',
                 'sanitize_js_callback' => 'maybe_hash_hex_color'
                 //'transport'   => 'postMessage'
@@ -569,42 +569,55 @@ if ( ! class_exists( 'HU_utils_settings_map' ) ) :
                     'priority' => '15'
                 )
           ),
+          'user-header-bg-color-important' => array(
+                'default'   => 0,
+                'control'   => 'HU_controls',
+                'label'     => __( 'Apply your custom background colors in priority for the topbar and the mobile menu' , 'hueman' ),
+                'section'   => 'header_design_sec',
+                'type'      => 'checkbox',
+                //'active_callback' => 'hu_is_pro',
+                'notice' => sprintf( __('This can be used to ensure your background colors are applied when designing a header with a background image in %1$s', 'hueman'),
+                    sprintf('<a href="https://docs.presscustomizr.com/article/284-pro-designing-header-background-and-slider-with-hueman-pro" target="_blank">%1$s</a>',
+                        __('Hueman Pro', 'hueman')
+                    )
+                )
+          ),
           'color-topbar' => array(
                 'default'     => hu_user_started_before_version( '3.3.8' ) ? '#26272b' : '#121d30',
-                'control'     => 'WP_Customize_Color_Control',
+                'control'     => 'HU_Customize_Color_Alpha_Control',
                 'label'       => __( 'Topbar Background' , 'hueman' ),
                 'section'     => 'header_design_sec',
-                'type'        =>  'color' ,
+                'type'        =>  'wp_color_alpha',
                 'sanitize_callback'    => 'maybe_hash_hex_color',
                 'sanitize_js_callback' => 'maybe_hash_hex_color'
                 //'transport'   => 'postMessage'
           ),
           'color-header' => array(
                 'default'     => hu_user_started_before_version( '3.3.8' ) ? '#33363b' : '#454e5c',
-                'control'     => 'WP_Customize_Color_Control',
+                'control'     => 'HU_Customize_Color_Alpha_Control',
                 'label'       => __( 'Header Background' , 'hueman' ),
                 'section'     => 'header_design_sec',
-                'type'        =>  'color' ,
+                'type'        =>  'wp_color_alpha',
                 'sanitize_callback'    => 'maybe_hash_hex_color',
                 'sanitize_js_callback' => 'maybe_hash_hex_color',
                 'transport'   => ( ( defined( 'HU_IS_PRO_ADDONS' ) && HU_IS_PRO_ADDONS ) || ( defined('HU_IS_PRO') && HU_IS_PRO  ) ) ? 'refresh' : 'postMessage'
           ),
           'color-header-menu' => array(
                 'default'     => hu_user_started_before_version( '3.3.8' ) ? '#33363b' : '#454e5c',
-                'control'     => 'WP_Customize_Color_Control',
+                'control'     => 'HU_Customize_Color_Alpha_Control',
                 'label'       => __( 'Header Menu Background' , 'hueman' ),
                 'section'     => 'header_design_sec',
-                'type'        =>  'color' ,
+                'type'        =>  'wp_color_alpha',
                 'sanitize_callback'    => 'maybe_hash_hex_color',
                 'sanitize_js_callback' => 'maybe_hash_hex_color',
                 'transport'   => ( ( defined( 'HU_IS_PRO_ADDONS' ) && HU_IS_PRO_ADDONS ) || ( defined('HU_IS_PRO') && HU_IS_PRO  ) ) ? 'refresh' : 'postMessage'
           ),
           'color-mobile-menu' => array(
                 'default'     => hu_user_started_before_version( '3.3.8' ) ? '#33363b' : '#454e5c',
-                'control'     => 'WP_Customize_Color_Control',
+                'control'     => 'HU_Customize_Color_Alpha_Control',
                 'label'       => __( 'Mobile Menu Background' , 'hueman' ),
                 'section'     => 'header_design_sec',
-                'type'        =>  'color' ,
+                'type'        =>  'wp_color_alpha',
                 'sanitize_callback'    => 'maybe_hash_hex_color',
                 'sanitize_js_callback' => 'maybe_hash_hex_color',
                 //'transport'   => 'postMessage'
@@ -961,7 +974,7 @@ if ( ! class_exists( 'HU_utils_settings_map' ) ) :
                 'label'     => __("Display a custom heading for your blog.", 'hueman'),
                 'section'   => 'content_blog_sec',
                 'type'      => 'checkbox',
-                'active_callback' => 'is_home',
+                //'active_callback' => 'is_home',
                 'priority'   => 5,
                 'ubq_section'   => array(
                     'section' => 'static_front_page',
@@ -976,7 +989,7 @@ if ( ! class_exists( 'HU_utils_settings_map' ) ) :
                 'section'   => 'content_blog_sec',
                 'notice'    => __( 'Your blog heading. Html is allowed. Note : write a blank space to hide the default content.', 'hueman'),
                 'sanitize_callback' => array( $this, 'hu_sanitize_html_text_input' ),
-                'active_callback' => 'is_home',
+                //'active_callback' => 'is_home',
                 'priority'   => 10,
                 'ubq_section'   => array(
                     'section' => 'static_front_page',
@@ -991,12 +1004,33 @@ if ( ! class_exists( 'HU_utils_settings_map' ) ) :
                 'section'   => 'content_blog_sec',
                 'notice'    => __( 'Your blog sub-heading. Html is allowed. Note : write a blank space to hide the default content.', 'hueman'),
                 'sanitize_callback' => array( $this, 'hu_sanitize_html_text_input' ),
-                'active_callback' => 'is_home',
+                //'active_callback' => 'is_home',
                 'priority'   => 15,
                 'ubq_section'   => array(
                     'section' => 'static_front_page',
                     'priority' => '50'
                 )
+          ),
+          'blog-restrict-by-cat' => array(
+            'default'   => array(),
+            'type'   => 'czr_multiple_picker',
+            'label'     => __( 'Apply a category filter to your home / blog posts', 'hueman' ),
+            'section'   => 'content_blog_sec',
+            'control'   => 'HU_Customize_Multipicker_Categories_Control',
+            'priority'   => 18,
+            'notice' => sprintf( '%1$s <a href="%2$s" target="_blank">%3$s<span style="font-size: 17px;" class="dashicons dashicons-external"></span></a><br>%4$s' ,
+                              __( 'Click inside the above field and pick post categories you want to display. No filter will be applied when empty.', 'hueman' ),
+                              esc_url('codex.wordpress.org/Posts_Categories_SubPanel'),
+                              __('Learn more about post categories in WordPress' , 'hueman' ),
+                              sprintf( '<strong>%1$s</strong> %2$s',
+                                    __( 'Note for Pro users:', 'hueman'),
+                                    __( 'The category filter will not be applied when using the <strong>Classic grid</strong> post list design if the <strong>infinite scroll</strong> option is active.', 'hueman' )
+                              )
+            ),
+            'ubq_section'   => array(
+                  'section' => 'static_front_page',
+                  'priority' => '55'
+            )
           ),
           'blog-standard' => array(
                 'default'   => 0,
@@ -1067,7 +1101,7 @@ if ( ! class_exists( 'HU_utils_settings_map' ) ) :
                 'section'   => 'content_blog_sec',
                 'type'      => 'checkbox',
                 'notice'    => __( 'Check this box to display a selection of posts with a slideshow, on top of your blog.' , 'hueman'),
-                'active_callback' => 'is_home',
+                //'active_callback' => 'is_home',
                 'priority'   => 30,
                 'ubq_section'   => array(
                     'section' => 'static_front_page',
@@ -1082,7 +1116,7 @@ if ( ! class_exists( 'HU_utils_settings_map' ) ) :
                 'type'      => 'select',//@todo create a simple cat picker with select type. => evolve to multipicker? Retrocompat ?
                 'choices'   => $this -> hu_get_the_cat_list(),
                 'notice'    => __( 'If no specific category is selected, the featured posts block will display your latest post(s) from all categories.' , 'hueman'),
-                'active_callback' => 'is_home',
+                //'active_callback' => 'is_home',
                 'priority'   => 35,
                 'ubq_section'   => array(
                     'section' => 'static_front_page',
@@ -1100,7 +1134,7 @@ if ( ! class_exists( 'HU_utils_settings_map' ) ) :
                 'min'       => 0,
                 //'transport' => 'postMessage',
                 'notice'    => __( "Max number of featured posts to display. <br /><i>Set to 1 and it will show it without any slider script</i><br /><i>Set it to 0 to disable</i>" , "hueman" ),//@todo sprintf split translation
-                'active_callback' => 'is_home',
+                //'active_callback' => 'is_home',
                 'priority'   => 40,
                 'ubq_section'   => array(
                     'section' => 'static_front_page',
@@ -1114,7 +1148,7 @@ if ( ! class_exists( 'HU_utils_settings_map' ) ) :
                 'section'   => 'content_blog_sec',
                 'type'      => 'checkbox',
                 'notice'    => __( 'By default, your featured posts display the first words of their content ( the "excerpt"). Check this box to display the full content.' , 'hueman'),
-                'active_callback' => 'is_home',
+                //'active_callback' => 'is_home',
                 'priority'   => 45,
                 'ubq_section'   => array(
                     'section' => 'static_front_page',
@@ -1128,7 +1162,7 @@ if ( ! class_exists( 'HU_utils_settings_map' ) ) :
                 'section'   => 'content_blog_sec',
                 'type'      => 'checkbox',
                 'notice'    => __( 'Enables the automatic animation of the featured posts carousel.' , 'hueman'),
-                'active_callback' => 'is_home',
+                //'active_callback' => 'is_home',
                 'priority'   => 50,
                 'ubq_section'   => array(
                     'section' => 'static_front_page',
@@ -1146,7 +1180,7 @@ if ( ! class_exists( 'HU_utils_settings_map' ) ) :
                 'min'       => 500,
                 'transport' => 'postMessage',
                 'notice'    => __( "Speed of the automatic slideshow animation" , "hueman" ),
-                'active_callback' => 'is_home',
+                //'active_callback' => 'is_home',
                 'priority'   => 55,
                 'ubq_section'   => array(
                     'section' => 'static_front_page',
@@ -1160,7 +1194,7 @@ if ( ! class_exists( 'HU_utils_settings_map' ) ) :
                 'section'   => 'content_blog_sec',
                 'type'      => 'checkbox',
                 'notice'    => __( 'If this box is checked, your featured posts will be displayed both in the featured slider and in the post list below. Usually not recommended because a given post might appear two times on the same page.' , 'hueman'),
-                'active_callback' => 'is_home',
+                //'active_callback' => 'is_home',
                 'priority'   => 60,
                 'ubq_section'   => array(
                     'section' => 'static_front_page',
@@ -1280,10 +1314,10 @@ if ( ! class_exists( 'HU_utils_settings_map' ) ) :
           ),
           'sidebar-background' => array(
                 'default'   => '#f0f0f0',
-                'control'   => 'WP_Customize_Color_Control',
+                'control'   => 'HU_Customize_Color_Alpha_Control',
                 'label'     => __('Sidebars background color', 'hueman'),
                 'section'   => 'sidebars_design_sec',
-                'type'      =>  'color' ,
+                'type'      =>  'wp_color_alpha' ,
                 'sanitize_callback'    => 'maybe_hash_hex_color',
                 'sanitize_js_callback' => 'maybe_hash_hex_color',
                 'priority'  => 2
@@ -1394,10 +1428,10 @@ if ( ! class_exists( 'HU_utils_settings_map' ) ) :
           ),
           'color-footer' => array(
                 'default'     => '#33363b',
-                'control'     => 'WP_Customize_Color_Control',
+                'control'     => 'HU_Customize_Color_Alpha_Control',
                 'label'       => __( 'Footer Background' , 'hueman' ),
                 'section'     => 'footer_design_sec',
-                'type'        =>  'color' ,
+                'type'        =>  'wp_color_alpha' ,
                 'sanitize_callback'    => 'maybe_hash_hex_color',
                 'sanitize_js_callback' => 'maybe_hash_hex_color',
                 'priority'  => 30,
@@ -1405,13 +1439,13 @@ if ( ! class_exists( 'HU_utils_settings_map' ) ) :
           ),
           'copyright' => array(
                 'control'   => 'HU_controls',
-                'default'   => '',
+                'default'   => sprintf( '{{site_title}} &copy; {{year}}. %1$s', __( 'All Rights Reserved.', 'hueman' ) ),
                 'label'     => __( 'Replace the footer copyright text', 'hueman'),
                 'type'      => 'text',
                 'section'   => 'footer_design_sec',
                 'sanitize_callback' => array( $this, 'hu_sanitize_html_text_input' ),
                 'priority'  => 35,
-                'notice'    => __( 'Note : Html is allowed.', 'hueman')
+                'notice'    => __( 'Note : Html is allowed. The following template tags can be used : {{year}}, {{site_title}}, {{home_url}}.', 'hueman')
           ),
           'credit' => array(
                 'control'   => 'HU_controls',

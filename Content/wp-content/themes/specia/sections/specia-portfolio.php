@@ -35,7 +35,7 @@
 						<?php endif; ?>
 						
 						<?php if ($portfolio_description) : ?>
-							<p><?php echo esc_attr($portfolio_description); ?></p>
+							<p><?php echo esc_html($portfolio_description); ?></p>
 						<?php endif; ?>
 					</div>
 				</div>

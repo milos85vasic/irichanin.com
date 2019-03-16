@@ -2,14 +2,15 @@
 
 Contributors: specia
 Requires at least: WordPress 4.4
-Tested up to: WordPress 5.0.2
-Stable tag: 1.1.63
-Version: 1.1.63
+Tested up to: WordPress 5.0.3
+Requires PHP: 5.6
+Stable tag: 1.1.70
+Version: 1.1.70
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
-Tags: one-column, two-columns, left-sidebar, right-sidebar, flexible-header, custom-background, custom-colors, custom-header, custom-menu,  custom-logo, featured-image-header, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, blog, e-commerce, education, entertainment, food-and-drink, photography, portfolio, editor-style, grid-layout
+Tags: one-column, two-columns, left-sidebar, right-sidebar, flexible-header, custom-background, custom-colors, custom-header, custom-menu,  custom-logo, featured-image-header, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready, blog, entertainment, portfolio, editor-style, grid-layout
 
-Proficient WordPress Theme, Copyright 2018 Specia Theme
+Proficient WordPress Theme, Copyright 2019 Specia Theme
 Proficient is distributed under the terms of the GNU GPL
 
 === Description ===
@@ -78,21 +79,46 @@ License - GNU GPL license v3
 Source: https://github.com/matthieua/WOW
 
 x) Screenshot Image
-URL: https://pixabay.com/en/urban-people-crowd-citizens-438393/
-Source: https://pixabay.com/
-License: CC0 License
+URL: https://stocksnap.io/photo/FCUDWWBKFV
+Source: https://stocksnap.io
+License: CC0 Public Domain
 
 xi) Image Folder Images
 All other Images have been used in images folder, Created by Specia Theme. Also they are GPL Licensed and free to use and free to redistribute further.
 
-x) Admin Detail Image
-Admin Detail Image
-URL: https://pixabay.com/en/woman-people-coffee-portrait-3083379/
-Source: http://pixabay.com
+x) Feature Section Image
+URL: https://stocksnap.io/photo/FCUDWWBKFV
+Source: https://stocksnap.io
 License: CC0 Public Domain
 ------------------------------------------------------------------------------------------------------
 
 === Changelog ===
+@version 1.1.70
+* Add Image Alt Feature
+* Remove Some Tags
+
+@version 1.1.69
+* Screenshot Changed
+* Feature Image Change
+
+@version 1.1.68
+* Minimum required php version added
+
+@version 1.1.67
+* Screenshot Image Changed
+
+@version 1.1.66
+* Resolve Escaping Issue
+* Add Orignal Files of Js
+* Screenshot Image Changed
+* Feature Image Change
+
+@version 1.1.65
+* Tested With WordPress 5.0.3
+
+@version 1.1.64
+* Copyright changed
+
 @version 1.1.63
 * Tested With WordPress 5.0.2
 
